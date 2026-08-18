@@ -16,10 +16,10 @@ public class Order_Agnostic_Binary_Search {
             if (arr[mid] == target)
                 return mid;
             if (flag == -1){
-                if (arr[mid] < target)
-                    end = mid - 1;
-                else
+                if (arr[mid] > target)
                     start = mid + 1;
+                else
+                    end = mid - 1;
                 continue;
             }
             if (arr[mid] > target)
