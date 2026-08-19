@@ -1,5 +1,5 @@
 package dsa.math;
-
+// https://leetcode.com/problems/palindrome-number/description/
 public class Palindrome_Number {
     public static void main() {
         java.util.Scanner sc = new java.util.Scanner(System.in);

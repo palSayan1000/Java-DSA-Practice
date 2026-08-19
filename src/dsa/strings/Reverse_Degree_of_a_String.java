@@ -1,5 +1,7 @@
 package dsa.strings;
 
+// https://leetcode.com/problems/reverse-degree-of-a-string/description/
+
 public class Reverse_Degree_of_a_String {
     static void main() {
         java.util.Scanner sc = new java.util.Scanner(System.in);

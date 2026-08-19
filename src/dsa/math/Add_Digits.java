@@ -1,5 +1,5 @@
 package dsa.math;
-
+// https://leetcode.com/problems/add-digits/description/
 public class Add_Digits {
     static void main() {
         java.util.Scanner sc = new java.util.Scanner(System.in);

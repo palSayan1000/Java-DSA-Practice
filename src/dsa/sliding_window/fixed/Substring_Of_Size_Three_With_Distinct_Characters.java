@@ -1,5 +1,7 @@
 package dsa.sliding_window.fixed;
 
+//https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/description/
+
 import java.util.*;
 
 public class Substring_Of_Size_Three_With_Distinct_Characters {

@@ -1,5 +1,7 @@
 package dsa.sliding_window.dynamic;
 
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+
 public class Longest_Substring_Without_Repeating_Characters {
     public static void main() {
         java.util.Scanner sc = new java.util.Scanner(System.in);

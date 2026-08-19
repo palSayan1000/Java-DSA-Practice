@@ -1,5 +1,7 @@
 package dsa.strings;
 
+//https://leetcode.com/problems/to-lower-case/description/
+
 public class To_Lower_Case {
     static void main() {
         System.out.println("Enter the string:");
