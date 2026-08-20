@@ -8,7 +8,10 @@ public class Ceiling_Of_A_Number {
         System.out.println("The ceiling of the number is: " + getCeilingNum(arr, target));
     }
     // Finding the ceiling number else -1
+    // return the smallest no. >= target
     static int getCeilingNum(int[] arr, int target) {
+        if (target > arr[arr.length-1])
+            return Integer.MAX_VALUE;
         int start = 0, end = arr.length - 1, mid;
         while (start <= end) {
             mid = start + (end - start) / 2;
@@ -19,6 +22,6 @@ public class Ceiling_Of_A_Number {
             else
                 start = mid + 1;
         }
-        return start >= arr.length ? -1 : arr[start];
+        return arr[start];
     }
 }
