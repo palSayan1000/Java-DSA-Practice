@@ -1,0 +1,13 @@
+There are many format specifiers that we can use here are the common ones ->
+
+%c -> Charcaters
+%d -> Decimal numbers (base - 10)
+%e -> Exponential foating point number
+%f -> Floating point number
+%i -> Integer (base-10)
+%o -> Octal number (base-8)
+%s -> Strings
+%u -> Unsigned Decimal Integer
+%x -> Hexadecimal number (base-16)
+%t -> Date/time
+%n -> New line

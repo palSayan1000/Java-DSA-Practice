@@ -1,4 +1,4 @@
-package dsa.math;
+package dsa.math.problems;
 // https://leetcode.com/problems/palindrome-number/description/
 public class Palindrome_Number {
     public static void main() {
