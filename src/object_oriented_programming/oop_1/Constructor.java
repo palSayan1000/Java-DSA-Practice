@@ -10,8 +10,12 @@ public class Constructor {
         sayan.greeting();
         sayan.changeName();
         sayan.greeting();
-        Student random = new Student(sayan);
+        Student random = new Student(sayan), random2 = new Student();
         System.out.println(sayan.rno + "    " + sayan.name + "    " + sayan.marks);
+        Student one = new Student("one", 100, 100.0f);
+        Student two = one;
+        two.name = "Paluda";
+        two.greeting();
     }
 
     // create a class
@@ -22,9 +26,12 @@ public class Constructor {
         String name;
         // by default constructor
         Student() {
-            this.rno = 0;
-            this.marks = 0.0f;
-            this.name = "";
+//            this.rno = 0;
+//            this.marks = 0.0f;
+//            this.name = "";
+            // This is how you call a constructor from another constructor
+            this("Kutta", 10, -99);
+            // internally its is like Student("Kutta", 10, -99);
         } // constructor overloading
         // we need a way to add the above properties object by object
         // we need one word to access every object
