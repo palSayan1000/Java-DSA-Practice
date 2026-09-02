@@ -1,7 +1,14 @@
 package object_oriented_programming.oop_3.inheritance.part_2;
 
 public class BoxWeight extends Box {
+    // Error if the Box class is marked as final
+    // also used for priventing inheritance
     double weight;
+
+//    @Override // writting this gives error so static methods cannot be overriden
+    static void greeting() {
+        System.out.println("Hey, I am in BoxWeight class. Greetings!!!");
+    }
 
     public BoxWeight() {
         this.weight = -1.0;

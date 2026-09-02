@@ -1,11 +1,20 @@
 package object_oriented_programming.oop_3.inheritance.part_2;
 
-public class Box {
+public /* final */ class Box {
+    // when you declare a class as final it implecitly declares all its methods final too
     double length;
     double height;
     double width;
-    private double ll;
+    private double ll; // this is known as data hiding
     double weight = 9.9;
+
+    static void greeting() {
+        System.out.println("Hey, I am in Box class. Greetings!!!");
+    }
+
+    double getLL() {
+        return ll;
+    }
 
     Box() {
         this.height = -1;

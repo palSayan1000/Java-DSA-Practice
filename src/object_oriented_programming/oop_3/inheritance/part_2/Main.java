@@ -7,5 +7,16 @@ public class Main {
         // reference type (Box) decides what's accessible, not the actual object type (BoxWeight)
 
         BoxPrice box = new BoxPrice();
+        Box box1 = new Box();
+        int temp = (int) box1.getLL();
+//        box1.greeting();
+//        Box.greeting(); // convention
+        Box boxW = new BoxWeight();
+        boxW.greeting(); // calls the one of the parent class
+        // why because it is static not dependent on objects it is beyond objects
+        // so static methods can be inherited but not overriden
+
+        BoxWeight box2 = new BoxWeight();
+        box2.greeting(); // calls the one of the child class
     }
 }
