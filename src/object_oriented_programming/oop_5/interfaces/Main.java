@@ -2,7 +2,7 @@ package object_oriented_programming.oop_5.interfaces;
 
 public class Main {
     static void main() {
-        Car car = new Car();
+//        Car car = new Car();
         Engine car2 = new Car();
 //        Engine car3 = new Engine(); // interface obj cannot be created
         int temp = car2.a; // can access this
@@ -15,7 +15,12 @@ public class Main {
 //        car.stop();
 //        car.start();
 //        car.stop();
-        Media carMedia = new Car();
-        carMedia.stop();
+//        Media carMedia = new Car();
+//        carMedia.stop();
+
+        NiceCar car = new NiceCar();
+        car.start();
+        car.startMusic();
+        car.upgradeEngine();
     }
 }
