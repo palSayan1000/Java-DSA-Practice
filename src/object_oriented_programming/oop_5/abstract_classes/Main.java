@@ -28,7 +28,7 @@ public class Main {
                 System.out.println("We live in a " + house);
             }
         };
-
+        System.out.println(mom.getClass().isAnonymousClass()); // true // mom is an anonymous class
 //        Parent dad = new Parent(56, "Uttam Pal");// error so you cannot create objects of an abstract class
     }
 }
