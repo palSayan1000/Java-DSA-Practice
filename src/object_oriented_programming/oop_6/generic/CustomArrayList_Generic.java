@@ -1,7 +1,6 @@
-package object_oriented_programming.oop_6;
+package object_oriented_programming.oop_6.generic;
 
 //import java.util.ArrayList;
-import org.jetbrains.annotations.Contract;
 
 import java.util.Arrays;
 

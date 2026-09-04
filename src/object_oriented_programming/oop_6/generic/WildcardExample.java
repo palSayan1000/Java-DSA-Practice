@@ -1,4 +1,4 @@
-package object_oriented_programming.oop_6;
+package object_oriented_programming.oop_6.generic;
 
 import java.util.Arrays;
 import java.util.List;
