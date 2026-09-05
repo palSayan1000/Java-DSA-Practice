@@ -1,4 +1,4 @@
-package dsa.searching.binary.problems;
+package dsa.searching.binary;
 
 public class Pivot_In_Rotated_Array_Duplicates {
     static int findPivotWithDuplicates(int[] arr) {

@@ -1,4 +1,4 @@
-package dsa.searching.binary.problems;
+package dsa.searching.binary;
 
 //https://leetcode.com/problems/split-array-largest-sum/description/
 

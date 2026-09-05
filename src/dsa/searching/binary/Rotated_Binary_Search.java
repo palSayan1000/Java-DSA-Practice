@@ -1,4 +1,4 @@
-package dsa.searching.binary.problems;
+package dsa.searching.binary;
 
 //https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 public class Rotated_Binary_Search {

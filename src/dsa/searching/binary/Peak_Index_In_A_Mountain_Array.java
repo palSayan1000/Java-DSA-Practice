@@ -1,4 +1,4 @@
-package dsa.searching.binary.problems;
+package dsa.searching.binary;
 
 // https://leetcode.com/problems/peak-index-in-a-mountain-array/
 public class Peak_Index_In_A_Mountain_Array {

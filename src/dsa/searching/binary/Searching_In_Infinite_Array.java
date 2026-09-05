@@ -1,4 +1,4 @@
-package dsa.searching.binary.problems;
+package dsa.searching.binary;
 
 //https://www.geeksforgeeks.org/dsa/find-position-element-sorted-array-infinite-numbers/
 public class Searching_In_Infinite_Array {
