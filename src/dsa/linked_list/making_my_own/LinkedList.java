@@ -1,4 +1,4 @@
-package dsa.linked_list.understanding;
+package dsa.linked_list.making_my_own;
 
 import java.util.Objects;
 
@@ -7,7 +7,7 @@ public class LinkedList<E> implements List<E> {
     private Node<E> head, tail;
     private int size;
 
-    @Constructor
+    @Constructor // default constructor
     public LinkedList () {
         this.head = this.tail = null;
         this.size = 0;
@@ -20,25 +20,52 @@ public class LinkedList<E> implements List<E> {
 
     @Constructor
     public LinkedList (E[] arr) {
+        if (arr == null)
+            return;
         for (E i: arr)
             addLast(i);
-        size = arr.length;
     }
 
+    // returns the nth node of the linked list
+    private Node<E> nthNode (int index) throws LinkedListException{
+        if (index < 0 || index >= size)
+            throw new ListOutOfBounds("Index Out Of Bounds!!!!");
+        if (head == null)
+            throw new ListEmpty("The List Is Empty!!!");
+        Node<E> dummy = head;
+        for (int i = 0; i < index; i ++)
+            dummy = dummy.next;
+
+        return dummy;
+    }
+
+    @Get // returns the size of the linked list
     public int getSize () {
         return size;
     }
 
-    public E getEle (int index) throws ListOutOfBounds{
-        if (index < 0 || index >= size)
-            throw new ListOutOfBounds("The Index Is Out Of Valid Range!!!!");
-        Node<E> dummy = head;
-        for (int i = 0; i < index; i ++)
-            dummy = dummy.next;
-        return dummy.next.value;
+    @Get // returns the value of the node at the specified index
+    public E getEle (int index) throws ListOutOfBounds {
+        return nthNode(index).value;
     }
 
-    @Adding
+    @Get // returns the value of the first node
+    public E getFirst () throws ListEmpty {
+        if (head == null)
+            throw new ListEmpty("List Is Empty Bro!!!");
+
+        return head.value;
+    }
+
+    @Get // returns the value of the last node
+    public E getLast () throws ListEmpty {
+        if (head == null)
+            throw new ListEmpty("List Is Empty Bro!!!");
+
+        return tail.value;
+    }
+
+    @Adding // adds a node to the linked in the first
     public void addFirst (E value) {
         Node<E> node = new Node<>(value);
         node.next = head;
@@ -50,7 +77,7 @@ public class LinkedList<E> implements List<E> {
         size ++;
     }
 
-    @Adding
+    @Adding // adds a node to the linked list at the last
     public void addLast (E value) {
         if (tail == null) {
             addFirst(value);
@@ -64,25 +91,40 @@ public class LinkedList<E> implements List<E> {
         size ++;
     }
 
-    @Deleting
+    @Adding // adds a node at the specified index
+    public void add (int index, E value) throws LinkedListException{
+        if (index == 0) {
+            addFirst(value);
+            return;
+        }
+        if (index == size) {
+            addLast(value);
+            return;
+        }
+        Node<E> prev = nthNode(index - 1);
+        Node<E> node = new Node<>(value, prev.next);
+        prev.next = node;
+        if (prev == tail)
+            tail = node;
+        size ++;
+    }
+
+    @Deleting // deletes the last node
     public E removeLast () throws ListEmpty{
         if (head == null)
             throw new ListEmpty("The LinkedList Is Empty!!!");
         if (head.next == null)
             return removeFirst();
 
-        E temp = tail.value;
-        Node<E> dummy = head;
-        while (dummy.next.next != null)
-            dummy = dummy.next;
-        tail = dummy;
+        tail = nthNode (size - 2);
+        Node<E> temp = tail.next;
         tail.next = null;
         size --;
 
-        return temp;
+        return temp.value;
     }
 
-    @Deleting
+    @Deleting // deletes the first node
     public E removeFirst () throws ListEmpty{
         if (head == null)
             throw new ListEmpty("The LinkedList Is Empty!!!");
@@ -96,7 +138,28 @@ public class LinkedList<E> implements List<E> {
         return temp.value;
     }
 
-    @Finding
+    @Deleting // deletes the node at the specified index
+    public E remove (int index) throws LinkedListException{
+        if (index == 0)
+            return removeFirst();
+        if (index == size - 1)
+            return removeLast();
+        Node<E> dummy = nthNode(index - 1), temp = dummy.next;
+        dummy.next = dummy.next.next;
+        size --;
+
+        return temp.value;
+    }
+
+    // sets the node value at the specified index with the provided value
+    public E set (int index, E value) throws LinkedListException {
+        Node<E> dummy = nthNode(index);
+        E temp = dummy.value;
+        dummy.value = value;
+        return temp;
+    }
+
+    @Finding // checks if a value contains in the linked list
     public boolean contains (E value) {
         if (head == null)
             return false;
@@ -110,29 +173,25 @@ public class LinkedList<E> implements List<E> {
         return false;
     }
 
-    @Finding
+    @Finding // indexOf on the linked list
     public int indexOf (E value) {
         if (head == null)
             return -1;
         return indexOf (0, value);
     }
 
-    @Finding
+    @Finding // last-indexOf at the linked list
     public int lastIndexOf (E value) {
         if (head == null)
             return -1;
         return lastIndexOf (size - 1, value);
     }
 
-    @Finding
+    @Finding // indexOf from the given index
     public int indexOf (int index, E value) throws ListOutOfBounds {
-        if (index < 0 || index >= size)
-            throw new ListOutOfBounds("The Index Is Out Of Valid Range!!!!");
-        Node<E> dummy = head;
-        int ans = -1, i = 0;
-        for (i = 0; i < index; i ++)
-            dummy = dummy.next;
-        for (; dummy != null; i ++) {
+        Node<E> dummy = index == 0? head : nthNode(index);
+        int ans = -1;
+        for (int i = index; dummy != null && ans == -1; i ++) {
             if (Objects.equals(dummy.value, value))
                 ans = i;
             dummy = dummy.next;
@@ -140,7 +199,7 @@ public class LinkedList<E> implements List<E> {
         return ans;
     }
 
-    @Finding
+    @Finding // lastIndexOf before the given index
     public int lastIndexOf (int index, E value) throws ListOutOfBounds {
         if (index < 0 || index >= size)
             throw new ListOutOfBounds("The Index Is Out Of Valid Range!!!!");
@@ -152,6 +211,23 @@ public class LinkedList<E> implements List<E> {
             dummy = dummy.next;
         }
         return ans;
+    }
+
+    @Display
+    public void display () {
+
+    }
+
+    @Display
+    public void display (E node) {
+
+    }
+
+    @Override
+    public String toString() {
+
+
+        return null;
     }
 
     private static class Node<E> {

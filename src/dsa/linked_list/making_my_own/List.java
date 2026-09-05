@@ -1,4 +1,4 @@
-package dsa.linked_list.understanding;
+package dsa.linked_list.making_my_own;
 
 public interface List<E> {
     int getSize ();
@@ -12,4 +12,12 @@ public interface List<E> {
     int indexOf (int index, E value);
     int lastIndexOf (E value);
     int lastIndexOf(int index, E value);
+    void display ();
+    void display (E node);
+    E getFirst ();
+    E getLast ();
+    E remove (int index);
+    void add (int index, E value);
+    E set (int index, E value);
+    String toString ();
 }
