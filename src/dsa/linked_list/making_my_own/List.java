@@ -5,6 +5,7 @@ public interface List<E> {
     E getEle (int index);
     void addFirst (E value);
     void addLast (E value);
+    void add (E value);
     E removeLast ();
     E removeFirst ();
     boolean contains (E value);

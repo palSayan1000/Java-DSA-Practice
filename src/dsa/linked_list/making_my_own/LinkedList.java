@@ -92,6 +92,11 @@ public class LinkedList<E> implements List<E> {
         size ++;
     }
 
+    @Override @Adding // adding a node at last
+    public void add (E value) {
+        addLast(value);
+    }
+
     @Override @Adding // adds a node at the specified index
     public void add (int index, E value) throws LinkedListException{
         if (index == 0) {

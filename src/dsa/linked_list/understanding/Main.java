@@ -10,8 +10,9 @@ public class Main {
         list.insertFirst(15);
         list.insertFirst(19);
         list.insertLast(1000);
-        list.deleteFirst();
-        list.deleteLast();
+//        list.deleteFirst();
+        list.display();
+        list.delete(5);
         list.display();
     }
 }

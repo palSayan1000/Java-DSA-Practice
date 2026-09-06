@@ -57,19 +57,19 @@ public class LinkedList {
         return value;
     }
 
-    public int deleteLast () {
-        if (head.next == null) {
-            return deleteFirst();
-        }
-        Node dummy = new Node(head);
-        for (int i = 0; i < size - 1; i ++)
-            dummy = dummy.next;
-        int val = tail.value;
-        dummy.next = null;
-        tail = dummy;
-        size--;
-        return val;
-    }
+//    public int deleteLast () {
+//        if (head.next == null) {
+//            return deleteFirst();
+//        }
+//        Node dummy = new Node(head);
+//        for (int i = 0; i < size - 1; i ++)
+//            dummy = dummy.next;
+//        int val = tail.value;
+//        dummy.next = null;
+//        tail = dummy;
+//        size--;
+//        return val;
+//    }
 
     public void display () {
         Node temp = head;
@@ -78,6 +78,48 @@ public class LinkedList {
             temp = temp.next;
         }
         System.out.println("null");
+    }
+
+    public Node get (int index) {
+        Node node = head;
+        for (int i = 0; i < index; i ++)
+            node = node.next;
+        return node;
+    }
+
+    @SuppressWarnings("UnusedReturnValue")
+    public int deleteLast () {
+        if (size <= 1) {
+            return deleteFirst();
+        }
+        Node secondLast = get(size - 2);
+        int val = tail.value;
+        tail = secondLast;
+        tail.next = null;
+        return val;
+    }
+
+    public int delete (int index) {
+        if (index == 0){
+            return deleteFirst();
+        } else if (index == size - 1) {
+            return deleteLast();
+        }
+
+        Node prev = get (index - 1);
+        int val = prev.next.value;
+        prev.next = prev.next.next;
+        return val;
+    }
+
+    public Node find (int val) {
+        Node node = head;
+        while (node != null) {
+            if (node.value == val)
+                return node;
+            node = node.next;
+        }
+        return null;
     }
 
     private static class Node {
