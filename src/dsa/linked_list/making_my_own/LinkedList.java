@@ -214,20 +214,30 @@ public class LinkedList<E> implements List<E> {
     }
 
     @Display
-    public void display () {
-
+    public void display () throws LinkedListException{
+        display (0);
     }
 
     @Display
-    public void display (E node) {
-
+    public void display (int index) throws LinkedListException{
+        Node<E> dummy = nthNode (index);
+        while (dummy != null) {
+            System.out.print(dummy.value + " --> ");
+            dummy = dummy.next;
+        }
+        System.out.println("null");
     }
 
     @Override
     public String toString() {
-
-
-        return null;
+        StringBuilder sb = new StringBuilder("[ ");
+        Node<E> dummy = head;
+        while (dummy != null) {
+            sb.append(dummy.value).append(", ");
+            dummy = dummy.next;
+        }
+        sb.append("null ]");
+        return sb.toString();
     }
 
     private static class Node<E> {

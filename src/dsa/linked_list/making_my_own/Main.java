@@ -6,6 +6,7 @@ public class Main {
         list.addLast(99);
         list.addFirst(100);
         list.add(2, 19);
-
+//        list.display();
+        System.out.println(list.toString());
     }
 }

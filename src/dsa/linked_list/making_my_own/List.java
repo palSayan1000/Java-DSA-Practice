@@ -13,7 +13,7 @@ public interface List<E> {
     int lastIndexOf (E value);
     int lastIndexOf(int index, E value);
     void display ();
-    void display (E node);
+    void display (int index);
     E getFirst ();
     E getLast ();
     E remove (int index);
