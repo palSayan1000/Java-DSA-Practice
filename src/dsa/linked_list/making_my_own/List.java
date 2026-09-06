@@ -20,4 +20,11 @@ public interface List<E> {
     void add (int index, E value);
     E set (int index, E value);
     String toString ();
+    boolean isEmpty ();
+    E[] toArray ();
+    E[] toArray (int index);
+    boolean isSingle ();
+    java.util.ArrayList<E> asList ();
+    java.util.ArrayList<E> asList (int index);
+    void clear ();
 }

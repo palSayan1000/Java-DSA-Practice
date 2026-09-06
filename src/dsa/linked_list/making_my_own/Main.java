@@ -5,7 +5,8 @@ public class Main {
         LinkedList<Integer> list = new LinkedList<>();
         list.addLast(99);
         list.addFirst(100);
-        list.add(2, 19);
+        list.add(1, 19);
+        list.remove(100);
 //        list.display();
         System.out.println(list.toString());
     }

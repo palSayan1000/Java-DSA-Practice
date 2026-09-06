@@ -41,9 +41,34 @@ public class LinkedList {
            return;
         }
         Node dummy = head, newNode;
-        for (int i = 0; i < index; i++)
+        for (int i = 1; i < index; i++)
             dummy = dummy.next;
         dummy.next = new Node(val, dummy.next);
+        size ++;
+    }
+
+    /// @returns the delete first element
+    public int deleteFirst () {
+        int value = head.value;
+        head = head.next;
+        if (head == null)
+            tail = null;
+        size --;
+        return value;
+    }
+
+    public int deleteLast () {
+        if (head.next == null) {
+            return deleteFirst();
+        }
+        Node dummy = new Node(head);
+        for (int i = 0; i < size - 1; i ++)
+            dummy = dummy.next;
+        int val = tail.value;
+        dummy.next = null;
+        tail = dummy;
+        size--;
+        return val;
     }
 
     public void display () {
