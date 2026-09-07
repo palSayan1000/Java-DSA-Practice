@@ -1,4 +1,4 @@
-package dsa.linked_list.understanding;
+package dsa.linked_list.understanding.single;
 
 public class LinkedList {
 

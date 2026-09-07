@@ -92,11 +92,6 @@ public class LinkedList<E> implements List<E> {
         size ++;
     }
 
-    @Override @Adding // adding a node at last
-    public void add (E value) {
-        addLast(value);
-    }
-
     @Override @Adding // adds a node at the specified index
     public void add (int index, E value) throws LinkedListException{
         if (index == 0) {
@@ -165,34 +160,6 @@ public class LinkedList<E> implements List<E> {
         return temp;
     }
 
-    @Override @Finding // checks if a value contains in the linked list
-    public boolean contains (E value) {
-        if (isEmpty())
-            return false;
-
-        Node<E> dummy = head;
-        while (dummy != null) {
-            if (Objects.equals(dummy.value, value))
-                return true;
-            dummy = dummy.next;
-        }
-        return false;
-    }
-
-    @Override @Finding // indexOf on the linked list
-    public int indexOf (E value) {
-        if (isEmpty())
-            return -1;
-        return indexOf (0, value);
-    }
-
-    @Override @Finding // last-indexOf at the linked list
-    public int lastIndexOf (E value) {
-        if (isEmpty())
-            return -1;
-        return lastIndexOf (size - 1, value);
-    }
-
     @Override @Finding // indexOf from the given index
     public int indexOf (int index, E value) throws ListOutOfBounds {
         Node<E> dummy = index == 0? head : nthNode(index);
@@ -219,11 +186,6 @@ public class LinkedList<E> implements List<E> {
         return ans;
     }
 
-    @Override @Display // displays the linked list
-    public void display () throws LinkedListException{
-        display (0);
-    }
-
     @Override @Display // displays the linked list from the given index
     public void display (int index) throws LinkedListException{
         Node<E> dummy = nthNode (index);
@@ -246,25 +208,12 @@ public class LinkedList<E> implements List<E> {
         return sb.toString();
     }
 
-    @Override // checks if the list is empty
-    public boolean isEmpty () {
-        return head == null;
-    }
-
-    @Override // checks if the linked list is single element
-    public boolean isSingle () {
-        return head.next == null;
-    }
-
-    @Override @Converting // converting a Linked List to array
-    public E[] toArray () {
-        return toArray (0);
-    }
-
     @Override @Converting // Converting a LinkedList to an array but from a specified index
-    public E[] toArray (int index) {
+    public E[] toArray (int index) throws ListOutOfBounds{
         if (size == 0)
             return (E[])(new Object[0]);
+        if (index < 0 || index >= size)
+            throw new ListOutOfBounds("Invalid Index Bitch!!!");
         Node<E> dummy = head;
         E[] array = (E[]) new Object[size - index];
         for (int i = 0, k = 0; i < size; i ++) {
@@ -276,15 +225,12 @@ public class LinkedList<E> implements List<E> {
         return array;
     }
 
-    @Override @Converting // Converting a LinkedList to arrayList
-    public java.util.ArrayList<E> asList () {
-        return asList (0);
-    }
-
     @Override @Converting // Converting a LinkedList to arrayList but from the specified index
-    public java.util.ArrayList<E> asList (int index) {
+    public java.util.ArrayList<E> asList (int index) throws ListOutOfBounds{
         if (size == 0)
             return new java.util.ArrayList<E>();
+        if (index < 0 || index >= size)
+            throw new ListOutOfBounds("Invalid Index Bitch!!!");
         Node<E> dummy = head;
         java.util.ArrayList<E> list = new java.util.ArrayList<>();
         for (int i = 0; i < size; i ++) {
@@ -299,6 +245,7 @@ public class LinkedList<E> implements List<E> {
     @Override
     public void clear () {
         head = tail = null;
+        size = 0;
     }
 
     private static class Node<E> {
