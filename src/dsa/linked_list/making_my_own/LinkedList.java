@@ -1,5 +1,6 @@
 package dsa.linked_list.making_my_own;
 
+import java.sql.SQLOutput;
 import java.util.Objects;
 
 public class LinkedList<E> implements List<E> {
@@ -275,6 +276,11 @@ public class LinkedList<E> implements List<E> {
         public Node (Node<E> node) {
             this.value = node.value;
             this.next = node.next;
+        }
+
+        @Override
+        protected void finalize() throws Throwable {
+            System.out.println("The node object is being deleted!!!1");
         }
     }
 }
