@@ -4,11 +4,17 @@ package multithreading_and_concurrency.intro.thread_creation_and_life_cycle;
 public class Demo2 {
     static void main() {
         // Defining a task
-        MyRunnable obj = new MyRunnable();
-        Thread t1 = new Thread(obj); // in the thread class passing my obj (as a constructor)
-        t1.start();
+//        MyRunnable obj = new MyRunnable();
+//        Thread t1 = new Thread(obj); // in the thread class passing my obj (as a constructor)
+//        t1.start();
 //        t1.start(); // gives  error in this line as the t1 is already running
 
+        Thread t1 = new Thread(() -> System.out.println("Thread is running !!!!!"));
+        t1.start();
+        Thread thread = new Thread(() -> {
+            System.out.println("New thread baby!!!!");
+        });
+        thread.start();
     }
 }
 // Second types of creating threads

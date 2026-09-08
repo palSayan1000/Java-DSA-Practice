@@ -1,6 +1,5 @@
 package dsa.linked_list.making_my_own;
 
-import java.sql.SQLOutput;
 import java.util.Objects;
 
 public class LinkedList<E> implements List<E> {
@@ -130,14 +129,15 @@ public class LinkedList<E> implements List<E> {
     public E removeFirst () throws ListEmpty{
         if (isEmpty())
             throw new ListEmpty("The LinkedList Is Empty!!!");
-        if (isSingle())
+
+        E value = head.value;
+        if (isSingle()) {
             head = tail = null;
-
-        Node<E> temp = head;
-        head = head.next;
+        } else {
+            head = head.next;
+        }
         size --;
-
-        return temp.value;
+        return value;
     }
 
     @Override @Deleting // deletes the node at the specified index

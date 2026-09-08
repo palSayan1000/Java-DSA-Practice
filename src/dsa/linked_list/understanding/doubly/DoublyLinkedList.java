@@ -68,6 +68,7 @@ public class DoublyLinkedList {
         dummy.next = node;
         node.next = null;
         node.prev = dummy;
+        size ++;
     }
 
     public void insert (int index, int val) {
@@ -107,6 +108,7 @@ public class DoublyLinkedList {
             dummy.next.prev = node;
         dummy.next = node;
         node.prev = dummy;
+        size ++;
     }
 
     private static class Node {
