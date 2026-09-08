@@ -1,4 +1,4 @@
-package dsa.two_pointers.arrays;
+package dsa.two_pointers.arrays.problems;
 
 // https://leetcode.com/problems/two-sum/description/
 
