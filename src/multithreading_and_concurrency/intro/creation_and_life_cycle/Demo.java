@@ -1,4 +1,4 @@
-package multithreading_and_concurrency.intro.thread_creation_and_life_cycle;
+package multithreading_and_concurrency.intro.creation_and_life_cycle;
 // First Type of Creating Threads
 // using Thread Class
 public class Demo {

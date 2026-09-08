@@ -1,4 +1,4 @@
-package multithreading_and_concurrency.intro.thread_creation_and_life_cycle;
+package multithreading_and_concurrency.intro.creation_and_life_cycle;
 
 public class Demo3 {
     static void main() {
