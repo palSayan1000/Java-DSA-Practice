@@ -8,8 +8,24 @@ public class Demo8 {
         });
 
         t1.setDaemon(true); // made it a daemon thread // and declared it as a background running task so when the main thread stops t1 will also stop
-        t1.start();
+        // t1.start();
         try { Thread.sleep(0, 1); } catch (InterruptedException _) {}
+
+                // Start immediately
+        // another way of declaring visual threads
+        Thread thread = Thread.ofVirtual().start(() -> { // started and declared the thread on the go
+            System.out.println("Running in a virtual thread");
+        });
+
+        // Or create without starting
+        Thread thread1 = Thread.ofVirtual().unstarted(() -> { // using unstarted
+            System.out.println("Virtual thread created");
+        });
+//        thread1.start();
+        // For a quick start, Java 21 provides a static convenience method:
+        Thread.startVirtualThread(() -> {
+            System.out.println("Running in a virtual thread");
+        });
     }
 }
 /*
