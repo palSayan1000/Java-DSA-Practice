@@ -1,7 +1,7 @@
 package dsa.linked_list.patterns.sort;
 
 // https://leetcode.com/problems/sort-list/description/
-public class Sort_List {
+public class Sort_List_mergeSort {
 
     private ListNode sortList(ListNode head) {
         if (head == null || head.next == null)
@@ -15,11 +15,13 @@ public class Sort_List {
     }
 
     private ListNode middleNode(ListNode head) {
-        ListNode fast = head, slow = head;
+        ListNode fast = head, slow = head, prev = null;
         while (fast != null && fast.next != null) {
+            prev = slow;
             slow = slow.next;
             fast = fast.next.next;
         }
+        prev.next = null;
         return slow;
     }
 
