@@ -3,7 +3,6 @@ package object_oriented_programming.oop_6.comparing;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Main {
     static void main() {

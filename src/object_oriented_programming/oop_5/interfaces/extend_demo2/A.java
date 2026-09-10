@@ -1,7 +1,5 @@
 package object_oriented_programming.oop_5.interfaces.extend_demo2;
 
-import java.sql.SQLOutput;
-
 public interface A {
     // Backward Compatibility: If you add a default method to an interface,
     // the classes implementing it do not break. They simply inherit the default behavior automatically.

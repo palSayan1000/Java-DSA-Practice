@@ -1,7 +1,5 @@
 package dsa.linked_list.understanding.circular;
 
-import dsa.linked_list.understanding.single.LinkedList;
-
 public class CircularLinkedList {
 
     private Node head;

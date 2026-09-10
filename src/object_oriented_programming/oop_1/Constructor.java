@@ -1,7 +1,5 @@
 package object_oriented_programming.oop_1;
 
-import java.util.Arrays;
-
 public class Constructor {
     void main() {
         // one student

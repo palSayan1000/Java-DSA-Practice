@@ -1,4 +1,4 @@
-package dsa.linked_list.patterns;
+package dsa.linked_list.patterns.sort;
 
 public class Remove_Duplicates_From_Sorted_List {
     static void main() {

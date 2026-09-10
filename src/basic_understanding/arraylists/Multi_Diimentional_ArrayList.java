@@ -1,7 +1,7 @@
 package basic_understanding.arraylists;
 
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Multi_Diimentional_ArrayList {
     public static void main(String[] args) {

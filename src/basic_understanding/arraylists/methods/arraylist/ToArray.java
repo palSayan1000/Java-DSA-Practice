@@ -1,7 +1,5 @@
 package basic_understanding.arraylists.methods.arraylist;
 
-import java.util.ArrayList;
-
 public class ToArray {
     static void main() {
         var list = InputList.input();

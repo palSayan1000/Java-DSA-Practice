@@ -1,8 +1,8 @@
 package dsa.sorting.cyclic_sort.problems;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+
 // https://leetcode.com/problems/find-all-duplicates-in-an-array/
 public class Find_All_Duplicates_In_An_Array {
     static List<Integer> findDuplicates(int[] nums) {

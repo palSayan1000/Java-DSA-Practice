@@ -1,4 +1,4 @@
-package dsa.searching.binary;
+package dsa.searching.binary.patterns.floor;
 
 
 public class Floor_Of_A_Number {

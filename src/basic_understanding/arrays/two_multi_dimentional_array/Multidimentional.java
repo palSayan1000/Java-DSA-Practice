@@ -1,6 +1,7 @@
 package basic_understanding.arrays.two_multi_dimentional_array;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Multidimentional {
     public static void main() {

@@ -1,4 +1,4 @@
-package dsa.searching.binary;
+package dsa.searching.binary.patterns.rotated;
 
 public class Rotation_Count {
     static void main() {

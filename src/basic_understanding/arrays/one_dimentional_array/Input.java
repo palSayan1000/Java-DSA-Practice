@@ -1,7 +1,8 @@
 package basic_understanding.arrays.one_dimentional_array;
 
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
+
 public class Input {
     public static void main() {
         Scanner sc = new Scanner(System.in);

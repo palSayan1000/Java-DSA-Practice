@@ -1,4 +1,4 @@
-package dsa.searching.binary;
+package dsa.searching.binary.patterns.ceiling;
 
 
 public class Ceiling_Of_A_Number {

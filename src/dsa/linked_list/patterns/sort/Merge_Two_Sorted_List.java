@@ -1,4 +1,4 @@
-package dsa.linked_list.patterns;
+package dsa.linked_list.patterns.sort;
 
 // https://leetcode.com/problems/merge-two-sorted-lists/description/
 public class Merge_Two_Sorted_List {

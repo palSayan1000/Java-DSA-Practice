@@ -1,6 +1,5 @@
 package basic_understanding.arrays.one_dimentional_array;
 
-import java.util.Scanner;
 import java.util.Arrays;
 
 public class PassinginFunc {

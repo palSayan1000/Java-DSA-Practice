@@ -1,4 +1,4 @@
-package dsa.searching.binary;
+package dsa.searching.binary.patterns.floor;
 
 // https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
 public class Find_Smallest_Letter_Greater_Than_Target {

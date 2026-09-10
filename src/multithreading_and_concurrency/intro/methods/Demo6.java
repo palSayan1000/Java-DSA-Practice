@@ -1,7 +1,5 @@
 package multithreading_and_concurrency.intro.methods;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Demo6 {
     static void main() {
         Thread t1 = new Thread ( () -> {

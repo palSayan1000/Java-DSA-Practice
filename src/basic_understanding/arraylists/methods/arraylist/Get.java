@@ -1,7 +1,6 @@
 package basic_understanding.arraylists.methods.arraylist;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Get {
     public static void main() {

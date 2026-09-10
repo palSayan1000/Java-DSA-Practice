@@ -1,7 +1,5 @@
 package object_oriented_programming.oop_4.access;
 
-import java.util.ArrayList;
-
 public class Main {
     static void main() {
         A obj = new A(10, "Sayan Pal");

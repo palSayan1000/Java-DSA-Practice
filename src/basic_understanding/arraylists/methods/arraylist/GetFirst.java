@@ -1,7 +1,5 @@
 package basic_understanding.arraylists.methods.arraylist;
 
-import java.util.ArrayList;
-
 public class GetFirst {
     public static void main() {
         var list = InputList.input();

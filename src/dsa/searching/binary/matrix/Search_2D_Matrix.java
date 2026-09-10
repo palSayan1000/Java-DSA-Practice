@@ -1,4 +1,4 @@
-package dsa.searching.binary;
+package dsa.searching.binary.matrix;
 // https://leetcode.com/problems/search-a-2d-matrix/description/
 public class Search_2D_Matrix {
     static boolean searchMatrix(int[][] matrix, int target) {

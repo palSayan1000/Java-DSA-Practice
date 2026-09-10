@@ -1,7 +1,5 @@
 package object_oriented_programming.oop_3.polymorphism;
 
-import java.awt.*;
-
 public class Triangle extends Shapes {
     @Override
     void area() {

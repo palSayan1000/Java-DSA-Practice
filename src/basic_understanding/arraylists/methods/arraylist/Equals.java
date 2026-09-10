@@ -1,7 +1,5 @@
 package basic_understanding.arraylists.methods.arraylist;
 
-import java.util.ArrayList;
-
 public class Equals {
     public static void main() {
         System.out.println("Enter the two list: ");

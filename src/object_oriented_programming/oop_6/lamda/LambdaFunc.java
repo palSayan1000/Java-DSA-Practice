@@ -2,7 +2,6 @@ package object_oriented_programming.oop_6.lamda;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.function.Consumer;
 
 public class LambdaFunc {
     static void main() {

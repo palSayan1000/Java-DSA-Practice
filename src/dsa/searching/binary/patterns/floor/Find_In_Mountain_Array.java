@@ -1,4 +1,4 @@
-package dsa.searching.binary;
+package dsa.searching.binary.patterns.floor;
 // https://leetcode.com/problems/find-in-mountain-array/description/
 public class Find_In_Mountain_Array {
 

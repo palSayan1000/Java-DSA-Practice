@@ -1,7 +1,5 @@
 package dsa.linked_list.understanding.doubly;
 
-import dsa.linked_list.understanding.single.LinkedList;
-
 public class DoublyLinkedList {
 
     private Node head,tail;

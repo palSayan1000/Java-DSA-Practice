@@ -1,4 +1,4 @@
-package dsa.searching.binary;
+package dsa.searching.binary.patterns.normal;
 
 public class BinarySearch {
     static void main() {

@@ -1,7 +1,5 @@
 package dsa.searching.linear;
 
-import java.util.Arrays;
-
 public class Max2d {
     static void main() {
         int[][] arr = {

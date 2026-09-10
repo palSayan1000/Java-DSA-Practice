@@ -2,7 +2,8 @@ package dsa.arrays;
 
 //https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/description/
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class How_Many_Numbers_Are_Smaller_Than_The_Current_Number {
     static void main() {

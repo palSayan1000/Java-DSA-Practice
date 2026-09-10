@@ -1,7 +1,7 @@
 package basic_understanding.arraylists.methods.arraylist;
 
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Insert {
     public static void main() {

@@ -1,4 +1,4 @@
-package dsa.searching.binary;
+package dsa.searching.binary.patterns.normal;
 
 public class Order_Agnostic_Binary_Search {
     static void main() {

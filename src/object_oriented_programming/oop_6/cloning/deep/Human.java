@@ -1,6 +1,5 @@
 package object_oriented_programming.oop_6.cloning.deep;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Human implements Cloneable{

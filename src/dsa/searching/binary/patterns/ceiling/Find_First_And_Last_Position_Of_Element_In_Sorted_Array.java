@@ -1,4 +1,4 @@
-package dsa.searching.binary;
+package dsa.searching.binary.patterns.ceiling;
 
 // https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
 

@@ -1,8 +1,5 @@
 package dsa.strings;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
 public class Sorting_The_Sentence {
     static void main() {
         System.out.println(new Sorting_The_Sentence().sortSentence("is2 sentence4 This1 a3"));

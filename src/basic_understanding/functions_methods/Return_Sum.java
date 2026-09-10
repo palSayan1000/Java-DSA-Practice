@@ -2,7 +2,8 @@ package basic_understanding.functions_methods;
 
 import java.util.Scanner;
 
-import static java.lang.IO.*;
+import static java.lang.IO.print;
+import static java.lang.IO.println;
 
 public class Return_Sum {
     public static void main(String[] args) {
