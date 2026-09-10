@@ -1,4 +1,4 @@
-package basic_understanding.strings.methods_strings;
+package basic_understanding.strings_and_string_builder.strings.methods_strings;
 
 import java.util.Locale;
 

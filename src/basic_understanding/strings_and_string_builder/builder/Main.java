@@ -1,4 +1,4 @@
-package basic_understanding.string_builder_and_buffer;
+package basic_understanding.strings_and_string_builder.builder;
 
 public class Main {
     public static void main(String[] args) {

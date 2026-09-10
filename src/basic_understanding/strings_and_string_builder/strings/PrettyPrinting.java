@@ -1,4 +1,4 @@
-package basic_understanding.strings;
+package basic_understanding.strings_and_string_builder.strings;
 
 public class PrettyPrinting {
     static void main() {

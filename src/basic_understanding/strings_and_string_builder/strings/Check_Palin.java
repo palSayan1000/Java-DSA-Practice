@@ -1,4 +1,4 @@
-package basic_understanding.strings;
+package basic_understanding.strings_and_string_builder.strings;
 
 public class Check_Palin {
     public static void main(String[] args) {
