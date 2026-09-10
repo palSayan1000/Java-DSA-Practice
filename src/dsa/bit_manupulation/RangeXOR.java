@@ -7,6 +7,7 @@ public class RangeXOR {
         int a = 3, b = 9, ans = xor(b) ^ xor(a - 1);
         System.out.println(ans);
     }
+
     // this gives xor from 0 till a
     static int xor(int a) {
         return switch (a % 4) {

@@ -10,6 +10,7 @@ public class SubSet_2 {
         List<List<Integer>> list = subsetDup(arr);
         System.out.println(list);
     }
+
     static List<List<Integer>> subsetDup(int[] arr) {
         Arrays.sort(arr);
         List<List<Integer>> outerList = new ArrayList<>();

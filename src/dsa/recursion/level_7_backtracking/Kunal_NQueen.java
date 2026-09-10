@@ -4,6 +4,7 @@ public class Kunal_NQueen {
     static void main() {
         System.out.println("N-Queens: " + placeNQueens(new boolean[4][4], 0));
     }
+
     static int placeNQueens(boolean[][] board, int row) {
         if (row == board.length) {
             displayBoard(board);
@@ -20,6 +21,7 @@ public class Kunal_NQueen {
             }
         return count;
     }
+
     static boolean isSafe(boolean[][] board, int row, int col) {
         // Checking up
         for (int i = 0; i < row; i++)
@@ -35,6 +37,7 @@ public class Kunal_NQueen {
                 return false;
         return true;
     }
+
     static void displayBoard(boolean[][] board) {
         for (boolean[] row : board) {
             for (boolean col : row)

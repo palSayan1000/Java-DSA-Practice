@@ -1,9 +1,11 @@
 package dsa.searching.binary.matrix;
+
 // https://leetcode.com/problems/search-a-2d-matrix/description/
 public class Search_2D_Matrix {
     static boolean searchMatrix(int[][] matrix, int target) {
         return rowSearch(matrix[colSearch(matrix, target)], target);
     }
+
     static int colSearch(int[][] matrix, int target) {
         int rStart = 0, rEnd = matrix.length - 1, eCol = matrix[0].length - 1;
         while (rStart < rEnd) {
@@ -14,6 +16,7 @@ public class Search_2D_Matrix {
         }
         return rEnd;
     }
+
     static boolean rowSearch(int[] arr, int target) {
         int start = 0, end = arr.length - 1, mid;
         while (start <= end) {
@@ -27,8 +30,9 @@ public class Search_2D_Matrix {
         }
         return false;
     }
+
     static void main() {
-        System.out.println(searchMatrix(new int[][] {
+        System.out.println(searchMatrix(new int[][]{
                 {1, 2, 3, 4},
                 {5, 6, 7, 8},
                 {9, 10, 11, 12},

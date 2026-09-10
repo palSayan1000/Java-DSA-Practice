@@ -12,6 +12,7 @@ public class StaticBlock {
     static int a = 4;
     static int b;
     static int c;
+
     /// A static block runs when the class is initialized, not when the first object is created.
 
     // below is kunal defination which is wrong the above one is correct
@@ -24,12 +25,12 @@ public class StaticBlock {
 
     static void main() {
 //        StaticBlock obj = new StaticBlock();
-        System.out.println(StaticBlock.a + "  "  + StaticBlock.b + "  " + StaticBlock.c);
+        System.out.println(StaticBlock.a + "  " + StaticBlock.b + "  " + StaticBlock.c);
 
-        StaticBlock .b += 3;
+        StaticBlock.b += 3;
         StaticBlock obj = new StaticBlock();
         // see the statement does not gets printed
-        System.out.println(StaticBlock.a + "  "  + StaticBlock.b + "  " + StaticBlock.c);
+        System.out.println(StaticBlock.a + "  " + StaticBlock.b + "  " + StaticBlock.c);
 
     }
 }

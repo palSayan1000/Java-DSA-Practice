@@ -6,16 +6,17 @@ import java.util.List;
 public class Word_Search_II {
     static void main() {
         char[][] board = {
-            {'o', 'a', 'a', 'n'},
-            {'e', 't', 'a', 'e'},
-            {'i', 'h', 'k', 'r'},
-            {'i', 'f', 'l', 'v'}
+                {'o', 'a', 'a', 'n'},
+                {'e', 't', 'a', 'e'},
+                {'i', 'h', 'k', 'r'},
+                {'i', 'f', 'l', 'v'}
         };
 
         String[] words = {"oath", "pea", "eat", "rain"};
 
         System.out.println(findWords(board, words));
     }
+
     static List<String> findWords(char[][] board, String[] words) {
         List<String> list = new ArrayList<>();
         for (int i = 0; i < board.length; i++)
@@ -25,6 +26,7 @@ public class Word_Search_II {
                         list.add(word);
         return list;
     }
+
     static boolean findWords(char[][] board, String word, int index, int row, int col) {
         if (index == word.length())
             return true;
@@ -35,7 +37,7 @@ public class Word_Search_II {
         char temp = board[row][col];
         board[row][col] = '#';
         boolean ans = findWords(board, word, index + 1, row + 1, col) || findWords(board, word, index + 1, row - 1, col)
-                || findWords(board, word, index + 1, row, col + 1) ||  findWords(board, word, index + 1, row, col - 1);
+                || findWords(board, word, index + 1, row, col + 1) || findWords(board, word, index + 1, row, col - 1);
         board[row][col] = temp;
         return ans;
     }

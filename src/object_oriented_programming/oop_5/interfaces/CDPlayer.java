@@ -1,6 +1,6 @@
 package object_oriented_programming.oop_5.interfaces;
 
-public class CDPlayer implements Media{
+public class CDPlayer implements Media {
 
     @Override
     public void start() {

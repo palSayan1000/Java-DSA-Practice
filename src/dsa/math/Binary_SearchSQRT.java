@@ -6,6 +6,7 @@ public class Binary_SearchSQRT {
         int p = 3;
         System.out.println(sqrt(n, p));
     }
+
     static double sqrt(int n, int p) {
         int s = 0;
         int e = n;

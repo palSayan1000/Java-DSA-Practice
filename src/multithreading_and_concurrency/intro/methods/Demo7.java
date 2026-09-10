@@ -2,7 +2,7 @@ package multithreading_and_concurrency.intro.methods;
 
 public class Demo7 {
     static void main() {
-        Thread t1 = new Thread ( () -> {
+        Thread t1 = new Thread(() -> {
             System.out.println("Custom thread running!!!");
         });
         t1.start();

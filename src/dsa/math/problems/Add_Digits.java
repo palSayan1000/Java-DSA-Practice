@@ -1,4 +1,5 @@
 package dsa.math.problems;
+
 // https://leetcode.com/problems/add-digits/description/
 public class Add_Digits {
     static void main() {

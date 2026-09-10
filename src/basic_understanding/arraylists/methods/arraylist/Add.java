@@ -8,7 +8,7 @@ public class Add {
         ArrayList<Integer> list = new ArrayList<>();
         System.out.println("Enter the array elements: ");
         // sc.hasNextInt() -> returns true as long as the user enters int
-        while(sc.hasNextInt())
+        while (sc.hasNextInt())
             list.add(sc.nextInt());
         // boolean -> return type always return true
         // add(E e) -> method

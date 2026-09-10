@@ -45,7 +45,7 @@ public class Linked_List_Cycle_II {
 
         while (length > 0) {
             second = second.next;
-            length --;
+            length--;
         }
 
         // keep moving both forward and they will meet at the start of the cycle
@@ -56,21 +56,23 @@ public class Linked_List_Cycle_II {
 
         return first;
     }
-        // find length of the cycle
-    private int lengthOfCycle (ListNode head) {
+
+    // find length of the cycle
+    private int lengthOfCycle(ListNode head) {
         ListNode fast = head, slow = fast;
         if (slow == null) throw new IllegalStateException("No cycle found");
         int lengthCount = 0;
         do {
-            lengthCount ++;
+            lengthCount++;
             slow = slow.next;
         } while (fast != slow);
         return lengthCount;
     }
 
-    private static  class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
+
         ListNode(int x) {
             val = x;
             next = null;

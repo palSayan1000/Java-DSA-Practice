@@ -15,7 +15,8 @@ public class Demo4 {
         try {
             t1.join();
             t2.join();
-        } catch (InterruptedException _) {}
+        } catch (InterruptedException _) {
+        }
 
         System.out.println(count.count); // Always 20000, because increment() is synchronized
     }

@@ -2,7 +2,7 @@ package object_oriented_programming.oop_6.comparing;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Student implements Comparable<Student>{
+public class Student implements Comparable<Student> {
     @SuppressWarnings("SpellCheckingInspection")
     int rollno;
     float marks;

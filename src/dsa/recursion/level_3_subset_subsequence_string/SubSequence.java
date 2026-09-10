@@ -8,6 +8,7 @@ public class SubSequence {
         // subSequence("", str);
         subSequence(str, 0, "");
     }
+
     /// My Approach
     static void subSequence(String str, int index, String current) {
         if (index == str.length()) {
@@ -17,6 +18,7 @@ public class SubSequence {
         subSequence(str, index + 1, current + str.charAt(index));
         subSequence(str, index + 1, current);
     }
+
     /// Returning ArrayList<String> but not taking as parameter
     static ArrayList<String> subsequence(String str, int index, String current) {
         if (index == str.length()) {
@@ -28,6 +30,7 @@ public class SubSequence {
         list.addAll(subsequence(str, index + 1, current));
         return list;
     }
+
     /// Taking arraylist<> as parameter
     static void subsequence(String str, int index, String current, ArrayList<String> list) {
         if (index == str.length()) {
@@ -37,6 +40,7 @@ public class SubSequence {
         subSequence(str, index + 1, current + str.charAt(index));
         subSequence(str, index + 1, current);
     }
+
     /// Kunal's Approach
     static void subSequence(String processed, String unprocessed) {
         if (unprocessed.isEmpty()) {

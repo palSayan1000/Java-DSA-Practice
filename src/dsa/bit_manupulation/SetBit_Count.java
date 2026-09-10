@@ -8,6 +8,7 @@ public class SetBit_Count {
         System.out.println(Integer.bitCount(n));
         System.out.println(setBits(n));
     }
+
     static int setBits(int n) {
         int count = 0;
 //        while (n > 0) {
@@ -16,7 +17,7 @@ public class SetBit_Count {
 //        }
         // or
         while (n > 0) {
-            count ++;
+            count++;
             n = n & (n - 1);
         }
         return count;

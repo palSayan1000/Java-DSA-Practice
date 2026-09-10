@@ -1,7 +1,7 @@
 package basic_understanding.math_func;
 
 public class NegateExact {
-    public static void main () {
+    public static void main() {
         //static int	negateExact(int a)
         //Returns the negation of the argument, throwing an exception if the result overflows an int.
         //static long	negateExact(long a)

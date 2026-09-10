@@ -3,9 +3,10 @@ package dsa.searching.binary.patterns.rotated;
 //https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 public class Rotated_Binary_Search {
     static void main() {
-        int[] arr = {4,5,6,7,0,1,2};
+        int[] arr = {4, 5, 6, 7, 0, 1, 2};
         System.out.println(search(arr, 0));
     }
+
     public static int search(int[] nums, int target) {
         int pivot = findPivot(nums);
         // if you do not find a pivot dust do normal binary search
@@ -20,6 +21,7 @@ public class Rotated_Binary_Search {
             return firstHalf;
         return binarySearch(nums, target, pivot + 1, nums.length - 1);
     }
+
     // this will not work for duplicate values
     static int findPivot(int[] arr) {
         if (arr.length == 0 || arr[0] < arr[arr.length - 1])
@@ -41,6 +43,7 @@ public class Rotated_Binary_Search {
         }
         return -1;
     }
+
     static int binarySearch(int[] arr, int target, int start, int end) {
         while (start <= end) {
             int mid = start + (end - start) / 2;

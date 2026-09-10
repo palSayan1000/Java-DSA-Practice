@@ -7,6 +7,7 @@ public class StringPermu {
         String str = "abcde";
         System.out.println(permutationsList(str, 0, ""));
     }
+
     static void permutations(String str, int index, String current) {
         if (index == str.length()) {
             System.out.println(current + "\t");
@@ -15,6 +16,7 @@ public class StringPermu {
         for (int i = 0; i <= index; i++)
             permutations(str, index + 1, current.substring(0, i) + str.charAt(index) + current.substring(i, index));
     }
+
     static ArrayList<String> permutationsList(String str, int index, String current) {
         if (index == str.length()) {
             ArrayList<String> list = new ArrayList<>();

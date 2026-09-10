@@ -8,10 +8,11 @@ public class Count_The_Digits_That_Divide_A_Number {
         System.out.println(obj.countDigits(7));
         System.out.println(obj.countDigits(1248));
     }
+
     public int countDigits(int num) {
         int copyNum = num, countDigits = 0;
         while (copyNum > 0) {
-            countDigits += num % (copyNum % 10) == 0? 1 : 0;
+            countDigits += num % (copyNum % 10) == 0 ? 1 : 0;
             copyNum /= 10;
         }
         return countDigits;

@@ -1,8 +1,8 @@
 package object_oriented_programming.oop_5.interfaces;
 
 public class NiceCar {
-    private Engine engine;
     private final Media player = new CDPlayer();
+    private Engine engine;
 
     public NiceCar() {
         engine = new PowerEngine();
@@ -35,6 +35,7 @@ public class NiceCar {
     public void stopPlayer() {
         player.stop();
     }
+
     // same as set engine
     public void updateEngine(Engine engine) {
         this.engine = engine;

@@ -1,6 +1,6 @@
 package object_oriented_programming.oop_5.interfaces;
 
-public class ElectricEngine implements Engine{
+public class ElectricEngine implements Engine {
 
     @Override
     public void start() {

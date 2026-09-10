@@ -8,6 +8,7 @@ public class Binary_Search {
         int ans = search(arr, target);
         System.out.println(ans);
     }
+
     public static int search(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
@@ -23,7 +24,7 @@ public class Binary_Search {
                 start = mid + 1;
                 continue;
             }
-            if(arr[mid] > target)
+            if (arr[mid] > target)
                 end = mid - 1;
         }
         return -1;

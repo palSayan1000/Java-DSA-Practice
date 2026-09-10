@@ -22,6 +22,7 @@ public class Constructor {
         int rno;
         float marks;
         String name;
+
         // by default constructor
         Student() {
 //            this.rno = 0;
@@ -31,6 +32,7 @@ public class Constructor {
             this("Kutta", 10, -99);
             // internally its is like Student("Kutta", 10, -99);
         } // constructor overloading
+
         // we need a way to add the above properties object by object
         // we need one word to access every object
         Student(String name, int rno, float marks) {
@@ -44,9 +46,11 @@ public class Constructor {
             this.marks = std.marks;
             this.name = std.name;
         }
+
         void greeting() {
             System.out.println("Hello " + this.name);
         }
+
         void changeName() {
             this.name = "Palu Da";
         }

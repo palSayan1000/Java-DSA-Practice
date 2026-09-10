@@ -9,6 +9,7 @@ public class Pell_Series {
         for (int i = 0; i <= n; i++)
             System.out.print(series(i) + "\t");
     }
+
     static int series(int n) {
         return (int) Math.round((Math.pow(1 + Math.sqrt(2), n) - Math.pow(1 - Math.sqrt(2), n)) / (2 * Math.sqrt(2)));
     }

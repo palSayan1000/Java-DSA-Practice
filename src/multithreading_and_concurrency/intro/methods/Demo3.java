@@ -2,16 +2,16 @@ package multithreading_and_concurrency.intro.methods;
 
 public class Demo3 {
     static void main() {
-        Thread t1 = new Thread ( () -> {
-            for (int i = 1; i <= 10; i ++) {
+        Thread t1 = new Thread(() -> {
+            for (int i = 1; i <= 10; i++) {
                 System.out.println("T1 : " + i);
 //                Thread.yield();
             }
         });
 
-        Thread t2 = new Thread ( () -> {
+        Thread t2 = new Thread(() -> {
 //            try {t1.join();} catch (InterruptedException _){}
-            for (int i = 1; i <= 10; i ++)
+            for (int i = 1; i <= 10; i++)
                 System.out.println("T2 : " + i);
         });
 

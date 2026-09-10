@@ -5,7 +5,8 @@ public class Prints_Hello {
         // write a function that prints hello world 5 times
         messege();
     }
-    static void messege(){
+
+    static void messege() {
         IO.println("Hello World");
         // i cannot modify this function
         // i cannot create new similar function

@@ -29,18 +29,21 @@ public class Final_Finalize_KeyWord {
         // so change in one changes the others
     }
 }
+
 class A {
-//    final int a; // always has to initialised while declaring
+    static int count = 0;
+    //    final int a; // always has to initialised while declaring
     // giving an error final variables has to be initialised
     // this is only for premitive data types
     final int num = 10;
     int ct = 0;
-    static int count = 0;
     String name;
+
     public A(String name) {
         this.name = name;
     }
-//    static void main() {
+
+    //    static void main() {
 //        final Student student = new Student();
 //        // here student = other object cannot be done student is fixed to this reference
 //        // but
@@ -54,19 +57,23 @@ class A {
     @Override
     protected void finalize() throws Throwable { // it is for remouval that is why showing in red
         System.out.println("Object is destroyed");
-        count ++;
-        ct ++;
+        count++;
+        ct++;
     }
 }
+
 class Student {
-     int rno;
-     float marks;
-     String name;
-     // after making this constructor making the defualt constructor becomes compulsory
-     Student(String name, int rno, float marks) {
-         this.rno = rno;
-         this.marks = marks;
-         this.name = name;
-     }
-     Student(){}
+    int rno;
+    float marks;
+    String name;
+
+    // after making this constructor making the defualt constructor becomes compulsory
+    Student(String name, int rno, float marks) {
+        this.rno = rno;
+        this.marks = marks;
+        this.name = name;
+    }
+
+    Student() {
+    }
 }

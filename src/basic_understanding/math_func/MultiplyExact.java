@@ -1,7 +1,7 @@
 package basic_understanding.math_func;
 
 public class MultiplyExact {
-    public static void main () {
+    public static void main() {
         //static int	multiplyExact(int x, int y)
         //Returns the product of the arguments, throwing an exception if the result overflows an int.
         //static long	multiplyExact(long x, long y)

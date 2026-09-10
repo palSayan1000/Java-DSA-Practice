@@ -1,7 +1,7 @@
 package basic_understanding.math_func;
 
 public class AddExact {
-    public static void main(){
+    public static void main() {
 //        static int	addExact(int x, int y)
 //        Returns the sum of its arguments, throwing an exception if the result overflows an int.
 //        static long	addExact(long x, long y)

@@ -4,8 +4,9 @@ public class BinarySearch {
     static void main() {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int target = 11;
-        System.out.println(search(arr, target,  0, arr.length - 1));
+        System.out.println(search(arr, target, 0, arr.length - 1));
     }
+
     static int search(int[] arr, int target, int start, int end) {
         if (start > end)
             return -1;

@@ -1,7 +1,7 @@
 package basic_understanding.math_func;
 
 public class Rint {
-    public static void main(){
+    public static void main() {
         //Math.rint(2.5) returns 2.0 (because 2 is an even number).
         //
         //Math.rint(3.5) returns 4.0 (because 4 is an even number).

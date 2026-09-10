@@ -9,6 +9,7 @@ public class Fibo_nth {
         int n = sc.nextInt();
         System.out.println("The nth fibo is: " + fibo(n));
     }
+
     static int fibo(int n) {
         if (n < 2)
             return n;

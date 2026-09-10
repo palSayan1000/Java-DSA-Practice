@@ -2,7 +2,7 @@ package dsa.linked_list.understanding.doubly;
 
 public class Main {
     static void main() {
-        DoublyLinkedList list =  new DoublyLinkedList();
+        DoublyLinkedList list = new DoublyLinkedList();
 //        list.insertFirst(10);
 //        list.insertFirst(11);
 //        list.insertFirst(12);

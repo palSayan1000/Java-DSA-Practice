@@ -6,6 +6,7 @@ public class Number_Of_1_Bits {
     static void main() {
         System.out.println(hammingWeight(11));
     }
+
     static int hammingWeight(int n) {
         return Integer.bitCount(n);
 //        while (n > 0) {

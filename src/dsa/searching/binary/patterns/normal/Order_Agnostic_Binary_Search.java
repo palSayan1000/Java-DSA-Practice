@@ -8,14 +8,15 @@ public class Order_Agnostic_Binary_Search {
         int ans = orderAgnosticBinarySearch(arr, target);
         System.out.println(ans);
     }
+
     static int orderAgnosticBinarySearch(int[] arr, int target) {
         int start = 0, end = arr.length - 1, flag = arr[0] > arr[arr.length - 1] ? -1 : 1;
         // using flag stored is it descending or ascending
-        while (start <= end){
+        while (start <= end) {
             int mid = start + (end - start) / 2;
             if (arr[mid] == target)
                 return mid;
-            if (flag == -1){
+            if (flag == -1) {
                 if (arr[mid] < target)
                     end = mid - 1;
                 else

@@ -1,4 +1,5 @@
 package multithreading_and_concurrency.intro.creation_and_life_cycle;
+
 // Second types of creating threads
 // Thread using Runnable Interface
 public class Demo2 {
@@ -17,6 +18,7 @@ public class Demo2 {
         thread.start();
     }
 }
+
 // Second types of creating threads
 // Thread using Runnable Interface
 class MyRunnable implements Runnable {
@@ -24,7 +26,8 @@ class MyRunnable implements Runnable {
     public void run() {
         System.out.println("Thread is running using Runnable interface");
     }
-    public void run2(){
+
+    public void run2() {
         System.out.println("My thread");
     }
 }

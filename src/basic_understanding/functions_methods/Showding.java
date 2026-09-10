@@ -2,6 +2,7 @@ package basic_understanding.functions_methods;
 
 public class Showding {
     static int x = 90; // why static you cannot use object depended things in  object depended things
+
     // this has it's own scope (above)
     static void main() {
         System.out.println(x); // 90

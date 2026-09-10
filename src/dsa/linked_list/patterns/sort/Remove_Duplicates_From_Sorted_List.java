@@ -4,6 +4,7 @@ public class Remove_Duplicates_From_Sorted_List {
     static void main() {
 
     }
+
     private ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = head.next, prev = head;
         while (dummy != null) {
@@ -17,6 +18,7 @@ public class Remove_Duplicates_From_Sorted_List {
         }
         return head;
     }
+
     // Kunal's solution
 //    private ListNode deleteDuplicatesKunal(ListNode head) {
 //        ListNode node = head;
@@ -33,10 +35,16 @@ public class Remove_Duplicates_From_Sorted_List {
         int val;
         ListNode next;
 
-        ListNode() {}
+        ListNode() {
+        }
 
-        ListNode(int val) { this.val = val; }
+        ListNode(int val) {
+            this.val = val;
+        }
 
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

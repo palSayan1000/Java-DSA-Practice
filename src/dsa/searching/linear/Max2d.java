@@ -10,10 +10,11 @@ public class Max2d {
         };
         System.out.println(max(arr));
     }
+
     public static int max(int[][] arr) {
         int max = Integer.MIN_VALUE;
-        for(int[] i: arr)
-            for(int j: i)
+        for (int[] i : arr)
+            for (int j : i)
                 max = Math.max(max, j);
         return max;
     }

@@ -15,11 +15,11 @@ public class VarArgs {
         multiple(2, 3, "Kunal", "Sayan", "Pal", "Rahul", "Allah amar gare");
     }
 
-    static void multiple (int a, int b, String... names) {
+    static void multiple(int a, int b, String... names) {
 
     }
 
-    static void func (int ...nums) {
+    static void func(int... nums) {
         // int ...nums -> internally it is taking it as an array of integers
         // or char ...ch or String... str (three dots are needed)
         System.out.println(Arrays.toString(nums)); // arrays is just a collection of integers

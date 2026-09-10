@@ -4,9 +4,10 @@ public class Selection_Sort {
     static void main() {
         int[] arr = {5, 4, 3, 2, 1};
 //        sort(arr, 0, 0);
-        selection(arr, arr.length, 0,0);
+        selection(arr, arr.length, 0, 0);
         System.out.println(java.util.Arrays.toString(arr));
     }
+
     // My one
     static int sort(int[] arr, int i, int j) {
         if (i == arr.length - 1 || j == arr.length - 1)
@@ -19,6 +20,7 @@ public class Selection_Sort {
         arr[i] = temp;
         return sort(arr, i + 1, i + 1);
     }
+
     // Kunal's one
     static void selection(int[] arr, int i, int j, int max) {
         if (i == 0) return;

@@ -5,11 +5,6 @@ public class BoxWeight extends Box {
     // also used for priventing inheritance
     double weight;
 
-//    @Override // writting this gives error so static methods cannot be overriden
-    static void greeting() {
-        System.out.println("Hey, I am in BoxWeight class. Greetings!!!");
-    }
-
     public BoxWeight() {
         this.weight = -1.0;
         // private members (like ll) can't be accessed here, only within Box itself
@@ -35,5 +30,10 @@ public class BoxWeight extends Box {
         super(length, height, width); // calls parent constructor to init parent's fields
         System.out.println(super.weight); // super.field accesses parent's version when names clash
         this.weight = weight;
+    }
+
+    //    @Override // writting this gives error so static methods cannot be overriden
+    static void greeting() {
+        System.out.println("Hey, I am in BoxWeight class. Greetings!!!");
     }
 }

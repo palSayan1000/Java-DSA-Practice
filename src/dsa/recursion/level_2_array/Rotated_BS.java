@@ -5,6 +5,7 @@ public class Rotated_BS {
         int[] arr = {5, 6, 7, 8, 9, 1, 2, 3};
         System.out.println(search(arr, 5, 0, arr.length - 1));
     }
+
     static int search(int[] arr, int target, int start, int end) {
         if (end < start) return -1;
         int mid = start + (end - start) / 2;

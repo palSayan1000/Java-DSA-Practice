@@ -16,15 +16,19 @@ public class Demo2 {
 
     static void main() {
         AtomicBoolean flag = new AtomicBoolean(false); // — internally, this also uses a volatile field under the hood, so you get the same visibility guarantee. But it wraps it in an object with atomic methods like get(), set(), compareAndSet().
-        Thread t1 = new Thread ( () -> {
-            try { Thread.sleep(1000); } catch (InterruptedException _) {}
+        Thread t1 = new Thread(() -> {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException _) {
+            }
             flag.set(true); // cache --> flag = true --> ram --> flag = true -> but thread two does not know this
         });
 
-        Thread t2= new Thread ( () -> { // cache --> flag = false;
-            while (!flag.get()); // this flag value is stored in cache so it is false even after the value in the ram has changed
+        Thread t2 = new Thread(() -> { // cache --> flag = false;
+            while (!flag.get())
+                ; // this flag value is stored in cache so it is false even after the value in the ram has changed
             // the above is an infinite loop
-                // System.out.println("Second Thread is Running!!!!"); //synchronized
+            // System.out.println("Second Thread is Running!!!!"); //synchronized
             System.out.println("Thread two finished!!!!");
         });
 

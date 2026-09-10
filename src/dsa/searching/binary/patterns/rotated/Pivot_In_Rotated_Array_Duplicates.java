@@ -24,8 +24,8 @@ public class Pivot_In_Rotated_Array_Duplicates {
                 // check if end is pivot
                 if (arr[end] < arr[end - 1])
                     return end - 1;
-                start ++;
-                end --;
+                start++;
+                end--;
             }
             // left side is sorted so, pivot should be in right
             else if (arr[start] < arr[mid] || (arr[start] == arr[mid] && arr[mid] > arr[end]))

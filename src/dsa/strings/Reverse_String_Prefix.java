@@ -23,10 +23,11 @@ public class Reverse_String_Prefix {
 //        }
 //        return sb.toString();
 //    }
-////// Using toCharArray ->
+
+    /// /// Using toCharArray ->
     static String reversePrefix(String str, int k) {
         char[] ch = str.toCharArray();
-        for (int i = 0; i < k / 2; i++){
+        for (int i = 0; i < k / 2; i++) {
             char temp = ch[i];
             ch[i] = ch[k - 1 - i];
             ch[k - 1 - i] = temp;

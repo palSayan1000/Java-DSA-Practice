@@ -6,7 +6,7 @@ public class Operators {
     static void main() {
         System.out.println('a' + 'b');
         System.out.println("a" + "b");
-        System.out.println((char)('a' + 3));
+        System.out.println((char) ('a' + 3));
         System.out.println("a" + 1);
         // this is same a after a few steps: "a" + "1"
         // integer will be converted to Integer that will call toString()

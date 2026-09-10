@@ -4,6 +4,7 @@ public class N_Knights {
     static void main() {
         knight(new boolean[4][4], 0, 0, 8);
     }
+
     static void knight(boolean[][] board, int row, int col, int knights) {
         if (knights == 0) {
             displayBoard(board);
@@ -22,6 +23,7 @@ public class N_Knights {
         }
         knight(board, row, col + 1, knights);
     }
+
     static boolean isSafe(boolean[][] board, int row, int col) {
         if (isValid(board, row - 2, col - 1) && board[row - 2][col - 1]) return false;
         if (isValid(board, row - 2, col + 1) && board[row - 2][col + 1]) return false;
@@ -33,10 +35,12 @@ public class N_Knights {
         if (isValid(board, row + 1, col - 2) && board[row + 1][col - 2]) return false;
         return true;
     }
+
     // do not repeat yourself hence created this func
     static boolean isValid(boolean[][] board, int row, int col) {
         return row >= 0 && row < board.length && col >= 0 && col < board.length;
     }
+
     static void displayBoard(boolean[][] board) {
         for (boolean[] row : board) {
             for (boolean col : row)

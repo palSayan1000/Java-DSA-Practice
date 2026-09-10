@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class Product_Of_Array_Except_Self {
     static void main() {
         System.out.println("Product of array except self: " +
-                Arrays.toString(new Product_Of_Array_Except_Self().productExceptSelf(new int[]{-1,1,0,-3,3})));
+                Arrays.toString(new Product_Of_Array_Except_Self().productExceptSelf(new int[]{-1, 1, 0, -3, 3})));
     }
+
     int[] productExceptSelf(int[] nums) {
         int[] ans = new int[nums.length];
         ans[0] = 1;

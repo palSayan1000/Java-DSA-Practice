@@ -2,7 +2,7 @@ package multithreading_and_concurrency.intro.creation_and_life_cycle;
 
 public class Demo4 {
     static void main() {
-        Thread t1 = new Thread ( () ->{
+        Thread t1 = new Thread(() -> {
             System.out.println("Current Thread: " + Thread.currentThread().getName());
             System.out.println(("Current Thread: " + Thread.currentThread().getClass()));
         });

@@ -9,6 +9,7 @@ public class PassinginFunc {
         chnage(nums);
         System.out.println(Arrays.toString(nums));
     }
+
     static void chnage(int[] nums) {
         nums[0] = 99;
     }

@@ -6,6 +6,7 @@ public class Bubble_Sort {
         sort(arr, 0, 0);
         System.out.println(java.util.Arrays.toString(arr));
     }
+
     static void sort(int[] arr, int i, int j) {
         if (i == arr.length - 1)
             return;

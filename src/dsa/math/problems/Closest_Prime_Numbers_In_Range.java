@@ -1,4 +1,5 @@
 package dsa.math.problems;
+
 // https://leetcode.com/problems/closest-prime-numbers-in-range/
 public class Closest_Prime_Numbers_In_Range {
     static void main() {
@@ -6,6 +7,7 @@ public class Closest_Prime_Numbers_In_Range {
         System.out.println("Enter the range: ");
         System.out.println("The closest prime number is " + java.util.Arrays.toString(closestPrimes(sc.nextInt(), sc.nextInt())));
     }
+
     static int[] closestPrimes(int startRange, int endRange) {
         if (startRange >= endRange || endRange <= 2) return new int[]{-1, -1};
         boolean[] primes = new boolean[endRange + 1];
@@ -28,6 +30,7 @@ public class Closest_Prime_Numbers_In_Range {
             ans[0] = -1;
         return ans;
     }
+
     // false means prime and vise-versa
     static void sieve(boolean[] primes) {
         primes[0] = primes[1] = true;

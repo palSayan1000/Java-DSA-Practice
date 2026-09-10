@@ -2,10 +2,10 @@ package dsa.linked_list.understanding.doubly;
 
 public class DoublyLinkedList {
 
-    private Node head,tail;
+    private Node head, tail;
     private int size;
 
-    public DoublyLinkedList () {
+    public DoublyLinkedList() {
         size = 0;
         head = tail = null;
     }
@@ -16,7 +16,7 @@ public class DoublyLinkedList {
     }
 
     public void insertFirst(int val) {
-        Node node = new Node (val);
+        Node node = new Node(val);
         node.next = head;
         if (head != null)
             head.prev = node;
@@ -24,11 +24,11 @@ public class DoublyLinkedList {
         head = node;
         if (tail == null)
             tail = head;
-        size ++;
+        size++;
     }
 
-    public void display () {
-        Node dummy  = head;
+    public void display() {
+        Node dummy = head;
         while (dummy != null) {
             System.out.print(dummy.value + " --> ");
             dummy = dummy.next;
@@ -36,8 +36,8 @@ public class DoublyLinkedList {
         System.out.println("null.");
     }
 
-    public void displayRev () {
-        Node dummy  = head, last = null;
+    public void displayRev() {
+        Node dummy = head, last = null;
         System.out.println("Print in Strait :-");
         while (dummy != null) {
             System.out.print(dummy.value + " --> ");
@@ -53,7 +53,7 @@ public class DoublyLinkedList {
         System.out.println("START.");
     }
 
-    public void insertLast (int val) {
+    public void insertLast(int val) {
         if (head == null) {
             insertFirst(val);
             return;
@@ -66,26 +66,26 @@ public class DoublyLinkedList {
         dummy.next = node;
         node.next = null;
         node.prev = dummy;
-        size ++;
+        size++;
     }
 
-    public void insert (int index, int val) {
+    public void insert(int index, int val) {
         if (index == 0) {
             insertFirst(val);
             return;
         }
         if (index == size) {
-           insertLast(val);
-           return;
+            insertLast(val);
+            return;
         }
         Node dummy = head, newNode;
         for (int i = 1; i < index; i++)
             dummy = dummy.next;
         dummy.next = new Node(val, dummy.next, dummy);
-        size ++;
+        size++;
     }
 
-    public Node find (int value) {
+    public Node find(int value) {
         Node node = head;
         while (node != null) {
             if (node.value == value)
@@ -96,17 +96,17 @@ public class DoublyLinkedList {
     }
 
     // Inserting an node after a specific node with the given value
-    public void insertAfter (int value, int newNodeVal) {
-        Node dummy = find (value);
+    public void insertAfter(int value, int newNodeVal) {
+        Node dummy = find(value);
         if (dummy == null)
             return;
-        Node node = new Node (newNodeVal);
+        Node node = new Node(newNodeVal);
         node.next = dummy.next;
         if (dummy.next != null)
             dummy.next.prev = node;
         dummy.next = node;
         node.prev = dummy;
-        size ++;
+        size++;
     }
 
     private static class Node {

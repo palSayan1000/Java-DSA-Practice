@@ -1,6 +1,18 @@
 package object_oriented_programming.oop_7.enums;
 
 public class Basic {
+    static void main() {
+        Week week;
+        week = Week.Monday;
+
+        // iterating over the Week enum
+//        for (Week day : Week.values())
+//            System.out.println(day);
+
+        System.out.println(week);
+        System.out.println(week.ordinal());
+    }
+
     enum Week { // enum cannot extend anything
         Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday;
         // this is enum constants
@@ -18,17 +30,5 @@ public class Basic {
         // internally :
         // public static final week Monday = new Week();
         // every enum expecitly extends java.lang.enum class
-    }
-
-    static void main() {
-        Week week;
-        week = Week.Monday;
-
-        // iterating over the Week enum
-//        for (Week day : Week.values())
-//            System.out.println(day);
-
-        System.out.println(week);
-        System.out.println(week.ordinal());
     }
 }

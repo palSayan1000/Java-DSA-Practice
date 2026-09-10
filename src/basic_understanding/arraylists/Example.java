@@ -20,7 +20,7 @@ public class Example {
         list.set(0, 99);
         list.remove(3);
         System.out.println(list);
-        for(int num: list)
+        for (int num : list)
             System.out.print(num + "\t");
         System.out.println();
     }

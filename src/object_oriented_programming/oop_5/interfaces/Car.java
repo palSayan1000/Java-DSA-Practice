@@ -1,7 +1,8 @@
 package object_oriented_programming.oop_5.interfaces;
 
-public class Car implements Engine, Media, Brake, CarType{
+public class Car implements Engine, Media, Brake, CarType {
     int a = 100;
+
     @Override
     public void start() {
         System.out.println("I start engine like a normal car");

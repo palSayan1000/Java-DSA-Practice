@@ -23,7 +23,7 @@ public class Main {
             }
         } catch (MyException e) { // it catches my created exception
             System.out.println(e.getMessage());
-        } catch (ArithmeticException e){ // this multiple catch you have to provide the strict exceptions at firsts
+        } catch (ArithmeticException e) { // this multiple catch you have to provide the strict exceptions at firsts
             System.out.println(e.getMessage());
         } catch (Exception e) {
             System.err.println(e.getMessage());
@@ -33,7 +33,7 @@ public class Main {
         }
     }
 
-    static int divide (int a, int b) throws ArithmeticException{ // when ever you throw an exception you have to explicitly declare it here as well
+    static int divide(int a, int b) throws ArithmeticException { // when ever you throw an exception you have to explicitly declare it here as well
         // in case of explicitly throwing something
         if (b == 0) {
             throw new ArithmeticException("Please do not divide by zero");

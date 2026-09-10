@@ -5,7 +5,8 @@ public class Triangle_2 {
         // pattern1(5, 1);
         pattern_(1, 1);
     }
-    static void pattern_(int row, int col){
+
+    static void pattern_(int row, int col) {
         if (col > row) return;
         if (row == 5) return;
         pattern_(row, col + 1);
@@ -15,6 +16,7 @@ public class Triangle_2 {
             pattern_(row + 1, 1);
         }
     }
+
     static void pattern(int row, int col) {
         if (row == 0) return;
         if (col == row) {

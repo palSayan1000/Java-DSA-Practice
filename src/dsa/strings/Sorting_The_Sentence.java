@@ -4,13 +4,14 @@ public class Sorting_The_Sentence {
     static void main() {
         System.out.println(new Sorting_The_Sentence().sortSentence("is2 sentence4 This1 a3"));
     }
-    public String sortSentence (String s) {
+
+    public String sortSentence(String s) {
         String[] words = s.split(" ");
-        for (int i = 0; i < words.length; i ++)
+        for (int i = 0; i < words.length; i++)
             if (words[i].charAt(words[i].length() - 1) - 48 != i + 1) {
                 String temp = words[words[i].charAt(words[i].length() - 1) - 48 - 1];
                 words[words[i].charAt(words[i].length() - 1) - 48 - 1] = words[i];
-                words[i --] = temp;
+                words[i--] = temp;
             } else
                 words[i] = words[i].substring(0, words[i].length() - 1);
         return String.join(" ", words);

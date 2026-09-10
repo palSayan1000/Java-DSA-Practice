@@ -1,6 +1,6 @@
 package object_oriented_programming.oop_4.access;
 
-public class SubClass extends A{
+public class SubClass extends A {
 
     SubClass(int num, String name) {
         super(num, name);
@@ -20,16 +20,19 @@ public class SubClass extends A{
         System.out.println(ob instanceof String);
     }
 }
-class SubSubClass extends A{
+
+class SubSubClass extends A {
     SubSubClass(int num, String name) {
         super(num, name);
     }
+
     static void main() {
         SubSubClass obj = new SubSubClass(10, "Sayan Pal");
         obj.number = 0; // sub-sub-class can also access protected variables
     }
 }
-class SubClass2 extends A{
+
+class SubClass2 extends A {
     SubClass2(int num, String name) {
         super(num, name);
     }

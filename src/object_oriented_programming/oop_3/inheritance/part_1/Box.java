@@ -4,8 +4,8 @@ public class Box {
     double length;
     double height;
     double width;
-    private double ll;
     double weight = 9.9;
+    private double ll;
 
     Box() {
         // super(); // calling super() in parent class // object class

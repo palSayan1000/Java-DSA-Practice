@@ -3,6 +3,10 @@ package object_oriented_programming.oop_6.lamda;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+interface Operation {
+    int operation(int a, int b);
+}
+
 public class LambdaFunc {
     static void main() {
         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(new Integer[]{3, 4, 52, 8, 9}));
@@ -22,7 +26,7 @@ public class LambdaFunc {
         Operation addition = (a, b) -> (a + b);
         Operation product = (a, b) -> (a * b);
         Operation subtraction = (a, b) -> (a - b);
-         // Operation sum = Integer::sum;
+        // Operation sum = Integer::sum;
         LambdaFunc myCal = new LambdaFunc();
         System.out.println(myCal.operate(5, 3, addition));
         System.out.println(myCal.operate(5, 3, product));
@@ -30,14 +34,11 @@ public class LambdaFunc {
 
     }
 
-    private int operate (int a, int b, Operation op) {
+    private int operate(int a, int b, Operation op) {
         return op.operation(a, b);
     }
-    int sum (int a, int b) {
+
+    int sum(int a, int b) {
         return a + b;
     }
-}
-
-interface Operation {
-    int operation (int a, int b);
 }

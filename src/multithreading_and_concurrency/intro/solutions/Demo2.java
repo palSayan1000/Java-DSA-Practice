@@ -8,7 +8,8 @@ public class Demo2 {
         // It's part of the same Thread.Builder API introduced in Java 21 alongside
         // Thread.ofVirtual() — both implement the common Thread.Builder interface, just producing different thread types.
 
-        /*Thread t1 = */Thread.ofPlatform().start(test::show);   // started immediately
+        /*Thread t1 = */
+        Thread.ofPlatform().start(test::show);   // started immediately
         Thread t2 = Thread.ofPlatform().unstarted(test::show); // created, not started
 
         t2.start();
@@ -31,16 +32,17 @@ public class Demo2 {
 
 class Test {
 
-    synchronized void show () {
+    public static void Test() {
+    }
+
+    synchronized void show() {
         System.out.println(Thread.currentThread().getName() + " --> Inside Show!!");
 
         try {
             Thread.sleep(2000);
-        } catch (InterruptedException _) {}
+        } catch (InterruptedException _) {
+        }
 
         System.out.println(Thread.currentThread().getName() + " --> Show Finish!!");
-    }
-
-    public static void Test() {
     }
 }

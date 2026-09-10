@@ -9,15 +9,16 @@ public class Overloading_In_VarArgs {
         // demo(); // error
         // here the VarArgs method parameter could not be empty as at compile time it could not decide which to call
     }
-    static void demo (int... arr) {
+
+    static void demo(int... arr) {
         System.out.println(Arrays.toString(arr));
     }
 
-    static void demo (String... arr) {
+    static void demo(String... arr) {
         System.out.println(Arrays.toString(arr));
     }
 
-    static void demo(char ...arr) {
+    static void demo(char... arr) {
         System.out.println(Arrays.toString(arr));
     }
 }

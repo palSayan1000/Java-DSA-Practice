@@ -4,38 +4,11 @@ public class ObjectDemo {
     /// overriding methods from the object class
     int num;
     float gpa;
+
     // already covered this
     public ObjectDemo(int num, float gpa) {
         this.num = num;
         this.gpa = gpa;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
-    @Override
-    public int hashCode() {
-        return /*super.hashCode()*/ num;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-//        return super.equals(obj);
-        // overriding the equals and creating my own
-        return this.num == ((ObjectDemo)obj).num; // (ObjectDemo)obj -> converted Object obj (which includes object of ObjectDemo to ObjectDemo)
-        // why casting is required as remember parent class does not know about child class
-    }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
-    // already covered this // calls during object destruction
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
     }
 
     public static void main(String[] args) {
@@ -61,5 +34,34 @@ public class ObjectDemo {
 //        System.out.println(demo.hashCode());
 //        System.out.println(obj.hashCode());
 
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    @Override
+    public int hashCode() {
+        return /*super.hashCode()*/ num;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+//        return super.equals(obj);
+        // overriding the equals and creating my own
+        return this.num == ((ObjectDemo) obj).num; // (ObjectDemo)obj -> converted Object obj (which includes object of ObjectDemo to ObjectDemo)
+        // why casting is required as remember parent class does not know about child class
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    // already covered this // calls during object destruction
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
     }
 }

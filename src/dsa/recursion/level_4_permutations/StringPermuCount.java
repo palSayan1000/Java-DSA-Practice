@@ -5,6 +5,7 @@ public class StringPermuCount {
         String str = "abcde";
         System.out.println("Total no.of permutations: " + permutations(str, 0, ""));
     }
+
     static int permutations(String str, int index, String current) {
         if (index == str.length())
             return 1;

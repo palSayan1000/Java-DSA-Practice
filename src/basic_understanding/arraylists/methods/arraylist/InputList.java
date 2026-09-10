@@ -12,7 +12,8 @@ public class InputList {
         sc.nextLine();
         return list;
     }
-    public static ArrayList<Integer> input(java.util.Scanner sc){
+
+    public static ArrayList<Integer> input(java.util.Scanner sc) {
         ArrayList<Integer> list = new ArrayList<>();
         System.out.println("Enter the array elements: ");
         while (sc.hasNextInt())

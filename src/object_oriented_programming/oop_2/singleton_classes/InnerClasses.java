@@ -1,21 +1,6 @@
 package object_oriented_programming.oop_2.singleton_classes;
 
 public class InnerClasses {
-    // only inner classes can be static
-    // static methods are done during compile time
-    static class Test { // if you do static like this internally everything inside becomes static
-        // if this was not it cannot be reference adn this class itself is dependent on the outside class
-        String name;
-        Test(String name) {
-            this.name = name;
-        }
-
-        @Override
-        public String toString() {
-            return name;
-        }
-    }
-
     static void main() {
 //        Test obj = new Test("Bal");
         // the above will give an error if the Test class is not static
@@ -38,6 +23,22 @@ public class InnerClasses {
 
         // static inner class means that the Test is not dependent of the outer class
         // but the main the test  can have instances of each other
+    }
+
+    // only inner classes can be static
+    // static methods are done during compile time
+    static class Test { // if you do static like this internally everything inside becomes static
+        // if this was not it cannot be reference adn this class itself is dependent on the outside class
+        String name;
+
+        Test(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return name;
+        }
     }
 }
 

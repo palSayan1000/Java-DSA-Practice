@@ -7,6 +7,7 @@ public class Floor_Of_A_Number {
         int target = 15;
         System.out.println("The ceiling of the number is: " + getFloorNum(arr, target));
     }
+
     // grestest number that is smaller or equal to target
     static int getFloorNum(int[] arr, int target) {
         if (target < arr[0])

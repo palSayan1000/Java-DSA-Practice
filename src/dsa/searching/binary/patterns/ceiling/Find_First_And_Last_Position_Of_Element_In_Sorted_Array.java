@@ -10,7 +10,8 @@ public class Find_First_And_Last_Position_Of_Element_In_Sorted_Array {
         int target = 8;
         System.out.println("The result: " + Arrays.toString(searchRange(arr, target)));
     }
-        // Kunal's Solution
+
+    // Kunal's Solution
     static public int[] searchRange(int[] nums, int target) {
         int[] ans = {-1, -1};
         int start = binarySearch(nums, target, true);
@@ -19,6 +20,7 @@ public class Find_First_And_Last_Position_Of_Element_In_Sorted_Array {
         ans[1] = end;
         return ans;
     }
+
     static int binarySearch(int[] nums, int target, boolean flag) {
         int ans = -1;
         int start = 0;

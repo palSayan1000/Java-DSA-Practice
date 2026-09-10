@@ -4,6 +4,7 @@ public class Newton_Raphson_SQRT {
     static void main() {
         System.out.println(sqrt(40));
     }
+
     static double sqrt(double n) {
         double x = n;
         double root;

@@ -6,7 +6,10 @@ public interface Engine {
     // it is by default static and final
 
     void start();
+
     void stop();
+
     void acc();
+
     void type();
 }

@@ -1,33 +1,46 @@
 package object_oriented_programming.oop_6.generic;
 
 //import java.util.ArrayList;
+
 import java.util.Arrays;
 
 public class CustomArrayList {
 
-    private int[] data;
     private static final int DEFAULT_SIZE = 10;
+    private int[] data;
     private int size = 0; // also working as index value
 
     public CustomArrayList() {
         this.data = new int[DEFAULT_SIZE];
     }
+
     public CustomArrayList(int size) {
         this.data = new int[this.size = size];
+    }
+
+    static void main() {
+//        ArrayList list = new ArrayList();
+        CustomArrayList list = new CustomArrayList();
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(10);
+
+        System.out.println(list);
     }
 
     public void add(int num) {
         if (isFull()) {
             reSize();
         }
-        data[size ++] = num;
+        data[size++] = num;
     }
 
     private void reSize() {
         int[] temp = new int[data.length * 2];
 
         // copy the current items in the new array
-        for (int i = 0; i < data.length; i ++)
+        for (int i = 0; i < data.length; i++)
             temp[i] = data[i];
         //System.arraycopy(data, 0, temp, 0, data.length);
         data = temp;
@@ -47,7 +60,7 @@ public class CustomArrayList {
 
     public int removeFirst() {
         int temp = data[0];
-        for (int i = 1; i < size; i ++)
+        for (int i = 1; i < size; i++)
             data[i - 1] = data[i];
         size--;
         return temp;
@@ -55,7 +68,7 @@ public class CustomArrayList {
 
     public int removeLast() {
         int temp = data[size - 1];
-        size --;
+        size--;
         return temp;
     }
 
@@ -70,7 +83,7 @@ public class CustomArrayList {
         return data[index];
     }
 
-    public int size(){
+    public int size() {
         return size;
     }
 
@@ -83,17 +96,6 @@ public class CustomArrayList {
     @Override
     public String toString() {
         return "CustomArrayList{" + "data=" + Arrays.toString(data) + ", size=" + size + '}';
-    }
-
-    static void main() {
-//        ArrayList list = new ArrayList();
-        CustomArrayList list = new CustomArrayList();
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        list.add(10);
-
-        System.out.println(list);
     }
 }
 // Methods to add

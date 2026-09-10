@@ -4,6 +4,7 @@ public class Concept {
     static void main() {
         fun(5);
     }
+
     static void fun(int n) {
         if (n == 0)
             return;

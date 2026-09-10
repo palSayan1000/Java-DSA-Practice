@@ -14,7 +14,9 @@ public class Cat {
     }
 
     @Constructors
-    public Cat(String name) { this.name = name; }
+    public Cat(String name) {
+        this.name = name;
+    }
 
     @RunImmediately
     public void eat() {

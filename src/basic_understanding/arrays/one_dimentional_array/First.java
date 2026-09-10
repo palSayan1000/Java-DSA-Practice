@@ -1,7 +1,7 @@
 package basic_understanding.arrays.one_dimentional_array;
 
 public class First {
-    public static void main(){
+    public static void main() {
         //Q. Store a roll no.
         int roll = 5;
 

@@ -8,6 +8,7 @@ public class Count_Primes {
         if (n <= 2) return 0;
         return sieve(new boolean[n]);
     }
+
     static int sieve(boolean[] primes) {
         int countNonPrimes = 0;
         for (int i = 2; i * i < primes.length; i++)

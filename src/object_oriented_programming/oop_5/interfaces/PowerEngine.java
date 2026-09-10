@@ -1,6 +1,6 @@
 package object_oriented_programming.oop_5.interfaces;
 
-public class PowerEngine implements Engine{
+public class PowerEngine implements Engine {
 
     @Override
     public void start() {

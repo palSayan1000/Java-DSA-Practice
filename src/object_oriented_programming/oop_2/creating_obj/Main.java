@@ -7,11 +7,7 @@ public class Main {
 //                rahul = new Human(34, "Rahul", 15_000, true);
 //        System.out.println(Human.population);
         Main m = new Main();
-        m. fun2();
-    }
-
-    void greeting() {
-        System.out.println("Hello World");
+        m.fun2();
     }
 
     static void func() {
@@ -21,6 +17,11 @@ public class Main {
         // you cannot access without referencing there instances in a static context
         // hence i am referencing it
     }
+
+    void greeting() {
+        System.out.println("Hello World");
+    }
+
     void fun2() {
         greeting();
     }

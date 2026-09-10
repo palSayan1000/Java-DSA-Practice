@@ -8,6 +8,7 @@ public class Backtracking_UDRL {
         // allPaths_UDLR("", board, 0, 0);
         allPathsPrint("", board, 0, 0, new int[board.length][board[0].length], 1);
     }
+
     static void allPaths_UDLR(String p, boolean[][] maze, int r, int c) {
         if (r == maze.length - 1 && c == maze[0].length - 1) {
             System.out.println(p);
@@ -34,10 +35,11 @@ public class Backtracking_UDRL {
         // so before the fucntion gets removed, also remove the changes that were made by that function
         maze[r][c] = false;
     }
+
     static void allPathsPrint(String p, boolean[][] maze, int r, int c, int[][] path, int step) {
         if (r == maze.length - 1 && c == maze[0].length - 1) {
             path[r][c] = step;
-            for (int[] i: path)
+            for (int[] i : path)
                 System.out.println(Arrays.toString(i));
             System.out.println(p + "\n");
             return;

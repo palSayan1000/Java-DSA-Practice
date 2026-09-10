@@ -1,7 +1,7 @@
 package object_oriented_programming.oop_4.access;
 
 public class A {
-    private int num;
+    protected int number;
     // int num; // if u do like this it is default access specifier
     // in the different package it will not be able to allow but in the same package it will be able to allow
     // default basically means you are not able to access outside the package
@@ -9,7 +9,13 @@ public class A {
     // public every where (after importing in other packages and in same package no import required)
     String name;
     int[] arr;
-    protected int number;
+    private int num;
+
+    public A(int num, String name) {
+        this.num = num;
+        this.name = name;
+        this.arr = new int[num];
+    }
 
     public int getNum() {
         return num;
@@ -17,11 +23,5 @@ public class A {
 
     public void setNum(int num) {
         this.num = num;
-    }
-
-    public A(int num, String name) {
-        this.num = num;
-        this.name = name;
-        this.arr = new int[num];
     }
 }

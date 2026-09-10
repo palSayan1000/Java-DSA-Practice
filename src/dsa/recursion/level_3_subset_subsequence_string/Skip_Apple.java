@@ -5,6 +5,7 @@ public class Skip_Apple {
         String str = "bacappledgf";
         System.out.println(skipApple(str));
     }
+
     static String skipApple(String up) {
         if (up.isEmpty()) {
             return "";
@@ -15,6 +16,7 @@ public class Skip_Apple {
             return up.charAt(0) + skipApple(up.substring(1));
         }
     }
+
     // should skipp app not apple
     static String skipAppApple(String up) {
         if (up.isEmpty()) {

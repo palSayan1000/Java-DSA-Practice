@@ -1,7 +1,7 @@
 package basic_understanding.math_func;
 
 public class Floor {
-    public static void main () {
+    public static void main() {
         /*
         static double	floor(double a)
         Returns the largest (closest to positive infinity) double value that is less than or equal to the argument and is equal to a mathematical integer.

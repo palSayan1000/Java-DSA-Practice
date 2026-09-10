@@ -1,6 +1,8 @@
 package object_oriented_programming.oop_2.singleton_classes;
 
 public class Singleton {
+    private static Singleton instance;
+
     // classes where only one object can be created
     // if you want to only create only one object you should not allow it to
     // call the constructor of the class
@@ -12,7 +14,7 @@ public class Singleton {
         // in this class only basically
         // you can call the constructor in this fileonly
     }
-    private static Singleton instance;
+
     public static Singleton getInstance() {
         // check wheather if one object iscreated or not
         if (instance == null) {
@@ -20,6 +22,7 @@ public class Singleton {
         }
         return instance;
     }
+
     static void main() {
         Singleton obj = new Singleton();
         // can only create the obj inthis file only

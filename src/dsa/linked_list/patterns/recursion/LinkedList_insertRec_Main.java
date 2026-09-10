@@ -9,7 +9,7 @@ class LinkedList_insertRec {
     }
 
     // insert using recursion
-    public void insertRec (int val, int index) {
+    public void insertRec(int val, int index) {
 //        Node dummy = new Node (head);
 //        insertRec(val, index + 1, dummy);
 
@@ -23,9 +23,9 @@ class LinkedList_insertRec {
     }
 
     // kunal kushwaha solution
-    private Node insertRevKunal (int val, int index, Node node) {
+    private Node insertRevKunal(int val, int index, Node node) {
         if (index == 0) {
-            Node temp = new Node (val, node);
+            Node temp = new Node(val, node);
             // size ++;
             return temp;
         }
@@ -34,7 +34,7 @@ class LinkedList_insertRec {
         return node;
     }
 
-    private void insertRec (int val, int index, Node dummy) { // here the Node next excepts a dummy new Node whole next points to head
+    private void insertRec(int val, int index, Node dummy) { // here the Node next excepts a dummy new Node whole next points to head
         if (index == 1) {
             Node node = new Node(val);
             node.next = dummy.next;
@@ -46,9 +46,9 @@ class LinkedList_insertRec {
         insertRec(val, index - 1, dummy.next);
     }
 
-    private Node insertRec (Node node, int val, int index) {
+    private Node insertRec(Node node, int val, int index) {
         if (index == 0) {
-            Node newNode = new Node (val);
+            Node newNode = new Node(val);
             newNode.next = node;
             return newNode;
         }
@@ -56,15 +56,15 @@ class LinkedList_insertRec {
         return node;
     }
 
-    public void display () {
+    public void display() {
         displayRec(head);
     }
 
-    public void displayRec () {
+    public void displayRec() {
         displayRevRec(head);
     }
 
-    private void displayRec (Node node) {
+    private void displayRec(Node node) {
         if (node == null) {
             System.out.println("END.");
             return;
@@ -73,7 +73,7 @@ class LinkedList_insertRec {
         displayRec(node.next);
     }
 
-    private void displayRevRec (Node node) {
+    private void displayRevRec(Node node) {
         if (node == null) {
             System.out.println("START.");
             return;
@@ -84,7 +84,7 @@ class LinkedList_insertRec {
 
     public void addFirst(int val) {
         Node node = new Node(val);
-        node.next  = head;
+        node.next = head;
         head = node;
 
         if (tail == null)

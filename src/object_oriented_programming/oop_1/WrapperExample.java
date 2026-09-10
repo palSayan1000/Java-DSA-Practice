@@ -11,12 +11,14 @@ public class WrapperExample {
         swap(a, b); // Not swapping because Integer class is a final class
         System.out.println(a + " " + b);// still not swapping
     }
+
     static void swap(int a, int b) {
         int temp = a;
         a = b;
         b = temp;
     }
-    static void swap(Integer a, Integer b){
+
+    static void swap(Integer a, Integer b) {
         Integer temp = a;
         a = b;
         b = temp;

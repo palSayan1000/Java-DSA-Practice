@@ -1,23 +1,34 @@
 package dsa.linked_list.patterns.sort;
 
-// https://leetcode.com/problems/merge-two-sorted-lists/description/
-public class Merge_Two_Sorted_List {
-    static void main() {
+// https://leetcode.com/problems/sort-list/description/
+public class Sort_List {
 
+    private ListNode sortList(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+
+        ListNode middle = middleNode(head);
+        ListNode left = sortList(head);
+        ListNode right = sortList(middle);
+
+        return mergeTwoLists(left, right);
     }
 
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     * int val;
-     * ListNode next;
-     * ListNode() {}
-     * ListNode(int val) { this.val = val; }
-     * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-     * }
-     */
+    private ListNode middleNode(ListNode head) {
+        ListNode fast = head, slow = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
     private ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode first = list1, second = list2, prev = new ListNode(), head = prev;
+        ListNode first = list1;
+        ListNode second = list2;
+        ListNode prev = new ListNode();
+        ListNode head = prev;
+
         while (first != null && second != null) {
             if (first.val <= second.val) {
                 prev.next = first;
@@ -29,16 +40,19 @@ public class Merge_Two_Sorted_List {
                 second = second.next;
             }
         }
+
         while (first != null) {
             prev.next = first;
             prev = first;
             first = first.next;
         }
+
         while (second != null) {
             prev.next = second;
             prev = second;
             second = second.next;
         }
+
         return head.next;
     }
 

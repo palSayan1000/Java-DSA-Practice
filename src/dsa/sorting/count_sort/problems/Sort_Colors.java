@@ -2,10 +2,11 @@ package dsa.sorting.count_sort.problems;
 
 public class Sort_Colors {
     static void main() {
-        int[] nums = {2,0,2,1,1,0};
+        int[] nums = {2, 0, 2, 1, 1, 0};
         new Sort_Colors().sortColors(nums);
         System.out.println(java.util.Arrays.toString(nums));
     }
+
     void sortColors(int[] nums) {
         int[] freq = new int[3];
         for (int n : nums)

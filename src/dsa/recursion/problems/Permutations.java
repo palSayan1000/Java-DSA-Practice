@@ -8,15 +8,17 @@ public class Permutations {
         int[] nums = {1, 2, 3};
         System.out.println(permute(nums));
     }
+
     static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
         permute(nums, 0, list);
         return list;
     }
+
     static void permute(int[] nums, int index, List<List<Integer>> list) {
         if (index == nums.length) {
             List<Integer> temp = new ArrayList<>();
-            for (int i: nums)
+            for (int i : nums)
                 temp.add(i);
             list.add(temp);
             return;
@@ -27,6 +29,7 @@ public class Permutations {
             swap(nums, i, index);
         }
     }
+
     static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];

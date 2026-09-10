@@ -5,9 +5,11 @@ public class N_Queens_II {
     static void main() {
         System.out.println("N Queens II: " + totalNQueens(4));
     }
+
     static int totalNQueens(int n) {
         return totalNQueens(new boolean[n][n], 0);
     }
+
     static int totalNQueens(boolean[][] board, int row) {
         if (row == board.length) return 1;
         int count = 0;
@@ -19,9 +21,10 @@ public class N_Queens_II {
             }
         return count;
     }
+
     static boolean isSafe(boolean[][] board, int row, int col) {
         // Vertical check
-        for (int i = 0; i < row; i ++)
+        for (int i = 0; i < row; i++)
             if (board[i][col]) return false;
         // Left diagonal check
         for (int i = 1; i <= Math.min(row, col); i++)

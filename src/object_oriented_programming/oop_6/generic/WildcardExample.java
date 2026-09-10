@@ -7,8 +7,8 @@ import java.util.List;
 public class WildcardExample<E extends Number> {
     // the E and the T are the same E -> Element and T -> Type
 
-    private Object[] data;
     private static final int DEFAULT_SIZE = 10;
+    private Object[] data;
     private int size = 0;
 
     public WildcardExample() {
@@ -20,7 +20,24 @@ public class WildcardExample<E extends Number> {
         // Note: size remains 0 because no elements have been added yet
     }
 
-    public void getList(List<?extends Number> list) {
+    public static void main(String[] args) {
+        WildcardExample<Integer> list = new WildcardExample<>();
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(10);
+
+//        WildcardExample<String> lst = new WildcardExample<>();
+//        lst.add("Sayan");
+//        lst.add("Bal");
+//        lst.add("Pal");
+        // String cannot be added as type restricted generic
+
+//        System.out.println(lst);
+        System.out.println(list);
+    }
+
+    public void getList(List<? extends Number> list) {
         // do something
     }
 
@@ -111,22 +128,5 @@ public class WildcardExample<E extends Number> {
         // Only print elements up to `size` instead of empty array slots
         Object[] activeElements = Arrays.copyOf(data, size);
         return "CustomArrayList{" + "data=" + Arrays.toString(activeElements) + ", size=" + size + '}';
-    }
-
-    public static void main(String[] args) {
-        WildcardExample<Integer> list = new WildcardExample<>();
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        list.add(10);
-
-//        WildcardExample<String> lst = new WildcardExample<>();
-//        lst.add("Sayan");
-//        lst.add("Bal");
-//        lst.add("Pal");
-        // String cannot be added as type restricted generic
-
-//        System.out.println(lst);
-        System.out.println(list);
     }
 }

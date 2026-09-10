@@ -22,9 +22,12 @@ class CounterBaby {
 
     static int count = 0;
 
-    synchronized static void increment () { // here it is taking lock in class
-        try { Thread.sleep(1000); } catch (InterruptedException _) {}
-        count ++;
+    synchronized static void increment() { // here it is taking lock in class
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException _) {
+        }
+        count++;
         System.out.println(count);
         // or
 //        synchronized (CounterBaby.class) { // taking lock in class for this block of statement of code

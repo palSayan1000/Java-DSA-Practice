@@ -4,6 +4,7 @@ public class NumbersExp_Recursion {
     static void main() {
         print(1);
     }
+
     static void print(int i) {
         if (i == 6)
             return;

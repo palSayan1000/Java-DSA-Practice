@@ -18,6 +18,7 @@ public class Diagonal_Path_included {
             list.addAll(returnPath(processed + 'H', row, col - 1));
         return list;
     }
+
     static void main() {
         System.out.println(returnPath("", 3, 3));
     }

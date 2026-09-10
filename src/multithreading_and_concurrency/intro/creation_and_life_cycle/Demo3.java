@@ -10,11 +10,11 @@ public class Demo3 {
         // threadId() -> introduced in java 19;
 
         // making my own thread
-        Thread t1 = new Thread (() -> {
+        Thread t1 = new Thread(() -> {
             System.out.println("Name of my first thread is: " + Thread.currentThread().getName());
             System.out.println("Id of my first thread is: " + Thread.currentThread().threadId());
         });
-        Thread t2 = new Thread (() -> {
+        Thread t2 = new Thread(() -> {
             System.out.println("Name of my second thread is: " + Thread.currentThread().getName());
             System.out.println("Id of my second thread is: " + Thread.currentThread().threadId());
         });
@@ -22,7 +22,7 @@ public class Demo3 {
         t2.start();
     }
 
-    static void others () {
+    static void others() {
         System.out.println(Thread.currentThread()); // Thread.currentThread() -> gives the reference of the current thread that is the main thread
 
         System.out.println(Thread.currentThread().isAlive()); // checks if the thread is running

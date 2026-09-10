@@ -1,10 +1,10 @@
 package multithreading_and_concurrency.intro.methods;
 
 public class Demo2 {
-    static void main() throws InterruptedException{
+    static void main() throws InterruptedException {
         System.out.println("Main Thread starts: ");
 
-        Thread t1 = new Thread ( () -> {
+        Thread t1 = new Thread(() -> {
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {

@@ -12,9 +12,10 @@ public @interface VeryImp {
     //value() is an annotation element, not a normal method that you call yourself.
 //    String value();
     String value() default "Important";
+
     int priority() default 1;
     // not very data types can be placed here
-           // ↓
-       // information that @VeryImp can store
+    // ↓
+    // information that @VeryImp can store
     // VeryImp is just a marker annotation; it doesn't store any extra information
 }

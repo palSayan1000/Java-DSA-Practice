@@ -1,7 +1,7 @@
 package basic_understanding.math_func;
 
 public class Random {
-    public static void main () {
+    public static void main() {
         //static double	random()
         //Returns a double value with a positive sign, greater than or equal to 0.0 and less than 1.0.
         System.out.println(Math.random());

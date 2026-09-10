@@ -35,11 +35,11 @@ public class Multidimentional {
 
         //input
         Scanner sc = new Scanner(System.in);
-        for(int row = 0; row < arr.length; row++){
+        for (int row = 0; row < arr.length; row++) {
             System.out.printf("Enter the length of this %dth row: ", row + 1);
             arr[row] = new int[sc.nextInt()];
             System.out.println("Enter the array elements: ");
-            for(int i = 0; i < arr[row].length; i++){
+            for (int i = 0; i < arr[row].length; i++) {
                 arr[row][i] = sc.nextInt();
             }
         }
@@ -51,8 +51,8 @@ public class Multidimentional {
 //        for(int row = 0; row < arr.length; row++, System.out.println())
 //            for(int col = 0; col < arr[row].length; System.out.print(arr[row][col] + "\t"));
         // output
-        for(int[] row: arr){
-            for(int num: row)
+        for (int[] row : arr) {
+            for (int num : row)
                 System.out.print(num + "\t");
             System.out.println();
         }

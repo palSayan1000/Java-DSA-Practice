@@ -14,6 +14,7 @@ public class How_Many_Numbers_Are_Smaller_Than_The_Current_Number {
         }
         System.out.printf("The given array: %s,\nThe resultant array is: %s", Arrays.toString(array), Arrays.toString(new Solution().smallerNumbersThanCurrent(array)));
     }
+
     static class Solution {
         public int[] smallerNumbersThanCurrent(int[] nums) {
             int[] freqCount = new int[101];

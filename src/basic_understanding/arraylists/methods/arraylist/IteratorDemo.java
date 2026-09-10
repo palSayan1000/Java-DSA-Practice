@@ -1,4 +1,5 @@
 package basic_understanding.arraylists.methods.arraylist;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -39,7 +40,6 @@ public class IteratorDemo {
         System.out.println("List after iterator(): " + tasks + "\n");
 
 
-
         System.out.println("=========================================");
         System.out.println("2. Using listIterator()");
         System.out.println("=========================================");
@@ -68,7 +68,6 @@ public class IteratorDemo {
             System.out.println(" <- " + listIter.previous());
         }
         System.out.println("List after listIterator(): " + cities + "\n");
-
 
 
         System.out.println("=========================================");

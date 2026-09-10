@@ -1,6 +1,6 @@
 package object_oriented_programming.oop_5.abstract_classes;
 
-public class Son extends Parent{
+public class Son extends Parent {
     // it can acceess only the Parent it still cannot have multiple inheriatance for that we have to learn about interfaces
     public Son(int age, String name) {
         super(age, name);

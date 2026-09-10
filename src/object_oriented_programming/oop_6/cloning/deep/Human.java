@@ -2,7 +2,7 @@ package object_oriented_programming.oop_6.cloning.deep;
 
 import java.util.Arrays;
 
-public class Human implements Cloneable{
+public class Human implements Cloneable {
     // implements Cloneable -> just tells the jvm that there is method clone in this class and is allowed to clone
     // the Cloneable interface is empty inside
     int age;
@@ -17,7 +17,7 @@ public class Human implements Cloneable{
     public Human(int age, String name) {
         this.age = age;
         this.name = name;
-        arr = new int[] {3, 4, 5, 6, 0, 1, 9};
+        arr = new int[]{3, 4, 5, 6, 0, 1, 9};
     }
 
     public Human(object_oriented_programming.oop_6.cloning.shallow.Human other) {
@@ -27,7 +27,7 @@ public class Human implements Cloneable{
     }
 
     @Override
-    public Human clone() throws CloneNotSupportedException{ // the clone method throws and exception
+    public Human clone() throws CloneNotSupportedException { // the clone method throws and exception
         // this is deep copy
         Human twin = (Human) super.clone(); // this is actually a shallow copy
 

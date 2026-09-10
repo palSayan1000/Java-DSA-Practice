@@ -6,10 +6,11 @@ public class Code_Bubble {
         bubble(arr);
         System.out.println(java.util.Arrays.toString(arr));
     }
+
     static void bubble(int[] arr) {
         // run the steps n-1 times
         boolean swapped = true; // if no swap occured it will break
-        for (int i = 0; i < arr.length - 1 && swapped; i ++) {
+        for (int i = 0; i < arr.length - 1 && swapped; i++) {
             // for each step, max item will come at the last respective index
             swapped = false;
             for (int j = 1; j < arr.length - i; j++)

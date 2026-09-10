@@ -1,11 +1,11 @@
 package object_oriented_programming.oop_2.creating_obj;
 
 public class Human {
+    public static long population;
     int age;
     String name;
     int salary;
     boolean married;
-    public static long population;
 
     public Human(int age, String name, int salary, boolean married) {
         this.age = age;

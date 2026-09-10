@@ -8,6 +8,11 @@ public class ObjectPrint /*extends Object*/ {
         this.num = num;
     }
 
+    static void main() {
+        ObjectPrint obj = new ObjectPrint(10);
+        System.out.println(obj);
+    }
+
     @Override
     public String toString() {
         // overriding the inbuilt toString() method
@@ -15,10 +20,5 @@ public class ObjectPrint /*extends Object*/ {
         // runtime polymorphism
         System.out.println("ObjectPrint { num = " + num + " }");
         return super.toString();
-    }
-
-    static void main() {
-        ObjectPrint obj = new ObjectPrint(10);
-        System.out.println(obj);
     }
 }

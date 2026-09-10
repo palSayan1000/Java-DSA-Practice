@@ -25,7 +25,7 @@ public class BinarySearch {
                 start = mid + 1;
                 continue;
             }
-            if(arr[mid] > target)
+            if (arr[mid] > target)
                 end = mid - 1;
         }
         return -1;

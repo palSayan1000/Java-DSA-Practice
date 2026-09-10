@@ -42,11 +42,11 @@ public class Main {
             }
         }
         /*
-            * .class vs .getClass() -> Both return the Class<?> "blueprint" for Reflection:
-            * - ClassName.class (Class Literal): Use when you know the type name (no object needed).
-            * - object.getClass() (Method): Use when you already have an instantiated object.
-            * Methods like isAnnotationPresent() require this Class<?> reference to inspect metadata.
-        */
+         * .class vs .getClass() -> Both return the Class<?> "blueprint" for Reflection:
+         * - ClassName.class (Class Literal): Use when you know the type name (no object needed).
+         * - object.getClass() (Method): Use when you already have an instantiated object.
+         * Methods like isAnnotationPresent() require this Class<?> reference to inspect metadata.
+         */
         for (Constructor<?> cons : obj.getClass().getConstructors()) {
             // Check if the constructor has your custom annotation
             // this will always return false as this is -> @Retention(RetentionPolicy.CLASS) -> present till it is not ran

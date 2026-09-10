@@ -5,16 +5,8 @@ public /* final */ class Box {
     double length;
     double height;
     double width;
-    private double ll; // this is known as data hiding
     double weight = 9.9;
-
-    static void greeting() {
-        System.out.println("Hey, I am in Box class. Greetings!!!");
-    }
-
-    double getLL() {
-        return ll;
-    }
+    private double ll; // this is known as data hiding
 
     Box() {
         this.height = -1;
@@ -43,6 +35,14 @@ public /* final */ class Box {
         this.length = old.length;
         this.height = old.height;
         this.width = old.width;
+    }
+
+    static void greeting() {
+        System.out.println("Hey, I am in Box class. Greetings!!!");
+    }
+
+    double getLL() {
+        return ll;
     }
 
     public void information() {

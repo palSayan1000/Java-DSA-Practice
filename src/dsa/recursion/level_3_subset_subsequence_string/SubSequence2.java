@@ -6,13 +6,14 @@ public class SubSequence2 {
         // subSequence("", str);
         subSequenceAscii(str, 0, "");
     }
+
     static void subSequenceAscii(String str, int index, String current) {
         if (index == str.length()) {
             System.out.println(current);
             return;
         }
         subSequenceAscii(str, index + 1, current + str.charAt(index));
-        subSequenceAscii(str, index + 1, current + (int)str.charAt(index));
+        subSequenceAscii(str, index + 1, current + (int) str.charAt(index));
         subSequenceAscii(str, index + 1, current);
     }
 }

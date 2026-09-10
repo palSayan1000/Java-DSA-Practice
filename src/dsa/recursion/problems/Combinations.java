@@ -8,11 +8,13 @@ public class Combinations {
     static void main() {
         System.out.println(new Combinations().combine(4, 2));
     }
+
     public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> list = new ArrayList<>();
         generateCombo(n, 1, k, new ArrayList<>(), list);
         return list;
     }
+
     public void generateCombo(int n, int index, int k, List<Integer> lst, List<List<Integer>> list) {
         if (k == 0) {
             list.add(new ArrayList<>(lst));

@@ -5,6 +5,7 @@ public class Reverse_Num {
         int n = 12345;
         System.out.println(reverse(n));
     }
+
     static int reverse(int n) {
         if (n <= 9) return n;
         return n % 10 * (int) Math.pow(10, (int) Math.log10(n)) + reverse(n / 10);

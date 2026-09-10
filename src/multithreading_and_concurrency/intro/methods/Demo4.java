@@ -2,12 +2,15 @@ package multithreading_and_concurrency.intro.methods;
 
 public class Demo4 {
     static void main() {
-        Thread t1 = new Thread ( () -> {
+        Thread t1 = new Thread(() -> {
             while (!Thread.currentThread().isInterrupted())
                 System.out.println("Running!!!!");
         });
         t1.start();
-        try {Thread.sleep(0, 500);} catch (InterruptedException _) {}
+        try {
+            Thread.sleep(0, 500);
+        } catch (InterruptedException _) {
+        }
         // any thread that is in join, sleep, wait cannot be interrupted cannot be called on that thread then it gives InterruptedException
         // Sleeping the thread in nano seconds
 //        System.nanoTime(); // getting the time in nao seconds

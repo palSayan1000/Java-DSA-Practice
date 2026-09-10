@@ -1,7 +1,25 @@
 package object_oriented_programming.oop_7.enums;
 
 public class Main {
-    enum Week implements A{ // enum cannot extend anything
+    static void main() {
+        Week week;
+        week = Week.Monday;
+        System.out.println(Week.valueOf("Monday"));// actually returning the enum constant
+        week.hello();
+
+        // second enum
+        WEEK week1 = WEEK.MONDAY;
+        // Accessing custom values via getters
+        System.out.println("Day number: " + week1.getDayNumber()); // 1
+        System.out.println("Short name: " + week1.getShortName()); // Mon
+
+        // Iterating over all values
+        for (WEEK day : WEEK.values()) {
+            System.out.println(day + " -> #" + day.getDayNumber() + " (" + day.getShortName() + ")");
+        }
+    }
+
+    enum Week implements A { // enum cannot extend anything
         Monday(), Tuesday(), Wednesday(), Thursday(), Friday(), Saturday(), Sunday();
 
         @Override
@@ -11,6 +29,7 @@ public class Main {
 
         // abstract methods not allowed here
     }
+
     public enum WEEK {
         // 1. Pass values to the enum constructor
         MONDAY(1, "Mon"),
@@ -38,23 +57,6 @@ public class Main {
 
         public String getShortName() {
             return shortName;
-        }
-    }
-    static void main() {
-        Week week;
-        week = Week.Monday;
-        System.out.println(Week.valueOf("Monday"));// actually returning the enum constant
-        week.hello();
-
-        // second enum
-        WEEK week1 = WEEK.MONDAY;
-        // Accessing custom values via getters
-        System.out.println("Day number: " + week1.getDayNumber()); // 1
-        System.out.println("Short name: " + week1.getShortName()); // Mon
-
-        // Iterating over all values
-        for (WEEK day : WEEK.values()) {
-            System.out.println(day + " -> #" + day.getDayNumber() + " (" + day.getShortName() + ")");
         }
     }
 }

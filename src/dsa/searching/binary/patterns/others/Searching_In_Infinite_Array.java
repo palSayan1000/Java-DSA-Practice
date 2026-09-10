@@ -9,11 +9,12 @@ public class Searching_In_Infinite_Array {
                 return mid;
             if (arr[mid] < target) {
                 start = mid + 1;
-            }else if(arr[mid] > target)
+            } else if (arr[mid] > target)
                 end = mid - 1;
         }
         return -1;
     }
+
     public static int findingRange(int[] arr, int target) {
         // first find the range
         // first start with  a box of 2 size
@@ -30,6 +31,7 @@ public class Searching_In_Infinite_Array {
         }
         return search(arr, target, start, end);
     }
+
     static void main() {
         int[] arr = {3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170};
         int target = 10;

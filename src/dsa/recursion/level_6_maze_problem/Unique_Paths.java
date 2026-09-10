@@ -7,13 +7,15 @@ public class Unique_Paths {
     static void main() {
         System.out.println(uniquePaths(3, 3));
     }
+
     // Using DP
     static int uniquePaths(int m, int n) {
         int[][] dp = new int[m][n];
-        for (int[] i: dp)
+        for (int[] i : dp)
             Arrays.fill(i, -1);
         return uniquePaths(0, 0, dp);
     }
+
     /// My one
     static int uniquePaths(int i, int j, int[][] dp) {
         if (i == dp.length - 1 && j == dp[0].length - 1)
@@ -24,6 +26,7 @@ public class Unique_Paths {
             return dp[i][j];
         return dp[i][j] = uniquePaths(i + 1, j, dp) + uniquePaths(i, j + 1, dp);
     }
+
     /// Kunal's one
     static int countPaths(int row, int col) {
         if (row == 1 || col == 1)

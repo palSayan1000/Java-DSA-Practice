@@ -5,55 +5,55 @@ public class LinkedList {
     private Node head, tail;
     private int size;
 
-    public LinkedList () {
+    public LinkedList() {
         this.size = 0;
     }
 
     public void insertFirst(int val) {
         Node node = new Node(val);
-        node.next  = head;
+        node.next = head;
         head = node;
 
         if (tail == null)
             tail = head;
 
-        size ++;
+        size++;
     }
 
-    public void insertLast (int val) {
+    public void insertLast(int val) {
         if (tail == null) {
-            insertFirst (val);
+            insertFirst(val);
             return;
         }
         Node node = new Node(val);
         tail.next = node;
         tail = node;
-        size ++;
+        size++;
     }
 
-    public void insert (int index, int val) {
+    public void insert(int index, int val) {
         if (index == 0) {
             insertFirst(val);
             return;
         }
         if (index == size) {
-           insertLast(val);
-           return;
+            insertLast(val);
+            return;
         }
         Node dummy = head, newNode;
         for (int i = 1; i < index; i++)
             dummy = dummy.next;
         dummy.next = new Node(val, dummy.next);
-        size ++;
+        size++;
     }
 
     /// @returns the delete first element
-    public int deleteFirst () {
+    public int deleteFirst() {
         int value = head.value;
         head = head.next;
         if (head == null)
             tail = null;
-        size --;
+        size--;
         return value;
     }
 
@@ -71,7 +71,7 @@ public class LinkedList {
 //        return val;
 //    }
 
-    public void display () {
+    public void display() {
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.value + " --> ");
@@ -80,15 +80,15 @@ public class LinkedList {
         System.out.println("null");
     }
 
-    public Node get (int index) {
+    public Node get(int index) {
         Node node = head;
-        for (int i = 0; i < index; i ++)
+        for (int i = 0; i < index; i++)
             node = node.next;
         return node;
     }
 
     @SuppressWarnings("UnusedReturnValue")
-    public int deleteLast () {
+    public int deleteLast() {
         if (size <= 1) {
             return deleteFirst();
         }
@@ -99,20 +99,20 @@ public class LinkedList {
         return val;
     }
 
-    public int delete (int index) {
-        if (index == 0){
+    public int delete(int index) {
+        if (index == 0) {
             return deleteFirst();
         } else if (index == size - 1) {
             return deleteLast();
         }
 
-        Node prev = get (index - 1);
+        Node prev = get(index - 1);
         int val = prev.next.value;
         prev.next = prev.next.next;
         return val;
     }
 
-    public Node find (int val) {
+    public Node find(int val) {
         Node node = head;
         while (node != null) {
             if (node.value == val)

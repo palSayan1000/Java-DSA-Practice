@@ -9,6 +9,7 @@ public class Locus_Series {
         for (int i = 0; i <= n; i++)
             System.out.print(locus_series(i) + "\t");
     }
+
     static int locus_series(int n) {
         return (int) Math.round(Math.pow((1 + Math.sqrt(5)) / 2, n) + Math.pow((1 - Math.sqrt(5)) / 2, n));
     }

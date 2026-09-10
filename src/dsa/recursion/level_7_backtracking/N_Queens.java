@@ -14,14 +14,16 @@ public class N_Queens {
             System.out.println();
         }
     }
+
     static List<List<String>> solveNQueens(int n) {
         char[][] board = new char[n][n];
-        for (char[] i: board)
+        for (char[] i : board)
             Arrays.fill(i, '.');
         List<List<String>> list = new ArrayList<>();
         solveNQueens(0, board, list);
         return list;
     }
+
     static void solveNQueens(int row, char[][] board, List<List<String>> list) {
         if (row == board.length) {
             List<String> lst = new ArrayList<>();
@@ -32,7 +34,7 @@ public class N_Queens {
 //                lst.add(sb.toString());
 //                sb.setLength(0);
 //            }
-            for (char[] i: board)
+            for (char[] i : board)
                 lst.add(String.valueOf(i));
             //  lst.add(new String(i));
             list.add(lst);
@@ -44,6 +46,7 @@ public class N_Queens {
                 board[row][i] = '.';
             }
     }
+
     static boolean isSafeToPlace(char[][] board, int row, int col) {
         // check up
         for (int i = 0; i < row; i++)

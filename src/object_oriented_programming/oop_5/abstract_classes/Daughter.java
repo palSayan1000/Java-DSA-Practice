@@ -1,6 +1,6 @@
 package object_oriented_programming.oop_5.abstract_classes;
 
-public class Daughter extends Parent{
+public class Daughter extends Parent {
 
     public Daughter(int age, String name) {
         super(age, name);

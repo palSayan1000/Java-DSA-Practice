@@ -2,19 +2,21 @@ package dsa.searching.binary.matrix;
 
 public class Sorted_Matrix_Search_Mod {
     static void main() {
-        System.out.println(java.util.Arrays.toString(search(new int[][] {
+        System.out.println(java.util.Arrays.toString(search(new int[][]{
                 {1, 2, 3, 4},
                 {5, 6, 7, 8},
                 {9, 10, 11, 12},
                 {13, 14, 15, 16}
         }, 2)));
     }
+
     static int[] search(int[][] matrix, int target) {
         int row = binarySearchCol(matrix, target), col = binarySearchRow(matrix[row], target);
         if (col == -1)
             return new int[]{-1, -1};
         return new int[]{row, col};
     }
+
     static int binarySearchCol(int[][] matrix, int target) {
         int lastCol = matrix[0].length - 1, rStart = 0, rEnd = matrix.length - 1;
         while (rStart < rEnd) {
@@ -27,6 +29,7 @@ public class Sorted_Matrix_Search_Mod {
         }
         return rStart;
     }
+
     static int binarySearchRow(int[] arr, int target) {
         int start = 0, end = arr.length - 1, mid;
         while (start <= end) {

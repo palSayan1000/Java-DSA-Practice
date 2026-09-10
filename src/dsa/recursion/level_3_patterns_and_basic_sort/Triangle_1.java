@@ -5,7 +5,8 @@ public class Triangle_1 {
         // pattern1(5, 1);
         pattern(4, 0);
     }
-    static void pattern_(int row, int col){
+
+    static void pattern_(int row, int col) {
         if (col > row) return;
         if (row == 0) return;
         System.out.print("*\t");
@@ -15,6 +16,7 @@ public class Triangle_1 {
             pattern_(row - 1, 1);
         }
     }
+
     static void pattern(int row, int col) {
         if (row == 0) return;
         if (col == row) {

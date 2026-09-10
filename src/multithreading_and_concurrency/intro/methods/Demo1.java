@@ -6,7 +6,8 @@ public class Demo1 {
         // Thread.sleep() -> cannot write here simple as it gives che ked exception and there will be compilation error
         try {
             Thread.sleep(2000);
-        } catch (InterruptedException _) {}
+        } catch (InterruptedException _) {
+        }
 
         System.out.println("Main thread ends:------->");
     }

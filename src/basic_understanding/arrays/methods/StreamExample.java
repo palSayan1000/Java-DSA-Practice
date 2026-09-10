@@ -1,4 +1,5 @@
 package basic_understanding.arrays.methods;
+
 import java.util.Arrays;
 
 public class StreamExample {
@@ -13,8 +14,8 @@ public class StreamExample {
 
         // Convert to stream, filter for even numbers, and sum them up
         int sumOfEvens = Arrays.stream(numbers)
-                               .filter(n -> n % 2 == 0)
-                               .sum();
+                .filter(n -> n % 2 == 0)
+                .sum();
 
         System.out.println("Sum of evens: " + sumOfEvens); // Prints: 6
     }

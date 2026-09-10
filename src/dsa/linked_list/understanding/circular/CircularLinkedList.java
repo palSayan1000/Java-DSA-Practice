@@ -6,13 +6,13 @@ public class CircularLinkedList {
     private Node tail;
     private int size = 0;
 
-    CircularLinkedList () {
+    CircularLinkedList() {
         this.head = this.tail = null;
         size = 0;
     }
 
-    public void insert (int val) {
-        Node node = new Node (val);
+    public void insert(int val) {
+        Node node = new Node(val);
         if (head == null) {
             head = tail = node;
             return;
@@ -22,8 +22,8 @@ public class CircularLinkedList {
         tail = node;
     }
 
-    public void display () {
-        if (head == null){
+    public void display() {
+        if (head == null) {
             System.out.println("Linked List is empty!!!");
             return;
         }
@@ -35,7 +35,7 @@ public class CircularLinkedList {
         System.out.println("HEAD.");
     }
 
-    public void delete (int val) {
+    public void delete(int val) {
 //        if (head == null)
 //            return;
 //        if (val == head.value) {
@@ -44,12 +44,12 @@ public class CircularLinkedList {
 //            return;
 //        }
 //        Node dummy = head, prev = null;
-            // boolean f = false;
+        // boolean f = false;
 //        while (dummy != tail) {
 //            if (dummy.value == val) {
-               // f = true;
+        // f = true;
 //                break;
-            //}
+        //}
 //            head = node.next;
 //            prev = dummy;
 //            dummy = dummy.next;

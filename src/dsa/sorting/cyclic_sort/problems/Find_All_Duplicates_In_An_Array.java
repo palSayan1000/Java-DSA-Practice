@@ -10,7 +10,7 @@ public class Find_All_Duplicates_In_An_Array {
             if (nums[i] - 1 != i && nums[i] != nums[nums[i] - 1]) {
                 int temp = nums[nums[i] - 1];
                 nums[nums[i] - 1] = nums[i];
-                nums[i --] = temp;
+                nums[i--] = temp;
             }
         List<Integer> res = new ArrayList<>();
         for (int i = 0; i < nums.length; i++)
@@ -20,7 +20,7 @@ public class Find_All_Duplicates_In_An_Array {
     }
 
     static void main() {
-        int[] arr = {4,3,2,7,8,2,3,1};
+        int[] arr = {4, 3, 2, 7, 8, 2, 3, 1};
         System.out.println("All the duplicates in the array are: " + findDuplicates(arr));
     }
 }

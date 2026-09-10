@@ -9,12 +9,13 @@ public class SubSet {
         List<List<Integer>> list = subset(arr);
         System.out.println(list);
     }
+
     static List<List<Integer>> subset(int[] arr) {
         List<List<Integer>> outerList = new ArrayList<>();
 
         outerList.add(new ArrayList<>());
 
-        for (int num: arr) {
+        for (int num : arr) {
             int n = outerList.size();
             for (int i = 0; i < n; i++) {
                 ArrayList<Integer> internalList = new ArrayList<>(outerList.get(i));

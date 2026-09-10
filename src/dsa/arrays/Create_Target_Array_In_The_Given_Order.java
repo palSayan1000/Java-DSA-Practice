@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Create_Target_Array_In_The_Given_Order {
+    static void main() {
+        Solution obj = new Solution();
+        System.out.println(Arrays.toString(obj.createTargetArray(new int[]{0, 1, 2, 3, 4}, new int[]{0, 1, 2, 2, 1})));
+    }
+
     static class Solution {
         static public int[] createTargetArray(int[] nums, int[] index) {
             ArrayList<Integer> list = new ArrayList<>();
@@ -16,10 +21,5 @@ public class Create_Target_Array_In_The_Given_Order {
                 ans[i] = list.get(i);
             return ans;
         }
-    }
-
-    static void main() {
-        Solution obj = new Solution();
-        System.out.println(Arrays.toString(obj.createTargetArray(new int[]{0,1,2,3,4}, new int[]{0,1,2,2,1})));
     }
 }

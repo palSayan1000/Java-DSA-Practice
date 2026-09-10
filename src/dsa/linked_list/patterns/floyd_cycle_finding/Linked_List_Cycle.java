@@ -5,6 +5,7 @@ public class Linked_List_Cycle {
     static void main() {
 
     }
+
     private boolean hasCycle(ListNode head) {
         if (head == null)
             return false;
@@ -17,9 +18,11 @@ public class Linked_List_Cycle {
         }
         return false;
     }
-    private static  class ListNode {
+
+    private static class ListNode {
         int val;
         ListNode next;
+
         ListNode(int x) {
             val = x;
             next = null;
