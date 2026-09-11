@@ -1,8 +1,8 @@
 package multithreading_and_concurrency.intro.inter_thread_communication;
 
-public class Demo2 {
+public class Demo3 {
     static void main() {
-        Box box = new Box();
+        Boxing box = new Boxing();
 
         Runnable task1 = () -> {
             for (int i = 1; i <= 20; i++)
@@ -17,24 +17,29 @@ public class Demo2 {
     }
 }
 
-class Box {
+class Boxing {
     volatile Integer item;
     volatile Boolean flag = false;
 
     synchronized void producer(int value) {
-        while (flag == true) {
+        while (flag) {
+            try { wait(); } catch (InterruptedException _) {}
         }
         item = value;
         flag = true;
         System.out.println("Producer produces: " + item);
+        notify();
     }
 
     synchronized void consumer() {
-        while (flag == false) {
+        while (!flag) {
+            try { wait(); } catch (InterruptedException _) {}
         }
         System.out.println("Consumer consumes: " + item);
         item = null;
         flag = false;
+        notify();
+        // notifyAll();
     }
 
 }
