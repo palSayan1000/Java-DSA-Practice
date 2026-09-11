@@ -48,7 +48,6 @@ public class Sort_List_bubbleSort {
 //            bubbleSort(row - 1, 0);
 //        }
 //    }
-
     private ListNode sortList(ListNode head) { // moving the values of the node
         if (head == null || head.next == null)
             return head;

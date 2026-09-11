@@ -4,6 +4,17 @@ package dsa.linked_list.patterns.reverse;
 public class Reverse_Linked_List {
 
     static ListNode head;
+
+    static void main(String[] args) {
+        ListNode head = new ListNode(3, new ListNode(1, new ListNode(2, new ListNode(9, new ListNode(-15, new ListNode(100, new ListNode(0)))))));
+
+        new Reverse_Linked_List().reverseListRecursion(head);
+
+        for (ListNode n = Reverse_Linked_List.head; n != null; n = n.next) {
+            System.out.print(n.val + " ");
+        }
+    }
+
     // google, amazon, apple
     // In-Place reversal of linked list
     private ListNode reverseList(ListNode head) {
@@ -23,7 +34,7 @@ public class Reverse_Linked_List {
     }
 
     // Reversing Linked List using recursion
-    private  ListNode reverseListRecursion(ListNode head) {
+    private ListNode reverseListRecursion(ListNode head) {
         if (head == null) {
             return null;
         }
@@ -51,16 +62,6 @@ public class Reverse_Linked_List {
         ListNode(int val, ListNode next) {
             this.val = val;
             this.next = next;
-        }
-    }
-
-    static void main(String[] args) {
-        ListNode head = new ListNode(3, new ListNode(1, new ListNode(2, new ListNode(9, new ListNode(-15, new ListNode(100, new ListNode(0)))))));
-
-        new Reverse_Linked_List().reverseListRecursion(head);
-
-        for (ListNode n = Reverse_Linked_List.head; n != null; n = n.next) {
-            System.out.print(n.val + " ");
         }
     }
 }

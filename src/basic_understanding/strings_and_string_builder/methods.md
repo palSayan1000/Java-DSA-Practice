@@ -90,7 +90,7 @@ String s=in.nextLine(); /* The letters in the entire line will be considered inc
 #### `Getting the character for a particular Ascii value:`
 
 ```java
-char character= (char) i;
+char character = (char) i;
 ```
 
 ------------------------------------------------------------------------------------------------------------------------------------------

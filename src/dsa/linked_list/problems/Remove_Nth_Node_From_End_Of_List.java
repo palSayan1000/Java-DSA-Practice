@@ -3,6 +3,11 @@ package dsa.linked_list.problems;
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
 public class Remove_Nth_Node_From_End_Of_List {
 
+    static void main() {
+        ListNode head = new ListNode(1);
+        // System.out.println(new Remove_Nth_Node_From_End_Of_List().removeNthFromEnd(head, 1).val);
+    }
+
     private ListNode nthNode(ListNode head, int index) {
         ListNode dummy = head;
 
@@ -21,7 +26,7 @@ public class Remove_Nth_Node_From_End_Of_List {
 
         while (dummy != null) {
             dummy = dummy.next;
-            size ++;
+            size++;
         }
 
         return size;
@@ -31,7 +36,7 @@ public class Remove_Nth_Node_From_End_Of_List {
         index = size(head) - index;
 
         if (index == 0) {
-            return head == null? null : head.next;
+            return head == null ? null : head.next;
         }
 
         ListNode dummy = nthNode(head, index - 1);
@@ -55,10 +60,5 @@ public class Remove_Nth_Node_From_End_Of_List {
             this.val = val;
             this.next = next;
         }
-    }
-
-    static void main() {
-        ListNode head = new ListNode(1);
-        // System.out.println(new Remove_Nth_Node_From_End_Of_List().removeNthFromEnd(head, 1).val);
     }
 }
