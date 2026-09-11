@@ -1,8 +1,8 @@
 package multithreading_and_concurrency.intro.inter_thread_communication;
 
-public class Demo {
+public class Demo2 {
     static void main() {
-        Boxer box = new Boxer();
+        Box box = new Box();
 
         Runnable task1 = () -> {
             for (int i = 1; i <= 20; i++)
@@ -17,9 +17,9 @@ public class Demo {
     }
 }
 
-class Boxer {
-    Integer item;
-    Boolean flag = false;
+class Box {
+    volatile Integer item;
+    volatile Boolean flag = false;
 
     void producer(int value) {
         item = value;
