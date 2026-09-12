@@ -9,6 +9,7 @@ public class Merge_Strings_Alternatively {
         System.out.println(obj.mergeAlternately("ab", "pqrs").equals("apbqrs"));
         System.out.println(obj.mergeAlternately("abcd", "pq").equals("apbqcd"));
     }
+
     public String mergeAlternately(String word1, String word2) {
         StringBuilder sb = new StringBuilder();
         int i = 0, j = 0;
