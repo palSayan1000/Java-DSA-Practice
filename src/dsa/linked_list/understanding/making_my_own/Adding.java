@@ -1,4 +1,4 @@
-package dsa.linked_list.making_my_own;
+package dsa.linked_list.understanding.making_my_own;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package dsa.linked_list.making_my_own;
+package dsa.linked_list.understanding.making_my_own;
 
 public class Main {
     static void main() {

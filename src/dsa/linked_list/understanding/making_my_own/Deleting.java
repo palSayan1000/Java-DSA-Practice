@@ -1,11 +1,11 @@
-package dsa.linked_list.making_my_own;
+package dsa.linked_list.understanding.making_my_own;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Get {
+@Target(ElementType.METHOD)
+public @interface Deleting {
 }
