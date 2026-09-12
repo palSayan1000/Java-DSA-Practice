@@ -1,22 +1,7 @@
-package dsa.linked_list.patterns.reverse;
+package dsa.linked_list.problems.patterns.reverse;
 
-import java.util.Objects;
-
-// https://leetcode.com/problems/reverse-nodes-in-k-group/description/
-public class Reverse_Nodes_In_K_Groups {
-
-    // My solution
-    private ListNode reverseKGroup(ListNode head, int k) {
-        int left = 1, right = k, size = getSize(head);
-
-        while (right < size) {
-            head = reverseBetween(head, left, right);
-            left += k;
-            right += k;
-        }
-
-        return head;
-    }
+// https://leetcode.com/problems/reverse-linked-list-ii/
+public class Reverse_Linked_List_II {
 
     private ListNode reverseBetween(ListNode head, int left, int right) {
         if (left == right)
@@ -34,7 +19,7 @@ public class Reverse_Nodes_In_K_Groups {
         ListNode newEnd = current;
 
         // reverse between left and right
-        ListNode next = Objects.requireNonNull(current).next;
+        ListNode next = current.next;
         for (int i = 0; current != null && i < right - left + 1; i++) {
             current.next = prev;
             prev = current;
@@ -52,18 +37,6 @@ public class Reverse_Nodes_In_K_Groups {
 
         newEnd.next = current;
         return head;
-    }
-
-    private int getSize(ListNode head) {
-        if (head == null)
-            return 0;
-        int size = 0;
-        ListNode dummy = head;
-        while (dummy != null) {
-            size++;
-            dummy = dummy.next;
-        }
-        return size;
     }
 
     private static class ListNode {

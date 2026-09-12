@@ -1,4 +1,4 @@
-package dsa.linked_list.patterns.reverse;
+package dsa.linked_list.problems.patterns.reverse;
 
 // https://leetcode.com/problems/reverse-linked-list/description/
 public class Reverse_Linked_List {

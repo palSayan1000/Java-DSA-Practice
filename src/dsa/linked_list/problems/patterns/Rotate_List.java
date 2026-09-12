@@ -1,4 +1,4 @@
-package dsa.linked_list.patterns;
+package dsa.linked_list.problems.patterns;
 
 // https://leetcode.com/problems/rotate-list/description/
 public class Rotate_List {

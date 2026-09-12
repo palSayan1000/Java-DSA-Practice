@@ -1,4 +1,4 @@
-package dsa.linked_list.patterns.floyd_cycle_finding;
+package dsa.linked_list.problems.patterns.floyd_cycle_finding;
 
 public class Length_Of_Cycle {
     // find length of the cycle

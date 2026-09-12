@@ -1,4 +1,4 @@
-package dsa.linked_list.patterns.reverse;
+package dsa.linked_list.problems.patterns.reverse;
 
 import java.util.Objects;
 

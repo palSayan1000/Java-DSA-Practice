@@ -1,4 +1,4 @@
-package dsa.stacks_queues;
+package dsa.stacks_queues.understanding_and_notes;
 
 import java.util.LinkedList;
 import java.util.Queue;

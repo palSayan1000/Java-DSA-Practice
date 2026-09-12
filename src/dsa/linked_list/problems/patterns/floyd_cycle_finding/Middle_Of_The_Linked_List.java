@@ -1,4 +1,4 @@
-package dsa.linked_list.patterns.floyd_cycle_finding;
+package dsa.linked_list.problems.patterns.floyd_cycle_finding;
 
 // https://leetcode.com/problems/middle-of-the-linked-list/description/
 public class Middle_Of_The_Linked_List {

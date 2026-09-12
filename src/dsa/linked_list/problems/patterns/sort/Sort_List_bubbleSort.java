@@ -1,4 +1,4 @@
-package dsa.linked_list.patterns.sort;
+package dsa.linked_list.problems.patterns.sort;
 
 public class Sort_List_bubbleSort {
 

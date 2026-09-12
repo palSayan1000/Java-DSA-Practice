@@ -1,4 +1,4 @@
-package dsa.linked_list.patterns.recursion;
+package dsa.linked_list.problems.patterns.recursion;
 
 class LinkedList_insertRec {
     Node head, tail;

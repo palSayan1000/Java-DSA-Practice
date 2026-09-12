@@ -1,4 +1,4 @@
-package dsa.linked_list.patterns.sort;
+package dsa.linked_list.problems.patterns.sort;
 
 // https://leetcode.com/problems/sort-list/description/
 public class Sort_List_mergeSort {

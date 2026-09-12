@@ -1,22 +1,29 @@
-package dsa.linked_list.patterns.reverse;
+package dsa.linked_list.problems.patterns.reverse;
 
-// https://leetcode.com/problems/palindrome-linked-list/description/
-public class Palindrome_Linked_List {
+// https://leetcode.com/problems/reorder-list/description/
+public class Reorder_List {
 
-    private boolean isPalindrome(ListNode head) {
+    private void reorderList(ListNode head) {
         if (head == null || head.next == null)
-            return true;
+            return;
 
-        ListNode firstDummy = head, secondDummy = reverseList(middleNode(head));
+        ListNode mid = middleNode(head), headFirst = head, headSecond = reverseList(mid);
 
-        while (firstDummy != null && secondDummy != null) {
-            if (firstDummy.val != secondDummy.val)
-                return false;
-            firstDummy = firstDummy.next;
-            secondDummy = secondDummy.next;
+        // Re-arrange
+        while (headFirst != null && headSecond != null) {
+            ListNode temp = headFirst.next;
+            headFirst.next = headSecond;
+            headFirst = temp;
+
+            temp = headSecond.next;
+            headSecond.next = headFirst;
+            headSecond = temp;
         }
 
-        return true;
+        // next of tail to null
+        if (headFirst != null) {
+            headFirst.next = null;
+        }
     }
 
     private ListNode middleNode(ListNode head) {

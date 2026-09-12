@@ -1,4 +1,4 @@
-package dsa.linked_list.patterns.floyd_cycle_finding;
+package dsa.linked_list.problems.patterns.floyd_cycle_finding;
 
 // https://leetcode.com/problems/happy-number/description/
 public class Happy_Number {
