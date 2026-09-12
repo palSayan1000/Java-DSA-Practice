@@ -23,7 +23,10 @@ class Boxing {
 
     synchronized void producer(int value) {
         while (flag) {
-            try { wait(); } catch (InterruptedException _) {}
+            try {
+                wait();
+            } catch (InterruptedException _) {
+            }
         }
         item = value;
         flag = true;
@@ -33,7 +36,10 @@ class Boxing {
 
     synchronized void consumer() {
         while (!flag) {
-            try { wait(); } catch (InterruptedException _) {}
+            try {
+                wait();
+            } catch (InterruptedException _) {
+            }
         }
         System.out.println("Consumer consumes: " + item);
         item = null;

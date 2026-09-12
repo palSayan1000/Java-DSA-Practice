@@ -7,9 +7,9 @@ public class Demo {
     static void main() {
         Resource r1 = new Resource();
 
-        Thread.ofPlatform().start(r1 :: f1);
-        Thread.ofPlatform().start(r1 :: f1);
-        Thread.ofPlatform().start(r1 :: f1);
+        Thread.ofPlatform().start(r1::f1);
+        Thread.ofPlatform().start(r1::f1);
+        Thread.ofPlatform().start(r1::f1);
     }
 }
 
@@ -17,7 +17,7 @@ class Resource {
 
     Lock lock = new ReentrantLock();
 
-    void f1 () {
+    void f1() {
         lock.lock();
 
         try {
