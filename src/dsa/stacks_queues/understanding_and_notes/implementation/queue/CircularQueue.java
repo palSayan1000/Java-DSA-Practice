@@ -1,10 +1,8 @@
 package dsa.stacks_queues.understanding_and_notes.implementation.queue;
 
 public class CircularQueue {
-    protected int[] data;
-
     private static final int DEFAULT_SIZE = 10;
-
+    protected int[] data;
     protected int end = 0;
     protected int front = 0;
     private int size = 0;
@@ -31,7 +29,7 @@ public class CircularQueue {
         }
         data[end++] = item;
         end = end % data.length;
-        size ++;
+        size++;
         return true;
     }
 
@@ -42,7 +40,7 @@ public class CircularQueue {
 
         int removed = data[front++];
         front = front % data.length;
-        size --;
+        size--;
 
         return removed;
     }
@@ -60,7 +58,7 @@ public class CircularQueue {
             System.out.println("The Circular Queue is Empty Bitch!!!!");
             return;
         }
-        for (int i = front, count = 0; count < size; i = ++i % data.length, count ++) {
+        for (int i = front, count = 0; count < size; i = ++i % data.length, count++) {
             System.out.print(data[i] + " <- ");
         }
         System.out.println("End");

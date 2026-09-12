@@ -1,9 +1,8 @@
 package dsa.stacks_queues.understanding_and_notes.implementation.stack;
 
 public class CustomStack {
-    protected int[] data;
     private static final int DEFAULT_SIZE = 10;
-
+    protected int[] data;
     int ptr = -1;
 
     public CustomStack() {
@@ -19,12 +18,12 @@ public class CustomStack {
             throw new StackException("Stack is Full !!!");
         }
 
-        ptr ++;
+        ptr++;
         data[ptr] = item;
         return true;
     }
 
-    public int pop() throws StackException{
+    public int pop() throws StackException {
         if (isEmpty()) {
             throw new StackException("Cannot Pop From An Empty Stack Bitch!!!");
         }
@@ -34,7 +33,7 @@ public class CustomStack {
         return data[ptr--];
     }
 
-    public int peek() throws StackException{
+    public int peek() throws StackException {
         if (isEmpty()) {
             throw new StackException("Cannot Peek From An Empty Stack Bitch!!!");
         }

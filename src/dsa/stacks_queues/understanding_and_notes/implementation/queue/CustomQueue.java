@@ -1,10 +1,8 @@
 package dsa.stacks_queues.understanding_and_notes.implementation.queue;
 
 public class CustomQueue {
-    private final int[] data;
-
     private static final int DEFAULT_SIZE = 10;
-
+    private final int[] data;
     int end = 0;
 
     public CustomQueue() {
@@ -39,7 +37,7 @@ public class CustomQueue {
         int removed = data[0];
         // shifting the elements to left
         System.arraycopy(data, 1, data, 0, end - 1);
-        end --;
+        end--;
 
         return removed;
     }

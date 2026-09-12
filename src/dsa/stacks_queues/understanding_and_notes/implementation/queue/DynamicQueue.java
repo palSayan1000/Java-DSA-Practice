@@ -1,6 +1,6 @@
 package dsa.stacks_queues.understanding_and_notes.implementation.queue;
 
-public class DynamicQueue extends CircularQueue{
+public class DynamicQueue extends CircularQueue {
 
     public DynamicQueue() {
         super();
