@@ -59,6 +59,7 @@ class SharedResources {
     public void sleep(int value) {
         try {
             Thread.sleep(value);
-        } catch (InterruptedException _) {}
+        } catch (InterruptedException _) {
+        }
     }
 }
