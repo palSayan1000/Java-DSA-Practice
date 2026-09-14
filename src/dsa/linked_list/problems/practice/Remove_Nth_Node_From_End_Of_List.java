@@ -1,4 +1,4 @@
-package dsa.linked_list.problems;
+package dsa.linked_list.problems.practice;
 
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
 public class Remove_Nth_Node_From_End_Of_List {
