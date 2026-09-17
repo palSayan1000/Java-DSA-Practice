@@ -19,7 +19,7 @@ public class Final_Finalize_KeyWord {
             obj = new A("Kutta");
         }
         System.out.println("Total obj destroyed: " + kunal.count);
-        // you will find this above statement as 22 in the middle as as this segment_tree continues running the
+        // you will find this above statement as 22 in the middle as as this segment continues running the
         // destruction of object is going on in on in and on in on in on in on
         // in the above the count is static the below is not static
         System.out.println("Total obj destroyed: " + kunal.ct); // this will print 0 -> lets see in static lecture
