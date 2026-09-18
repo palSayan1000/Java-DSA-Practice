@@ -14,14 +14,14 @@ public class Main {
         // SegmentTree class
         SegmentTree<Long> tree2 = SegmentTree.of(arr2, LongOps.ADD);
         SegmentTree<Float> tree3 = new SegmentTree<>(arr3, FloatOps.MODULES),
-                    tree33 = SegmentTree.of(arr33, FloatOps.MIN);
+                tree33 = SegmentTree.of(arr33, FloatOps.MIN);
         SegmentTree<Double> tree4 = SegmentTree.of(arr4, DoubleOps.MAX);
         // SegmentTree<Short> treeAR = new SegmentTree<>(ar, IntegerOps.SUBTRACT);
         System.out.println(tree1); // automatically calls toString as it over
         System.out.println(tree4.query(0, 4));
         System.out.println(tree33.query(5, arr33.length - 1));
         tree2.display();
-        System.out.println(tree2.query(0,1));
+        System.out.println(tree2.query(0, 1));
         tree2.update(0, 4L);
         System.out.println(tree2);
         System.out.println(tree3);

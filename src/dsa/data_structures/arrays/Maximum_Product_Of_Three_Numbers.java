@@ -4,16 +4,16 @@ package dsa.data_structures.arrays;
 public class Maximum_Product_Of_Three_Numbers {
     static void main() {
         System.out.println(new Maximum_Product_Of_Three_Numbers().maximumProduct(
-                new int[] {-100,-98,-1,2,3,4}
+                new int[]{-100, -98, -1, 2, 3, 4}
         ));
     }
 
     public int maximumProduct(int[] nums) {
         int largestNum = Integer.MIN_VALUE,
-            secondLargestNum = largestNum,
-            thirdLargestNum = largestNum,
-            smallestNum = Integer.MAX_VALUE,
-            secondSmallestNum = smallestNum;
+                secondLargestNum = largestNum,
+                thirdLargestNum = largestNum,
+                smallestNum = Integer.MAX_VALUE,
+                secondSmallestNum = smallestNum;
 
         for (int i : nums) {
 
@@ -38,6 +38,6 @@ public class Maximum_Product_Of_Three_Numbers {
         }
 
         return Math.max(thirdLargestNum * secondLargestNum * largestNum,
-                        largestNum * secondSmallestNum * smallestNum);
+                largestNum * secondSmallestNum * smallestNum);
     }
 }

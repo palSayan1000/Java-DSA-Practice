@@ -4,25 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AVL {
-    private static class Node {
-        private int value;
-        private int height;
-        private Node left;
-        private Node right;
-
-        public Node(int value) {
-            this.value = value;
-        }
-
-        public int getValue() {
-            return value;
-        }
-
-        public int setValue(int val) {
-            return this.value = val;
-        }
-    }
-
     private Node root;
 
     public AVL() {
@@ -37,12 +18,23 @@ public class AVL {
         }
     }
 
+    // Math.max(0, ...) guards make these safe even at the edges of odd-width /
+    // multi-digit trees, where a naive subtraction could otherwise go negative
+    // and blow up String.repeat with an IllegalArgumentException.
+    private static String spaces(int count) {
+        return " ".repeat(Math.max(0, count));
+    }
+
+    private static String underscores(int count) {
+        return "_".repeat(Math.max(0, count));
+    }
+
     private boolean isSorted(int[] nums) {
         if (nums == null || nums.length <= 1) {
             return false;
         }
 
-        for (int i = 0; i < nums.length - 1; i ++) {
+        for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] > nums[i + 1]) {
                 return false;
             }
@@ -168,18 +160,6 @@ public class AVL {
         }
     }
 
-    public void populateSorted(int[] nums, int start, int end) {
-        if (start > end) {
-            return;
-        }
-        int mid = start + (end - start) / 2;
-
-        insert(nums[mid]);
-
-        populateSorted(nums, start, mid - 1);
-        populateSorted(nums, mid + 1, end);
-    }
-
 //    public void display() {
 //        display(root, "Root Node: ");
 //    }
@@ -195,7 +175,19 @@ public class AVL {
 //    }
 
     // this is ai generated
-      // ---------- branch-drawn view ----------
+    // ---------- branch-drawn view ----------
+
+    public void populateSorted(int[] nums, int start, int end) {
+        if (start > end) {
+            return;
+        }
+        int mid = start + (end - start) / 2;
+
+        insert(nums[mid]);
+
+        populateSorted(nums, start, mid - 1);
+        populateSorted(nums, mid + 1, end);
+    }
 
     /**
      * Prints the tree as a connected ASCII diagram, e.g.:
@@ -220,28 +212,6 @@ public class AVL {
             return "(empty tree)";
         }
         return String.join(System.lineSeparator(), buildDiagram(root).lines);
-    }
-
-    /**
-     * One rendered "block" for a subtree: its lines, plus the geometry the parent
-     * needs (width/height/middle) to attach its own branch lines correctly.
-     *
-     * @param width  total character width of the block
-     * @param height number of lines in the block
-     * @param middle horizontal offset of this node's own connector point
-     */
-        private record Diagram(List<String> lines, int width, int height, int middle) {
-    }
-
-    // Math.max(0, ...) guards make these safe even at the edges of odd-width /
-    // multi-digit trees, where a naive subtraction could otherwise go negative
-    // and blow up String.repeat with an IllegalArgumentException.
-    private static String spaces(int count) {
-        return " ".repeat(Math.max(0, count));
-    }
-
-    private static String underscores(int count) {
-        return "_".repeat(Math.max(0, count));
     }
 
     private Diagram buildDiagram(Node node) {
@@ -317,5 +287,35 @@ public class AVL {
                 left.width + labelWidth + right.width,
                 Math.max(left.height, right.height) + 2,
                 left.width + labelWidth / 2);
+    }
+
+    private static class Node {
+        private int value;
+        private int height;
+        private Node left;
+        private Node right;
+
+        public Node(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public int setValue(int val) {
+            return this.value = val;
+        }
+    }
+
+    /**
+     * One rendered "block" for a subtree: its lines, plus the geometry the parent
+     * needs (width/height/middle) to attach its own branch lines correctly.
+     *
+     * @param width  total character width of the block
+     * @param height number of lines in the block
+     * @param middle horizontal offset of this node's own connector point
+     */
+    private record Diagram(List<String> lines, int width, int height, int middle) {
     }
 }

@@ -5,47 +5,22 @@ import java.util.List;
 
 public class SegmentTree {
 
-    private static class Node {
-        int data;
-        int startInterval;
-        int endInterval;
-        Node left;
-        Node right;
-
-        public Node (int data, int startInterval, int endInterval) {
-            this.endInterval = endInterval;
-            this.startInterval = startInterval;
-            this.data = data;
-        }
-
-        public Node (int startInterval, int endInterval) {
-            this.startInterval = startInterval;
-            this.endInterval = endInterval;
-        }
-    }
-
     Node root;
 
-    public SegmentTree (int[] arr) {
+    public SegmentTree(int[] arr) {
         // create a tree using this array
         this.root = constructTree(arr, 0, arr.length - 1);
     }
 
-    private Node constructTree (int[] arr, int start, int end) {
-        if (start ==  end) {
-            // leaf node
-            return new Node(arr[start], start, end);
-        }
+    // Math.max(0, ...) guards make these safe even at the edges of odd-width /
+    // multi-digit trees, where a naive subtraction could otherwise go negative
+    // and blow up String.repeat with an IllegalArgumentException.
+    private static String spaces(int count) {
+        return " ".repeat(Math.max(0, count));
+    }
 
-        // create new node with the index you are currently at
-        Node node = new Node(start, end);
-        int mid = start + (end - start) / 2;
-
-        node.left = this.constructTree(arr, start, mid);
-        node.right = this.constructTree(arr, mid + 1, end);
-
-        node.data = node.left.data + node.right.data;
-        return node;
+    private static String underscores(int count) {
+        return "_".repeat(Math.max(0, count));
     }
 
 //    public void display() {
@@ -81,12 +56,29 @@ public class SegmentTree {
 //        }
 //    }
 
+    private Node constructTree(int[] arr, int start, int end) {
+        if (start == end) {
+            // leaf node
+            return new Node(arr[start], start, end);
+        }
+
+        // create new node with the index you are currently at
+        Node node = new Node(start, end);
+        int mid = start + (end - start) / 2;
+
+        node.left = this.constructTree(arr, start, mid);
+        node.right = this.constructTree(arr, mid + 1, end);
+
+        node.data = node.left.data + node.right.data;
+        return node;
+    }
+
     // query
-    public int query (int qsi, int qei) {
+    public int query(int qsi, int qei) {
         return query(root, qsi, qei);
     }
 
-    private int query (Node node, int qsi, int qei) {
+    private int query(Node node, int qsi, int qei) {
         if (node.startInterval >= qsi && node.endInterval <= qei) { // case 1
             // node is completely lying inside query
             return node.data;
@@ -99,9 +91,12 @@ public class SegmentTree {
     }
 
     // update
-    public void update (int index, int val) {
+    public void update(int index, int val) {
         root.data = update(root, index, val);
     }
+
+    // this is ai generated
+    // ---------- branch-drawn view ----------
 
     private int update(Node node, int index, int value) {
         if (index >= node.startInterval && index <= node.endInterval) {
@@ -119,9 +114,6 @@ public class SegmentTree {
 
         return node.data;
     }
-
-    // this is ai generated
-      // ---------- branch-drawn view ----------
 
     /**
      * Prints the tree as a connected ASCII diagram, e.g.:
@@ -146,28 +138,6 @@ public class SegmentTree {
             return "(empty tree)";
         }
         return String.join(System.lineSeparator(), buildDiagram(root).lines);
-    }
-
-    /**
-     * One rendered "block" for a subtree: its lines, plus the geometry the parent
-     * needs (width/height/middle) to attach its own branch lines correctly.
-     *
-     * @param width  total character width of the block
-     * @param height number of lines in the block
-     * @param middle horizontal offset of this node's own connector point
-     */
-        private record Diagram(List<String> lines, int width, int height, int middle) {
-    }
-
-    // Math.max(0, ...) guards make these safe even at the edges of odd-width /
-    // multi-digit trees, where a naive subtraction could otherwise go negative
-    // and blow up String.repeat with an IllegalArgumentException.
-    private static String spaces(int count) {
-        return " ".repeat(Math.max(0, count));
-    }
-
-    private static String underscores(int count) {
-        return "_".repeat(Math.max(0, count));
     }
 
     private Diagram buildDiagram(Node node) {
@@ -243,5 +213,35 @@ public class SegmentTree {
                 left.width + labelWidth + right.width,
                 Math.max(left.height, right.height) + 2,
                 left.width + labelWidth / 2);
+    }
+
+    private static class Node {
+        int data;
+        int startInterval;
+        int endInterval;
+        Node left;
+        Node right;
+
+        public Node(int data, int startInterval, int endInterval) {
+            this.endInterval = endInterval;
+            this.startInterval = startInterval;
+            this.data = data;
+        }
+
+        public Node(int startInterval, int endInterval) {
+            this.startInterval = startInterval;
+            this.endInterval = endInterval;
+        }
+    }
+
+    /**
+     * One rendered "block" for a subtree: its lines, plus the geometry the parent
+     * needs (width/height/middle) to attach its own branch lines correctly.
+     *
+     * @param width  total character width of the block
+     * @param height number of lines in the block
+     * @param middle horizontal offset of this node's own connector point
+     */
+    private record Diagram(List<String> lines, int width, int height, int middle) {
     }
 }

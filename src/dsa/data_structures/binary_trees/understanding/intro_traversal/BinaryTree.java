@@ -6,30 +6,24 @@ import java.util.Scanner;
 
 public class BinaryTree {
 
+    private Node root;
+
     public BinaryTree() {
         root = null;
     }
 
-    private static class Node {
-        @SuppressWarnings("FieldMayBeFinal")
-        private int value;
-        private Node left;
-        private Node right;
-
-        public Node(int value) {
-            this.value = value;
-        }
-
-        public Node(int value, Node left, Node right) {
-            this.value = value;
-            this.left = left;
-            this.right = right;
-        }
+    // Math.max(0, ...) guards make these safe even at the edges of odd-width /
+    // multi-digit trees, where a naive subtraction could otherwise go negative
+    // and blow up String.repeat with an IllegalArgumentException.
+    private static String spaces(int count) {
+        return " ".repeat(Math.max(0, count));
     }
 
-    private Node root;
+    private static String underscores(int count) {
+        return "_".repeat(Math.max(0, count));
+    }
 
-      // ---------- building the tree interactively ----------
+    // ---------- building the tree interactively ----------
     // insert elements
     public void populate(Scanner scanner) {
         System.out.println("Enter the root node value: ");
@@ -126,6 +120,8 @@ public class BinaryTree {
         postOrder(root);
     }
 
+    // ---------- branch-drawn view ----------
+
     private void postOrder(Node node) {
         if (node == null) {
             return;
@@ -134,8 +130,6 @@ public class BinaryTree {
         postOrder(node.right);
         System.out.println(node.value + "\t");
     }
-
-      // ---------- branch-drawn view ----------
 
     /**
      * Prints the tree as a connected ASCII diagram, e.g.:
@@ -160,35 +154,6 @@ public class BinaryTree {
             return "(empty tree)";
         }
         return String.join(System.lineSeparator(), buildDiagram(root).lines);
-    }
-
-    /**
-     * One rendered "block" for a subtree: its lines, plus the geometry the parent
-     * needs (width/height/middle) to attach its own branch lines correctly.
-     */
-    private static final class Diagram {
-        final List<String> lines;
-        final int width;   // total character width of the block
-        final int height;  // number of lines in the block
-        final int middle;  // horizontal offset of this node's own connector point
-
-        Diagram(List<String> lines, int width, int height, int middle) {
-            this.lines = lines;
-            this.width = width;
-            this.height = height;
-            this.middle = middle;
-        }
-    }
-
-    // Math.max(0, ...) guards make these safe even at the edges of odd-width /
-    // multi-digit trees, where a naive subtraction could otherwise go negative
-    // and blow up String.repeat with an IllegalArgumentException.
-    private static String spaces(int count) {
-        return " ".repeat(Math.max(0, count));
-    }
-
-    private static String underscores(int count) {
-        return "_".repeat(Math.max(0, count));
     }
 
     private Diagram buildDiagram(Node node) {
@@ -264,5 +229,40 @@ public class BinaryTree {
                 left.width + labelWidth + right.width,
                 Math.max(left.height, right.height) + 2,
                 left.width + labelWidth / 2);
+    }
+
+    private static class Node {
+        @SuppressWarnings("FieldMayBeFinal")
+        private int value;
+        private Node left;
+        private Node right;
+
+        public Node(int value) {
+            this.value = value;
+        }
+
+        public Node(int value, Node left, Node right) {
+            this.value = value;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
+    /**
+     * One rendered "block" for a subtree: its lines, plus the geometry the parent
+     * needs (width/height/middle) to attach its own branch lines correctly.
+     */
+    private static final class Diagram {
+        final List<String> lines;
+        final int width;   // total character width of the block
+        final int height;  // number of lines in the block
+        final int middle;  // horizontal offset of this node's own connector point
+
+        Diagram(List<String> lines, int width, int height, int middle) {
+            this.lines = lines;
+            this.width = width;
+            this.height = height;
+            this.middle = middle;
+        }
     }
 }

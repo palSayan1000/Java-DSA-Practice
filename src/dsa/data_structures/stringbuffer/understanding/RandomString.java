@@ -9,9 +9,9 @@ public class RandomString {
 
         Random rand = new Random();
 
-        for (int i = 0; i < size; i ++) {
+        for (int i = 0; i < size; i++) {
             int randomChar = 97 + (int) (26 * rand.nextFloat());
-            sb.append((char)randomChar);
+            sb.append((char) randomChar);
         }
 
         return sb.toString();
@@ -30,7 +30,7 @@ public class RandomString {
             }
         };
 
-        for (int i = 0; i < 10; i ++) {
+        for (int i = 0; i < 10; i++) {
             Thread.ofPlatform().start(task);
         }
     }

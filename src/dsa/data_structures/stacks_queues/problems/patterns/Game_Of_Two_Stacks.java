@@ -4,9 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Game_Of_Two_Stacks {
-    public int twoStacks(int x, int[] a, int[] b) {
-        return twoStacks(x, a, b, 0, 0) - 1;
-    }
     public static int twoStacks(int x, int[] a, int[] b, int sum, int count) {
         if (sum > x) {
             return count;
@@ -21,6 +18,7 @@ public class Game_Of_Two_Stacks {
 
         return Math.max(ans1, ans2);
     }
+
     // the official correct code
     public static int twoStacks(int maxSum, List<Integer> a, List<Integer> b) {
         int i = 0, sum = 0;
@@ -43,5 +41,9 @@ public class Game_Of_Two_Stacks {
         }
 
         return maxCount;
+    }
+
+    public int twoStacks(int x, int[] a, int[] b) {
+        return twoStacks(x, a, b, 0, 0) - 1;
     }
 }

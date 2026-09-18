@@ -3,7 +3,7 @@ package multithreading_and_concurrency.intro.lock_free_concurrency.part_1;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class Demo2 {
-    static void main() throws Exception{
+    static void main() throws Exception {
         SeatBooking obj = new SeatBooking();
 
         Thread t1 = Thread.ofPlatform().start(() -> obj.bookSeat("Ronno"));
@@ -16,14 +16,17 @@ public class Demo2 {
         t3.join();
         t4.join();
 
-        try {Thread.sleep(0, 2000);} catch (InterruptedException _) {}
+        try {
+            Thread.sleep(0, 2000);
+        } catch (InterruptedException _) {
+        }
 
         System.out.println(obj.seat);
     }
 }
 
 class SeatBooking {
-//    String seat = new String("EMPTY");
+    //    String seat = new String("EMPTY");
     AtomicReference<String> seat = new AtomicReference<>("EMPTY");
 
     boolean bookSeat(String name) {

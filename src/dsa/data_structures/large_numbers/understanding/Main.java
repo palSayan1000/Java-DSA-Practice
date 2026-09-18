@@ -1,7 +1,5 @@
 package dsa.data_structures.large_numbers.understanding;
 
-import object_oriented_programming.oop_5.interfaces.extend_demo.B;
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
@@ -44,7 +42,7 @@ public class Main {
         BigInteger C = new BigInteger("2345456789098765433456789876543345678909876543345678909876543");
 //        BigInteger D = BigInteger.valueOf("4567890"); --> this does not work
         BigInteger AB = BigInteger.valueOf(3),
-                    X = new BigInteger("2345675678");
+                X = new BigInteger("2345675678");
         int c = AB.intValue(); // BI to int
 
         // constants
@@ -55,7 +53,7 @@ public class Main {
         BigInteger prod = B.multiply(C),
                 sub = C.subtract(A),
                 div = C.divide(AB),
-                        mod = A.remainder(AB);
+                mod = A.remainder(AB);
 
         if (C.compareTo(X) < 0) { // that's how you compare
             System.out.println("Yes");

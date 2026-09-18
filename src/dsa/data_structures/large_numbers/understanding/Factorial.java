@@ -1,7 +1,5 @@
 package dsa.data_structures.large_numbers.understanding;
 
-import dsa.algorithms.bit_manupulation.BitCount;
-
 import java.math.BigInteger;
 
 public class Factorial {
@@ -10,7 +8,7 @@ public class Factorial {
                 limit = new BigInteger(num);
 
         for (BigInteger i = BigInteger.ONE; i.compareTo(limit) <= 0/* continues till i less than limit*/;
-                                            i = i.add(BigInteger.ONE)) {
+             i = i.add(BigInteger.ONE)) {
             prod = prod.multiply(i);
         }
 

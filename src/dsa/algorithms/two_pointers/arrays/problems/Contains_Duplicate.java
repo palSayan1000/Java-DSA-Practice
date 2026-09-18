@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Contains_Duplicate {
     static void main() {
-        System.out.println(new Contains_Duplicate().containsDuplicate(new int[] {1, 2, 3, 4, 2}));
+        System.out.println(new Contains_Duplicate().containsDuplicate(new int[]{1, 2, 3, 4, 2}));
     }
 
     public boolean containsDuplicate(int[] nums) {

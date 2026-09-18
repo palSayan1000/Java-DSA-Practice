@@ -4,17 +4,18 @@ public class Robot_Return_To_Origin {
     static void main() {
         System.out.println(new Robot_Return_To_Origin().judgeCircle("LDRRLRUULR"));
     }
+
     public boolean judgeCircle(String moves) {
         int UD = 0, LR = 0;
         for (char ch : moves.toCharArray()) {
             if (ch == 'L')
-                LR ++;
+                LR++;
             else if (ch == 'R')
-                LR --;
+                LR--;
             else if (ch == 'U')
-                UD ++;
+                UD++;
             else if (ch == 'D')
-                UD --;
+                UD--;
         }
         return UD == 0 && LR == 0;
     }

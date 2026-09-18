@@ -1,16 +1,18 @@
 package multithreading_and_concurrency.intro.lock_free_concurrency.part_2;
 
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class Demo {
     static void main() {
         LikeCounter likeCount = new LikeCounter();
 
         for (int i = 100; i > 0; i--)
-            Thread.ofPlatform().start(likeCount :: like);
+            Thread.ofPlatform().start(likeCount::like);
 
-        try { Thread.sleep(1000); } catch (InterruptedException _) {}
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException _) {
+        }
 
         System.out.println("Total Likes Baby: " + likeCount.get());
     }

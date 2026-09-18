@@ -12,7 +12,7 @@ public class Merge_K_Sorted_Lists {
     private ListNode mergeKLists(ListNode[] lists) {
         List<Integer> list = new ArrayList<>();
 
-        for (ListNode node: lists)
+        for (ListNode node : lists)
             while (node != null) {
                 list.add(node.val);
                 node = node.next;
@@ -22,7 +22,7 @@ public class Merge_K_Sorted_Lists {
 
         ListNode dummy = new ListNode(0), headPrev = dummy;
 
-        for (int i: list) {
+        for (int i : list) {
             dummy.next = new ListNode(i);
             dummy = dummy.next;
         }

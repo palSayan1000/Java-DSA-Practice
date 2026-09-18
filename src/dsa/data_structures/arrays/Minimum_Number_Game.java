@@ -6,9 +6,10 @@ import java.util.Arrays;
 public class Minimum_Number_Game {
     static void main() {
         System.out.println(Arrays.toString(new Minimum_Number_Game().numberGame(
-                new int[] {5,4,2,3}
+                new int[]{5, 4, 2, 3}
         )));
     }
+
     public int[] numberGame(int[] nums) {
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 1; i += 2) {

@@ -11,7 +11,7 @@ public class Demo {
         };
 
         Thread t1 = Thread.ofPlatform().start(task),
-            t2 = Thread.ofPlatform().start(task), t3 = Thread.ofPlatform().start(task);
+                t2 = Thread.ofPlatform().start(task), t3 = Thread.ofPlatform().start(task);
 
         t1.join();
         t2.join();
