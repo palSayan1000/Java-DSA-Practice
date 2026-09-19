@@ -96,5 +96,41 @@ public enum IntegerOps implements Operation<Integer> {
         public Integer identity() {
             return Integer.MAX_VALUE;
         }
+    },
+
+    /**
+     * Returns the lcm of the two values; identity is {@code 1}.
+     */
+    LCM {
+        public Integer apply(Integer a, Integer b) {
+            return lcm(a, b);
+        }
+
+        public Integer identity() {
+            return 1;
+        }
+    },
+
+    /**
+     * Returns the gcd of the two values; identity is {@code 0}.
+     */
+    GCD {
+        public Integer apply(Integer a, Integer b) {
+            return gcd(a, b);
+        }
+
+        public Integer identity() {
+            return 0;
+        }
+    };
+
+    Integer lcm(Integer a, Integer b) {
+        return a * b / gcd(a, b);
+    }
+
+    Integer gcd(Integer a, Integer b) {
+        if (a == 0)
+            return b;
+        return gcd(b % a, a);
     }
 }

@@ -186,6 +186,9 @@ public class SegmentTree<T extends Number> {
      */
     public T query(int queryStartIndex, int queryEndIndex) {
         checkRange(queryStartIndex, queryEndIndex);
+        if (queryEndIndex == queryStartIndex) {
+            return get(queryEndIndex);
+        }
         return query(root, queryStartIndex, queryEndIndex);
     }
 

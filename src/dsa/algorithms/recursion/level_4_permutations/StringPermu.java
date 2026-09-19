@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class StringPermu {
     static void main() {
-        String str = "abcde";
-        System.out.println(permutationsList(str, 0, ""));
+        String str = "123";
+        permutations(str, 0, "");
     }
 
     static void permutations(String str, int index, String current) {

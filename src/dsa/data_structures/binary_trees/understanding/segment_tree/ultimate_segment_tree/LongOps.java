@@ -96,5 +96,41 @@ public enum LongOps implements Operation<Long> {
         public Long identity() {
             return Long.MAX_VALUE;
         }
+    },
+
+    /**
+     * Returns the lcm of the two values; identity is {@code 1L}.
+     */
+    LCM {
+        public Long apply(Long a, Long b) {
+            return lcm(a, b);
+        }
+
+        public Long identity() {
+            return 1L;
+        }
+    },
+    
+    /**
+     * Returns the gcd of the two values; identity is {@code 0L}.
+     */
+    GCD {
+        public Long apply(Long a, Long b) {
+            return gcd(a, b);
+        }
+
+        public Long identity() {
+            return 0L;
+        }
+    };
+    
+    Long lcm(Long a, Long b) {
+        return a * b / gcd(a, b);
+    }
+
+    Long gcd(Long a, Long b) {
+        if (a == 0)
+            return b;
+        return gcd(b % a, a);
     }
 }
