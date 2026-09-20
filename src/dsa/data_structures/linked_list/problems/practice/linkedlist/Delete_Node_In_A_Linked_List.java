@@ -1,4 +1,4 @@
-package dsa.data_structures.linked_list.problems.practice;
+package dsa.data_structures.linked_list.problems.practice.linkedlist;
 
 public class Delete_Node_In_A_Linked_List {
 

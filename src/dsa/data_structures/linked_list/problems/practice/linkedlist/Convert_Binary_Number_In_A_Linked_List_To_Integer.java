@@ -1,4 +1,4 @@
-package dsa.data_structures.linked_list.problems.practice;
+package dsa.data_structures.linked_list.problems.practice.linkedlist;
 
 // https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/description/
 public class Convert_Binary_Number_In_A_Linked_List_To_Integer {

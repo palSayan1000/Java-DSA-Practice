@@ -1,4 +1,4 @@
-package dsa.data_structures.linked_list.problems.practice;
+package dsa.data_structures.linked_list.problems.practice.linkedlist;
 
 // https://leetcode.com/problems/add-two-numbers/description/
 public class Add_Two_Numbers {

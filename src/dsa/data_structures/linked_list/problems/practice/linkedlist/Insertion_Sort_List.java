@@ -1,4 +1,4 @@
-package dsa.data_structures.linked_list.problems.practice;
+package dsa.data_structures.linked_list.problems.practice.linkedlist;
 
 public class Insertion_Sort_List {
     private ListNode insertionSortList(ListNode head) {

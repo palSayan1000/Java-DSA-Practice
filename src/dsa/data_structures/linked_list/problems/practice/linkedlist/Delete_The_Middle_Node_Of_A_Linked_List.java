@@ -1,4 +1,4 @@
-package dsa.data_structures.linked_list.problems.practice;
+package dsa.data_structures.linked_list.problems.practice.linkedlist;
 
 public class Delete_The_Middle_Node_Of_A_Linked_List {
 

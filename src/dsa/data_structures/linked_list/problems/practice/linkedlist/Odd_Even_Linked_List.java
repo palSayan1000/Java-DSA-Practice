@@ -1,4 +1,4 @@
-package dsa.data_structures.linked_list.problems.practice;
+package dsa.data_structures.linked_list.problems.practice.linkedlist;
 
 // https://leetcode.com/problems/odd-even-linked-list/description/?envType=problem-list-v2&envId=linked-list
 public class Odd_Even_Linked_List {
