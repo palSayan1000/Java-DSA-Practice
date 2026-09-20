@@ -7,6 +7,7 @@ public class SegmentTree<T extends Number> {
 
     private final Node<T> root; // the root node of the segment tree
     private final Operation<T> op;
+
     /**
      * Builds a segment tree over the given array using the supplied combining
      * operation (e.g. sum, min, max).

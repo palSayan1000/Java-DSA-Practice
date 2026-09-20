@@ -1,6 +1,8 @@
 package multithreading_and_concurrency.intro.executer_framework;
 
-import java.util.concurrent.*;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 public class Demo4 {
     static void main() {
@@ -15,7 +17,10 @@ public class Demo4 {
             executor.execute(() -> {
                 System.out.println("Task : " + finalI + " is performed by : " +
                         Thread.currentThread().getName());
-                try { Thread.sleep(0, 1000); } catch (InterruptedException _) {}
+                try {
+                    Thread.sleep(0, 1000);
+                } catch (InterruptedException _) {
+                }
             });
         }
 

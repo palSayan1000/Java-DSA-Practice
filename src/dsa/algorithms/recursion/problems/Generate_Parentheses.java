@@ -7,14 +7,16 @@ public class Generate_Parentheses {
     static void main() {
         System.out.println(new Generate_Parentheses().generateParenthesis(8));
     }
+
     public List<String> generateParenthesis(int n) {
         List<String> list = new ArrayList<>();
         generateParenthesis(n, n, new StringBuilder(), list);
         return list;
     }
+
     public void generateParenthesis(int openingParenthesisTracker,
-                    int closingParenthesisTracker,
-                    StringBuilder sBuilder, List<String> list) {
+                                    int closingParenthesisTracker,
+                                    StringBuilder sBuilder, List<String> list) {
 
         if (openingParenthesisTracker == 0 &&
                 closingParenthesisTracker == 0) {

@@ -17,6 +17,7 @@ public class Flatten_A_Multilevel_Doubly_Linked_List {
         }
         return head;
     }
+
     private Node getTail(Node head) {
         if (head == null || head.next == null) {
             return head;

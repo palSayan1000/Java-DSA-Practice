@@ -110,7 +110,7 @@ public enum LongOps implements Operation<Long> {
             return 1L;
         }
     },
-    
+
     /**
      * Returns the gcd of the two values; identity is {@code 0L}.
      */
@@ -123,7 +123,7 @@ public enum LongOps implements Operation<Long> {
             return 0L;
         }
     };
-    
+
     Long lcm(Long a, Long b) {
         return a * b / gcd(a, b);
     }

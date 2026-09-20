@@ -8,11 +8,13 @@ public class Combination_Sum_III {
     static void main() {
         System.out.println(new Combination_Sum_III().combinationSum3(3, 7));
     }
+
     public List<List<Integer>> combinationSum3(int k, int n) {
         List<List<Integer>> list = new ArrayList<>();
         combinationSum3(1, n, k, new ArrayList<>(), list);
         return list;
     }
+
     public void combinationSum3(int index, int n, int k, List<Integer> lst,
                                 List<List<Integer>> list) {
         if (k == 0 && n == 0) {

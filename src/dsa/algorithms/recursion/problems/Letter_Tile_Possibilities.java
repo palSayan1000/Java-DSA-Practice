@@ -3,10 +3,11 @@ package dsa.algorithms.recursion.problems;
 import java.util.HashSet;
 
 public class Letter_Tile_Possibilities {
+    HashSet<String> set = new HashSet<>();
+
     static void main() {
         System.out.println(new Letter_Tile_Possibilities().numTilePossibilities("AAB"));
     }
-    HashSet<String> set = new HashSet<>();
 
     public int numTilePossibilities(String tiles) {
         countPossibilities(tiles, new boolean[tiles.length()], new StringBuilder());

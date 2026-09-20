@@ -4,8 +4,8 @@ package dsa.data_structures.linked_list.problems.practice.linkedlist;
 public class Odd_Even_Linked_List {
     private ListNode oddEvenList(ListNode head) {
         ListNode oddHead = new ListNode(),
-            evenHead = new ListNode(), dummyOddHead = oddHead,
-            dummyEvenHead = evenHead, dummy = head;
+                evenHead = new ListNode(), dummyOddHead = oddHead,
+                dummyEvenHead = evenHead, dummy = head;
 
         for (int i = 1; dummy != null; i++) {
             if (i % 2 == 0) {
@@ -22,6 +22,7 @@ public class Odd_Even_Linked_List {
         oddHead.next = dummyEvenHead.next;
         return dummyOddHead.next;
     }
+
     private static class ListNode {
         int val;
         ListNode next;

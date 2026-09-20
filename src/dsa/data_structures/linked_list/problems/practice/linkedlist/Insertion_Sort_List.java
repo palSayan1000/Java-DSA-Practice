@@ -27,6 +27,7 @@ public class Insertion_Sort_List {
 
         return head;
     }
+
     private static class ListNode {
         int val;
         ListNode next;
