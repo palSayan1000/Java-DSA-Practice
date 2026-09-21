@@ -9,6 +9,7 @@ public class Symmetric_Tree {
         }
         return isSymmetric(root.left, root.right);
     }
+
     // dfs baby
     private boolean isSymmetric(TreeNode firstNode, TreeNode secondNode) {
         if (firstNode == null && secondNode == null) {
@@ -19,20 +20,26 @@ public class Symmetric_Tree {
         }
         return (
                 firstNode.val == secondNode.val &&
-                isSymmetric(firstNode.left, secondNode.right) && isSymmetric(firstNode.right, secondNode.left)
+                        isSymmetric(firstNode.left, secondNode.right) && isSymmetric(firstNode.right, secondNode.left)
         );
     }
 
     private static class TreeNode {
-       int val;
-       TreeNode left;
-       TreeNode right;
-       TreeNode() {}
-       TreeNode(int val) { this.val = val; }
-       TreeNode(int val, TreeNode left, TreeNode right) {
-           this.val = val;
-           this.left = left;
-           this.right = right;
-       }
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 }

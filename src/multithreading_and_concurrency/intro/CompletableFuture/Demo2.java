@@ -1,7 +1,6 @@
 package multithreading_and_concurrency.intro.CompletableFuture;
 
 import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.RecursiveAction;
 import java.util.concurrent.RecursiveTask;
 
 public class Demo2 {
@@ -19,6 +18,7 @@ public class Demo2 {
         pool.shutdown();
     }
 }
+
 // Fork join pool
 class SumTask extends RecursiveTask<Integer> {
 
@@ -36,7 +36,7 @@ class SumTask extends RecursiveTask<Integer> {
         // base condition
         if (end - start <= 2) {
             int sum = 0;
-            for (int i = start;i <= end; i++)
+            for (int i = start; i <= end; i++)
                 sum += arr[i];
             return sum;
         }

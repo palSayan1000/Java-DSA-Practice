@@ -8,20 +8,26 @@ public class Maximum_Depth_Of_Binary_Tree {
             return 0;
         }
         return (
-            Math.max(/*Left Height*/maxDepth(root.left), /*Right Height*/maxDepth(root.right)) + 1
+                Math.max(/*Left Height*/maxDepth(root.left), /*Right Height*/maxDepth(root.right)) + 1
         );
     }
 
     private static class TreeNode {
-       int val;
-       TreeNode left;
-       TreeNode right;
-       TreeNode() {}
-       TreeNode(int val) { this.val = val; }
-       TreeNode(int val, TreeNode left, TreeNode right) {
-           this.val = val;
-           this.left = left;
-           this.right = right;
-       }
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 }

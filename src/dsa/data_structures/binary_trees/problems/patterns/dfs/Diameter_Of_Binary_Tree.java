@@ -3,10 +3,12 @@ package dsa.data_structures.binary_trees.problems.patterns.dfs;
 // https://leetcode.com/problems/diameter-of-binary-tree/description/
 public class Diameter_Of_Binary_Tree {
     int diameter = 0;
+
     private int diameterOfBinaryTree(TreeNode root) {
         height(root);
         return diameter - 1;
     }
+
     private int height(TreeNode node) {
         if (node == null) {
             return 0;
@@ -22,15 +24,21 @@ public class Diameter_Of_Binary_Tree {
     }
 
     private static class TreeNode {
-       int val;
-       TreeNode left;
-       TreeNode right;
-       TreeNode() {}
-       TreeNode(int val) { this.val = val; }
-       TreeNode(int val, TreeNode left, TreeNode right) {
-           this.val = val;
-           this.left = left;
-           this.right = right;
-       }
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 }

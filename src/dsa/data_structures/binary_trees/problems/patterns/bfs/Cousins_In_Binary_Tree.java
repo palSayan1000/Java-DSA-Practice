@@ -8,7 +8,7 @@ public class Cousins_In_Binary_Tree {
         TreeNode yy = findNode(root, y);
 
         return (
-            level(root, xx, 0) == level(root, yy, 0) && !isSiblings(root, xx, yy)
+                level(root, xx, 0) == level(root, yy, 0) && !isSiblings(root, xx, yy)
         );
     }
 
@@ -49,15 +49,21 @@ public class Cousins_In_Binary_Tree {
     }
 
     private static class TreeNode {
-       int val;
-       TreeNode left;
-       TreeNode right;
-       TreeNode() {}
-       TreeNode(int val) { this.val = val; }
-       TreeNode(int val, TreeNode left, TreeNode right) {
-           this.val = val;
-           this.left = left;
-           this.right = right;
-       }
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 }

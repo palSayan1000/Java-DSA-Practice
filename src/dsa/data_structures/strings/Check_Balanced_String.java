@@ -5,6 +5,7 @@ public class Check_Balanced_String {
     static void main() {
         System.out.println(new Check_Balanced_String().isBalanced("1234"));
     }
+
     public boolean isBalanced(String num) {
         int evenSum = 0, oddSum = 0;
         for (int i = 0; i < num.length(); i++) {
