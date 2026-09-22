@@ -1,5 +1,7 @@
 package dsa.data_structures.binary_trees.problems.practice.dfs;
 
+import dsa.data_structures.binary_trees.problems.TreeNode;
+
 // https://leetcode.com/problems/balanced-binary-tree/description/
 public class Balanced_Binary_Tree {
     private boolean isBalanced(TreeNode root) {
@@ -17,24 +19,5 @@ public class Balanced_Binary_Tree {
         return Math.max(
                 height(node.left), height(node.right)
         ) + 1;
-    }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

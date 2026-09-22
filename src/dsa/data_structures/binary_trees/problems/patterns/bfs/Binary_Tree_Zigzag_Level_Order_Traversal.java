@@ -1,5 +1,7 @@
 package dsa.data_structures.binary_trees.problems.patterns.bfs;
 
+import dsa.data_structures.binary_trees.problems.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -92,23 +94,4 @@ public class Binary_Tree_Zigzag_Level_Order_Traversal {
 //
 //        return list;
 //    }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 }

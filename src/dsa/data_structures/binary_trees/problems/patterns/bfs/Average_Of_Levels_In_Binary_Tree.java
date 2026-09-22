@@ -1,5 +1,7 @@
 package dsa.data_structures.binary_trees.problems.patterns.bfs;
 
+import dsa.data_structures.binary_trees.problems.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -41,24 +43,5 @@ public class Average_Of_Levels_In_Binary_Tree {
         }
 
         return list;
-    }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

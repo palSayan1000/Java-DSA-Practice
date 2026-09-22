@@ -1,5 +1,7 @@
 package dsa.data_structures.binary_trees.problems.patterns.bst;
 
+import dsa.data_structures.binary_trees.problems.TreeNode;
+
 // https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/
 public class Convert_Sorted_Array_To_Binary_Search_Tree {
     TreeNode root;
@@ -36,24 +38,5 @@ public class Convert_Sorted_Array_To_Binary_Search_Tree {
             node.right = insert(value, node.right);
         }
         return node;
-    }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

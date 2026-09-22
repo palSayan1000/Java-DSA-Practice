@@ -1,5 +1,7 @@
 package dsa.data_structures.binary_trees.problems.patterns.bfs;
 
+import dsa.data_structures.binary_trees.problems.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -37,24 +39,5 @@ public class Binary_Tree_Level_Order_Traversal {
         }
 
         return list;
-    }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

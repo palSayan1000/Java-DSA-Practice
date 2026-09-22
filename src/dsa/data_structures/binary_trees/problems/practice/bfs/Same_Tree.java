@@ -1,5 +1,7 @@
 package dsa.data_structures.binary_trees.problems.practice.bfs;
 
+import dsa.data_structures.binary_trees.problems.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -58,24 +60,5 @@ public class Same_Tree {
         }
 
         return true;
-    }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

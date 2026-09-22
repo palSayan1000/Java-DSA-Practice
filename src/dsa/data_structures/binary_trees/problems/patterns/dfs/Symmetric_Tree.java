@@ -1,5 +1,7 @@
 package dsa.data_structures.binary_trees.problems.patterns.dfs;
 
+import dsa.data_structures.binary_trees.problems.TreeNode;
+
 // https://leetcode.com/problems/symmetric-tree/description/
 public class Symmetric_Tree {
 
@@ -22,24 +24,5 @@ public class Symmetric_Tree {
                 firstNode.val == secondNode.val &&
                         isSymmetric(firstNode.left, secondNode.right) && isSymmetric(firstNode.right, secondNode.left)
         );
-    }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

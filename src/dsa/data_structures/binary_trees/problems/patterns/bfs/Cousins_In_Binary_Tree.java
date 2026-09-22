@@ -1,5 +1,7 @@
 package dsa.data_structures.binary_trees.problems.patterns.bfs;
 
+import dsa.data_structures.binary_trees.problems.TreeNode;
+
 // https://leetcode.com/problems/cousins-in-binary-tree/description/
 public class Cousins_In_Binary_Tree {
 
@@ -46,24 +48,5 @@ public class Cousins_In_Binary_Tree {
             return nn;
         }
         return findNode(node.right, find);
-    }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

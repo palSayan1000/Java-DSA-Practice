@@ -1,5 +1,7 @@
 package dsa.data_structures.binary_trees.problems.patterns.dfs;
 
+import dsa.data_structures.binary_trees.problems.TreeNode;
+
 // https://leetcode.com/problems/invert-binary-tree/description/
 public class Invert_Binary_Tree {
 
@@ -27,23 +29,4 @@ public class Invert_Binary_Tree {
 //        node.left = node.right;
 //        node.right = dummy;
 //    }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 }
