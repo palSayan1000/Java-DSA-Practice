@@ -16,7 +16,7 @@ public class Validate_Binary_Search_Tree {
         if (low != null && node.val <= low) {
             return false;
         }
-        if (high != null &&node.val >= high) {
+        if (high != null && node.val >= high) {
             return false;
         }
 

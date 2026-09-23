@@ -7,7 +7,8 @@ package dsa.data_structures.binary_trees.understanding.segment_tree.ultimate_seg
  *
  * @param <T> the numeric type being combined
  */
-public interface Operation<T extends Number> {
+public sealed interface Operation<T extends Number>
+        permits DoubleOps, LongOps, FloatOps, IntegerOps{
 
     /**
      * Combines two values using this operation (e.g. sum, min, max).

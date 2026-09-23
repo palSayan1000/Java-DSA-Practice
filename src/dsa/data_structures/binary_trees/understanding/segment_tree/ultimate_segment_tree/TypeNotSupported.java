@@ -5,7 +5,7 @@ package dsa.data_structures.binary_trees.understanding.segment_tree.ultimate_seg
  * that isn't supported (e.g. {@link java.math.BigDecimal}, {@link java.math.BigInteger},
  * {@code Byte}, or {@code Short}).
  */
-public class TypeNotSupported extends RuntimeException {
+public final class TypeNotSupported extends RuntimeException {
 
     /**
      * Creates a new exception with the given detail message.

@@ -1,0 +1,138 @@
+package dsa.data_structures.binary_trees.problems.practice.segment_tree;
+
+public class Range_Sum_Query_Immutable {
+    static void main() {
+        NumArray obj = new NumArray(new int[] {1, 2, 3, 4, 5, 6});
+        System.out.println(obj.sumRange(0, 3));
+    }
+}
+class NumArray_ {
+    int[] prefixSum;
+
+    public NumArray_(int[] nums) {
+        prefixSum = new int[nums.length];
+        if (nums.length == 0) {
+            return;
+        }
+        prefixSum[0] = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            prefixSum[i] = prefixSum[i - 1] + nums[i];
+        }
+    }
+
+    public int sumRange(int left, int right) {
+        if (left == 0) {
+            return prefixSum[right];
+        }
+        return prefixSum[right] - prefixSum[left - 1];
+    }
+}
+// class NumArray {
+
+//     TreeNode root;
+
+//     public NumArray(int[] nums) {
+//         root = constructTree(nums, 0, nums.length - 1);
+//     }
+
+//     public int sumRange(int left, int right) {
+//         return sumRange(root, left, right);
+//     }
+
+//     private TreeNode constructTree(int[] nums, int start, int end) {
+//         if (start == end) {
+//             return new TreeNode(nums[start], start, end);
+//         }
+//         int mid = start + (end - start) / 2;
+//         TreeNode leftTree = constructTree(nums, start, mid);
+//         TreeNode rightTree = constructTree(nums, mid + 1, end);
+
+//         TreeNode currentNode = new TreeNode(leftTree.getData() + rightTree.getData(), start, end);
+//         currentNode.left = leftTree;
+//         currentNode.right = rightTree;
+
+//         return currentNode;
+//     }
+
+//     private int sumRange(TreeNode node, int left, int right) {
+//         if (node.startInterval >= left && node.endInterval <= right) { // case 1
+//             // node is completely lying inside query
+//             return node.data;
+//         } else if (node.endInterval < left || node.startInterval > right) { // case 2
+//             // completely outside
+//             return 0;
+//         } else { // Overlapping -> case 3
+//             return this.sumRange(node.left, left, right) + this.sumRange(node.right, left, right);
+//         }
+//     }
+
+//     private static class TreeNode {
+//         final private int startInterval;
+//         final private int endInterval;
+//         private int data;
+//         private TreeNode left;
+//         private TreeNode right;
+
+//         /**
+//          * Creates a leaf or internal node with a known data value already computed.
+//          *
+//          * @param data          the value stored at this node (leaf value, or combined
+//          *                      value for an internal node)
+//          * @param startInterval inclusive start index of the range this node covers
+//          * @param endInterval   inclusive end index of the range this node covers
+//          */
+//         private TreeNode(int data, int startInterval, int endInterval) {
+//             this.endInterval = endInterval;
+//             this.startInterval = startInterval;
+//             this.data = data;
+//         }
+
+//         /**
+//          * Creates an internal node with a known range but no data yet; the data is
+//          * expected to be set later (e.g. after both children are built).
+//          *
+//          * @param startInterval inclusive start index of the range this node covers
+//          * @param endInterval   inclusive end index of the range this node covers
+//          */
+//         private TreeNode(int startInterval, int endInterval) {
+//             this.startInterval = startInterval;
+//             this.endInterval = endInterval;
+//         }
+
+//         /**
+//          * Returns the value currently stored at this node.
+//          *
+//          * @return the node's data
+//          */
+//         private int getData() {
+//             return this.data;
+//         }
+
+//         /**
+//          * Overwrites the value stored at this node.
+//          *
+//          * @param data the new value to store
+//          */
+//         private int setData(int data) {
+//             return this.data = data;
+//         }
+
+//         /**
+//          * Returns the inclusive start index of the range this node covers.
+//          *
+//          * @return the start index
+//          */
+//         private int getStartInterval() {
+//             return this.startInterval;
+//         }
+
+//         /**
+//          * Returns the inclusive end index of the range this node covers.
+//          *
+//          * @return the end index
+//          */
+//         private int getEndInterval() {
+//             return this.endInterval;
+//         }
+//     }
+// }

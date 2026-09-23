@@ -4,7 +4,7 @@ package dsa.data_structures.binary_trees.understanding.segment_tree.ultimate_seg
  * Thrown when a {@link SegmentTree} is constructed from an empty array —
  * there's nothing to build a tree over.
  */
-public class DataEmptyException extends RuntimeException {
+public final class DataEmptyException extends RuntimeException {
 
     /**
      * Creates a new exception with the given detail message.
