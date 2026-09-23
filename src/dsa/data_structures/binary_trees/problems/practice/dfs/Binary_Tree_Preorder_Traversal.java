@@ -16,6 +16,7 @@ public class Binary_Tree_Preorder_Traversal {
         preorderTraversal(root, result);
         return result;
     }
+
     public void preorderTraversal(TreeNode root, List<Integer> list) {
         if (root == null) {
             return;

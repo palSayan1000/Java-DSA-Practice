@@ -82,7 +82,7 @@ public class SegmentTree {
         if (node.startInterval >= qsi && node.endInterval <= qei) { // case 1
             // node is completely lying inside query
             return node.data;
-        }  else if (node.endInterval < qsi || node.startInterval > qei) { // correct case 2
+        } else if (node.endInterval < qsi || node.startInterval > qei) { // correct case 2
             // completely outside
             return 0;
         } else { // Overlapping -> case 3

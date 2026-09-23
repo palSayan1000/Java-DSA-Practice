@@ -13,6 +13,7 @@ public class N_ary_Tree_Preorder_Traversal {
         preorderTraversal(root, result);
         return result;
     }
+
     private void preorderTraversal(Node node, List<Integer> list) {
         if (node == null) {
             return;
@@ -27,7 +28,8 @@ public class N_ary_Tree_Preorder_Traversal {
         public int val;
         public List<Node> children;
 
-        public Node() {}
+        public Node() {
+        }
 
         public Node(int _val) {
             val = _val;

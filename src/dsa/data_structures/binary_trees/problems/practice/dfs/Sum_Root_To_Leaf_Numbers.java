@@ -10,6 +10,7 @@ public class Sum_Root_To_Leaf_Numbers {
         }
         return sumNumbers(root, 0);
     }
+
     public int sumNumbers(TreeNode node, int currNum) {
         if (node == null) {
             return 0;

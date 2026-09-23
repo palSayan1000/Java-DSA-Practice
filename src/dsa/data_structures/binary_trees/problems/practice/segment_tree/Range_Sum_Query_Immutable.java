@@ -2,10 +2,11 @@ package dsa.data_structures.binary_trees.problems.practice.segment_tree;
 
 public class Range_Sum_Query_Immutable {
     static void main() {
-        NumArray obj = new NumArray(new int[] {1, 2, 3, 4, 5, 6});
+        NumArray obj = new NumArray(new int[]{1, 2, 3, 4, 5, 6});
         System.out.println(obj.sumRange(0, 3));
     }
 }
+
 class NumArray_ {
     int[] prefixSum;
 

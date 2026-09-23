@@ -18,6 +18,7 @@ public class Binary_Tree_Postorder_Traversal {
 
         return list;
     }
+
     public void postorderTraversal(TreeNode node, List<Integer> list) {
         if (node == null) {
             return;

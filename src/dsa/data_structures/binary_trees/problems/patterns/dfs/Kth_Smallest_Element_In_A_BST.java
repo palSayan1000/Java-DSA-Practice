@@ -23,7 +23,7 @@ public class Kth_Smallest_Element_In_A_BST {
             return left;
         }
 
-        count ++;
+        count++;
 
         if (count == k) {
             return node;
