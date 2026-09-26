@@ -1,7 +1,5 @@
 package object_oriented_programming.oop_7.iterators_iterable.iterable;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Iterator;
 
 // Custom Linked List class using Generics
@@ -31,7 +29,7 @@ class List<T> implements Iterable<T> {
 
     // return Iterator instance
     @Override
-    public @NotNull Iterator<T> iterator() {
+    public Iterator<T> iterator() {
         return new ListIterator<T>(this);
     }
 }

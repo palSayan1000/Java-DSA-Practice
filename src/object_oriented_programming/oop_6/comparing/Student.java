@@ -1,7 +1,5 @@
 package object_oriented_programming.oop_6.comparing;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Student implements Comparable<Student> {
     @SuppressWarnings("SpellCheckingInspection")
     int rollno;
@@ -14,7 +12,7 @@ public class Student implements Comparable<Student> {
     }
 
     @Override
-    public int compareTo(@NotNull Student o) {
+    public int compareTo(Student o) {
         // if diff == 0: means both are equal
         // if diff < 1: means o is bigger
         // else this is bigger

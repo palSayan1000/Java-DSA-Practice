@@ -1,7 +1,5 @@
 package object_oriented_programming.oop_6.comparing;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Arrays;
 
 public class Main {
@@ -31,7 +29,7 @@ public class Main {
 //        }
     }
 
-    private static Student @NotNull [] getArrayStud() {
+    private static Student[] getArrayStud() {
         Student kunal = new Student(12, 89.76f),
                 rahul = new Student(5, 99.345f),
                 sayan = new Student(42, 90.25f),
@@ -41,7 +39,6 @@ public class Main {
                 madhu = new Student(4, 33f),
                 karan = new Student(5, 49),
                 krishna = new Student(Integer.MIN_VALUE, Integer.MIN_VALUE);
-        Student[] arrayStud = {kunal, rahul, sayan, ram, sham, jodhu, madhu, karan, krishna};
-        return arrayStud;
+        return new Student[]{kunal, rahul, sayan, ram, sham, jodhu, madhu, karan, krishna};
     }
 }
