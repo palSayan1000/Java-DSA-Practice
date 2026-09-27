@@ -8,7 +8,7 @@ public class Range_Sum_Of_BST {
             return 0;
         }
         return (root.val >= low && root.val <= high ? root.val : 0) +
-            (root.val > low ? rangeSumBST(root.left, low, high) : 0) +
-            (root.val < high ? rangeSumBST(root.right, low, high) : 0);
+                (root.val > low ? rangeSumBST(root.left, low, high) : 0) +
+                (root.val < high ? rangeSumBST(root.right, low, high) : 0);
     }
 }

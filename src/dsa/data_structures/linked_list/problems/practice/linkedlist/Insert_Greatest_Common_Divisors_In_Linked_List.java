@@ -17,6 +17,7 @@ public class Insert_Greatest_Common_Divisors_In_Linked_List {
         }
         return head;
     }
+
     public int gcd(int a, int b) {
         if (a == 0)
             return b;

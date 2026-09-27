@@ -5,6 +5,7 @@ public class Reverse_Prefix_Of_Word {
     static void main() {
         System.out.println(new Reverse_Prefix_Of_Word().reversePrefix("abcdefd", 'd'));
     }
+
     public String reversePrefix(String word, char ch) {
         int index = word.indexOf(ch);
         if (index == -1) {
