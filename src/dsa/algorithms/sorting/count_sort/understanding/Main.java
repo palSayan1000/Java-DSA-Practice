@@ -23,7 +23,7 @@ public class Main {
 
         int[] freq = new int[maxEle + 1];
         for (int i : array) {
-            freq[i] ++;
+            freq[i]++;
         }
 
         for (int i = 0, index = 0; i <= maxEle; i++) {

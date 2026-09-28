@@ -4,7 +4,7 @@ package dsa.algorithms.bit_manupulation.problems;
 public class Find_The_Original_Array_Of_Prefix_Xor {
     static void main() {
         System.out.println(java.util.Arrays.toString(
-                new Find_The_Original_Array_Of_Prefix_Xor().findArray(new int[] {5,2,0,3,1})
+                new Find_The_Original_Array_Of_Prefix_Xor().findArray(new int[]{5, 2, 0, 3, 1})
         ));
     }
 

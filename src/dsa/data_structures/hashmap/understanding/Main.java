@@ -1,6 +1,7 @@
 package dsa.data_structures.hashmap.understanding;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Main {
     static void main() {

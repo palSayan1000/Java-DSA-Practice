@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public class HashMapFinal_Main {
     static void main() {
-         // hashDemo();
+        // hashDemo();
         HashMapFinal<String, String> map = new HashMapFinal<>();
 
         map.put("Mango", "King Of Fruits!!");
@@ -43,7 +43,7 @@ class HashMapFinal<K, V> {
             }
         }
 
-        if ((float)size / list.size() > lf) {
+        if ((float) size / list.size() > lf) {
             reHash();
         }
 
@@ -63,8 +63,8 @@ class HashMapFinal<K, V> {
             list.add(new LinkedList<>());
         }
 
-        for (LinkedList<Entity<K, V>> entries: old) {
-            for (Entity<K, V> entry: entries) {
+        for (LinkedList<Entity<K, V>> entries : old) {
+            for (Entity<K, V> entry : entries) {
                 put(entry.key, entry.value);
             }
         }
@@ -108,8 +108,8 @@ class HashMapFinal<K, V> {
         StringBuilder builder = new StringBuilder();
         builder.append("{");
 
-        for (LinkedList<Entity<K, V>> entities: list) {
-            for (Entity<K, V> entity: entities) {
+        for (LinkedList<Entity<K, V>> entities : list) {
+            for (Entity<K, V> entity : entities) {
                 builder.append(entity.key);
                 builder.append(" = ");
                 builder.append(entity.value);

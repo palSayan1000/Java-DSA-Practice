@@ -9,13 +9,13 @@ public class Maximum_Substrings_With_Distinct_Start {
     public int maxDistinct(String s) {
         int[] freq = new int[26];
         for (char ch : s.toCharArray()) {
-            freq[ch - 97] ++;
+            freq[ch - 97]++;
         }
 
         int countUnique = 0;
         for (int i : freq) {
             if (i != 0) {
-                countUnique ++;
+                countUnique++;
             }
         }
 

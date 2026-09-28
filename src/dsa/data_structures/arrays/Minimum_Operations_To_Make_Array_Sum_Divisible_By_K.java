@@ -4,7 +4,7 @@ package dsa.data_structures.arrays;
 public class Minimum_Operations_To_Make_Array_Sum_Divisible_By_K {
     static void main() {
         System.out.println(new Minimum_Operations_To_Make_Array_Sum_Divisible_By_K()
-                .minOperations(new int[] {3, 9, 7}, 5));
+                .minOperations(new int[]{3, 9, 7}, 5));
     }
 
     public int minOperations(int[] nums, int k) {
