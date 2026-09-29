@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Tic_Tac_Toe {
+
     static void main() {
         char[][] board = new char[3][3];
 
