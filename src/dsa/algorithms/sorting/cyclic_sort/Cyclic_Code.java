@@ -2,7 +2,7 @@ package dsa.algorithms.sorting.cyclic_sort;
 
 public class Cyclic_Code {
     static void main() {
-        int[] arr = {3, 5, 2, 1, 4}; //// array should only contain elements from 1 to n or 0 to n-1 or something like this
+        int[] arr = {3, 5, 2, 1, 4}; // array should only contain elements from 1 to n or 0 to n-1 or something like this
         cyclic(arr);
         System.out.println(java.util.Arrays.toString(arr));
     }

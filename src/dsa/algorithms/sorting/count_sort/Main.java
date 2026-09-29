@@ -1,4 +1,4 @@
-package dsa.algorithms.sorting.count_sort.understanding;
+package dsa.algorithms.sorting.count_sort;
 
 import java.util.Arrays;
 import java.util.HashMap;
