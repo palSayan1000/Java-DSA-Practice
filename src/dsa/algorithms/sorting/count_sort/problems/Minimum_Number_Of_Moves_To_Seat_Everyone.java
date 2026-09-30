@@ -5,7 +5,7 @@ import java.util.Arrays;
 // https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/description/
 public class Minimum_Number_Of_Moves_To_Seat_Everyone {
     static void main() {
-        System.out.println(new Minimum_Number_Of_Moves_To_Seat_Everyone().minMovesToSeat(new int[] {3, 1, 5}, new int[] {2, 7, 4}));
+        System.out.println(new Minimum_Number_Of_Moves_To_Seat_Everyone().minMovesToSeat(new int[]{3, 1, 5}, new int[]{2, 7, 4}));
     }
 
     public int minMovesToSeat(int[] seats, int[] students) {

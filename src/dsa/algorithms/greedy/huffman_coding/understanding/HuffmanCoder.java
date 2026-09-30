@@ -1,7 +1,7 @@
 package dsa.algorithms.greedy.huffman_coding.understanding;
 
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class HuffmanCoder {
@@ -67,7 +67,7 @@ public class HuffmanCoder {
     public String encode(String source) {
         StringBuilder ans = new StringBuilder();
 
-        for (int  i = 0; i < source.length(); i++) {
+        for (int i = 0; i < source.length(); i++) {
             ans.append(encoder.get(source.charAt(i)));
         }
 
@@ -78,7 +78,7 @@ public class HuffmanCoder {
         String key = "";
         StringBuilder ans = new StringBuilder();
 
-        for (int  i = 0; i < codedString.length(); i++) {
+        for (int i = 0; i < codedString.length(); i++) {
             key = key + codedString.charAt(i);
             if (decoder.containsKey(key)) {
                 ans.append(decoder.get(key));
