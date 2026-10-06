@@ -42,7 +42,7 @@ class LLNode {
     LLNode next;
 
     public LLNode(int val) {
-       this.val = val;
+        this.val = val;
     }
 }
 

@@ -5,7 +5,7 @@ import java.util.Arrays;
 // https://leetcode.com/problems/transpose-matrix/description/
 public class Transpose_Matrix {
     static void main() {
-        int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         System.out.println(Arrays.deepToString(matrix));
         System.out.println(Arrays.deepToString(new Transpose_Matrix().transpose(matrix)));
     }

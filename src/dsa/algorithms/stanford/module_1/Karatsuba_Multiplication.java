@@ -58,7 +58,10 @@ public class Karatsuba_Multiplication {
         while (i >= 0) {
             int diff = (a.charAt(i--) - '0') - borrow;
             if (j >= 0) diff -= b.charAt(j--) - '0';
-            if (diff < 0) { diff += 10; borrow = 1; } else borrow = 0;
+            if (diff < 0) {
+                diff += 10;
+                borrow = 1;
+            } else borrow = 0;
             sb.append(diff);
         }
         return strip(sb.reverse().toString());

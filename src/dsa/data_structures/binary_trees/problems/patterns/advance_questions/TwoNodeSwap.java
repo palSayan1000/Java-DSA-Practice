@@ -17,7 +17,7 @@ public class TwoNodeSwap {
     }
 
     private void iot(Node node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
         iot(node.left);

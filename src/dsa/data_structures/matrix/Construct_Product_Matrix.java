@@ -5,7 +5,7 @@ import java.util.Arrays;
 // https://leetcode.com/problems/construct-product-matrix/description/
 public class Construct_Product_Matrix {
     static void main() {
-        int[][] grid = {{1,2},{3,4}};
+        int[][] grid = {{1, 2}, {3, 4}};
         System.out.println(Arrays.deepToString(grid));
         System.out.println(Arrays.deepToString(new Construct_Product_Matrix().constructProductMatrix(grid)));
     }
