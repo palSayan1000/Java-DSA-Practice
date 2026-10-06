@@ -1,0 +1,13 @@
+package concepts.basic_understanding.strings_and_string_builder.strings;
+
+public class Performance {
+    static void main() {
+        String series = "";
+        for (int i = 0; i < 26; i++) {
+            char ch = (char) ('a' + i);
+//            System.out.print(ch);
+            series += ch; // everytime new string gets created
+        }
+        System.out.println(series);
+    }
+}
