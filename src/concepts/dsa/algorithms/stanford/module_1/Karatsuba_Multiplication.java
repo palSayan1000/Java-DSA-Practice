@@ -2,7 +2,8 @@ package concepts.dsa.algorithms.stanford.module_1;
 
 public class Karatsuba_Multiplication {
     static void main() {
-        System.out.println(new Karatsuba_Multiplication().multiply("1234", "5678"));
+        System.out.println(new Karatsuba_Multiplication().multiply("3141592653589793238462643383279502884197169399375105820974944592",
+                "2718281828459045235360287471352662497757247093699959574966967627"));
     }
 
     public String multiply(String num1, String num2) {
