@@ -1,4 +1,4 @@
-package concepts.important_packages.file_handling.understanding;
+package concepts.dsa.file_handling.understanding;
 
 import java.io.FileReader;
 import java.io.IOException;
