@@ -1,4 +1,4 @@
-package concepts.dsa.algorithms.sorting.cyclic_sort.problems;
+package concepts.dsa.algorithms.sorting.cyclic_sort.problems.pattern;
 
 import java.util.Arrays;
 

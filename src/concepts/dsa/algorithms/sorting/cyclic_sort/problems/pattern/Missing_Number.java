@@ -1,4 +1,4 @@
-package concepts.dsa.algorithms.sorting.cyclic_sort.problems;
+package concepts.dsa.algorithms.sorting.cyclic_sort.problems.pattern;
 
 // https://leetcode.com/problems/missing-number/description/
 public class Missing_Number {

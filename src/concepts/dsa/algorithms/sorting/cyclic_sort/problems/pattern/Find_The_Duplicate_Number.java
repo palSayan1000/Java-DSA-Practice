@@ -1,4 +1,4 @@
-package concepts.dsa.algorithms.sorting.cyclic_sort.problems;
+package concepts.dsa.algorithms.sorting.cyclic_sort.problems.pattern;
 
 // https://leetcode.com/problems/find-the-duplicate-number/description/
 public class Find_The_Duplicate_Number {
