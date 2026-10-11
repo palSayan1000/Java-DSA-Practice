@@ -13,6 +13,8 @@ public class Main {
         OrderService orderService = context.getBean(OrderService.class);
         orderService.placeOrder();
 
+        User user = context.getBean(User.class);
+        System.out.println(user.getName());
 //        PaymentService paymentService = context.getBean(PaymentService.class);
 //        paymentService.pay();
     }
