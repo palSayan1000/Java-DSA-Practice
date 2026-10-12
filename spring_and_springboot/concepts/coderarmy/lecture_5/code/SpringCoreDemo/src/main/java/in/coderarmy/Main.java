@@ -26,9 +26,9 @@ public class Main {
 //        orderService.placeOrder();
 
 //        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class); // passing the reflection of the AppConfig class
-        // this line means that start a spring container with Annotation based container
-        // but it cannot start untill i pass the rules for it
-        // the rules i will mae and pass the refection of the class in that
+// this line means that start a spring container with Annotation based container
+// but it cannot start untill i pass the rules for it
+// the rules i will mae and pass the refection of the class in that
 
 //        Student s1 = new Student();
 //

@@ -5,7 +5,7 @@ public class Minimum_Element_After_Replacement_With_Digit_Sum {
     static void main() {
         System.out.println(new Minimum_Element_After_Replacement_With_Digit_Sum()
                 .minElement(
-                        new int[] {999,19,199}
+                        new int[]{999, 19, 199}
                 ));
     }
 

@@ -5,7 +5,7 @@ public class Number_Of_Strings_That_Appear_As_Substrings_In_Word {
     static void main() {
         System.out.println(new Number_Of_Strings_That_Appear_As_Substrings_In_Word()
                 .numOfStrings(
-                        new String[] {"a","abc","bc","d"},
+                        new String[]{"a", "abc", "bc", "d"},
                         "abc"
                 ));
     }

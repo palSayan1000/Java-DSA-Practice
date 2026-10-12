@@ -4,7 +4,7 @@ package dsa.algorithms.recursion.problems;
 public class Sum_Of_All_Subset_XOR_Totals {
     static void main() {
         System.out.println(new Sum_Of_All_Subset_XOR_Totals()
-                .subsetXORSum(new int[] {3,4,5,6,7,8}));
+                .subsetXORSum(new int[]{3, 4, 5, 6, 7, 8}));
     }
 
     public int subsetXORSum(int[] nums) {

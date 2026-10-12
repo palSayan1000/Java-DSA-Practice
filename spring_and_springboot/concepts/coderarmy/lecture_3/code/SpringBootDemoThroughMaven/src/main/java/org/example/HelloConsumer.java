@@ -21,10 +21,10 @@ import org.apache.servicecomb.provider.springmvc.reference.RestTemplateBuilder;
 import org.springframework.web.client.RestTemplate;
 
 public class HelloConsumer {
-  private final RestTemplate restTemplate = RestTemplateBuilder.create();
+    private final RestTemplate restTemplate = RestTemplateBuilder.create();
 
-  public void invokeHello() {
-    //service url is : cse://serviceName/operation
-    restTemplate.getForObject("cse://business-service/hello", String.class);
-  }
+    public void invokeHello() {
+        //service url is : cse://serviceName/operation
+        restTemplate.getForObject("cse://business-service/hello", String.class);
+    }
 }

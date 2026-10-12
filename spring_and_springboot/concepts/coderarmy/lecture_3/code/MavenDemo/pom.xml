@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -8,15 +8,15 @@
     <artifactId>MavenDemo</artifactId>
     <version>1.0-SNAPSHOT-${author.name}</version>
 
-<!--    <packaging>jar</packaging>-->
+    <!--    <packaging>jar</packaging>-->
 
-<!--    Overriding the inbuilt repositories tag in the parent pom-->
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>company-repo</id>-->
-<!--            <url>http://repo.coderarmy.in/maven</url>-->
-<!--        </repository>-->
-<!--    </repositories>-->
+    <!--    Overriding the inbuilt repositories tag in the parent pom-->
+    <!--    <repositories>-->
+    <!--        <repository>-->
+    <!--            <id>company-repo</id>-->
+    <!--            <url>http://repo.coderarmy.in/maven</url>-->
+    <!--        </repository>-->
+    <!--    </repositories>-->
 
     <dependencies>
         <!-- Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->

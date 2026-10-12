@@ -25,8 +25,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(path = "/")
 public class HelloImpl {
 
-  @GetMapping(path = "/hello")
-  public String hello() {
-    return "Hello World!";
-  }
+    @GetMapping(path = "/hello")
+    public String hello() {
+        return "Hello World!";
+    }
 }

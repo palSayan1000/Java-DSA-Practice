@@ -12,7 +12,7 @@ public class MainController {
 
     @PostMapping(path = "/add")
     public @ResponseBody User addNewUser(@RequestBody String name
-                ,@RequestBody String email) {
+            , @RequestBody String email) {
 
         User user = new User();
         user.setName(name);

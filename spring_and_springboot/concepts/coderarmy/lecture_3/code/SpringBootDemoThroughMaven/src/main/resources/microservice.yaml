@@ -1,4 +1,3 @@
-
 #More details can be found :
 # 1.http://servicecomb.apache.org/users/service-definition/
 # 2.http://servicecomb.apache.org/users/service-configurations/
@@ -7,16 +6,16 @@
 #Indicates an application name
 APPLICATION_ID: business
 service_description:
-#Indicates a microservice name
-#The microservice name should be unique within an application.
-#The name can contain digits, uppercase and lowercase letters, hyphens(-), underscores(_), and periods(.); and can neither start nor end with punctuations.
-#The naming rule is as follows: ^[a-zA-Z0-9]+$|^[a-zA-Z0-9][a-zA-Z0-9_-.]*[a-zA-Z0-9]$.
+  #Indicates a microservice name
+  #The microservice name should be unique within an application.
+  #The name can contain digits, uppercase and lowercase letters, hyphens(-), underscores(_), and periods(.); and can neither start nor end with punctuations.
+  #The naming rule is as follows: ^[a-zA-Z0-9]+$|^[a-zA-Z0-9][a-zA-Z0-9_-.]*[a-zA-Z0-9]$.
   name: business-service
-#Indicates a service version
+  #Indicates a service version
   version: 1.0.0
 servicecomb:
   service:
-  #Specifies the service center IP address.
+    #Specifies the service center IP address.
     registry:
       address: http://127.0.0.1:30100
   #Specifies the rest transport listening IP address.
