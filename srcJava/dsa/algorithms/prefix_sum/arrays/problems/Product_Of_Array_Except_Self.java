@@ -1,4 +1,4 @@
-package dsa.algorithms.prefix_sum.arrays;
+package dsa.algorithms.prefix_sum.arrays.problems;
 
 import java.util.Arrays;
 

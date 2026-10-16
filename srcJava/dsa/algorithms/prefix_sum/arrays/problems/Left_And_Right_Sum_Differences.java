@@ -1,4 +1,4 @@
-package dsa.algorithms.prefix_sum.arrays;
+package dsa.algorithms.prefix_sum.arrays.problems;
 
 // https://leetcode.com/problems/left-and-right-sum-differences/description/
 public class Left_And_Right_Sum_Differences {
