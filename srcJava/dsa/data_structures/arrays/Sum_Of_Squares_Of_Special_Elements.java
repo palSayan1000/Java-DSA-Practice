@@ -4,7 +4,7 @@ package dsa.data_structures.arrays;
 public class Sum_Of_Squares_Of_Special_Elements {
     static void main() {
         System.out.println(new Sum_Of_Squares_Of_Special_Elements()
-                .sumOfSquares(new int[] {1,2,3,4}));
+                .sumOfSquares(new int[]{1, 2, 3, 4}));
     }
 
     public int sumOfSquares(int[] nums) {

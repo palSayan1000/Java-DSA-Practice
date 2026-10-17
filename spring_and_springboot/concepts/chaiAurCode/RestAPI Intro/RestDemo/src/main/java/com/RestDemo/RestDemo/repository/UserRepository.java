@@ -52,4 +52,18 @@ public class UserRepository implements CommandLineRunner {
         this.users.add(new UserDto(UUID.randomUUID().toString(), createUserDto.getName(), createUserDto.getEmail()));
         return this.users.getLast();
     }
+
+    public UserDto updateUser(String id, CreateUserDto updateUserDto) {
+        UserDto userDto = this.findUserById(id);
+        if (userDto == null) {
+            return null;
+        }
+        userDto.setName(updateUserDto.getName());
+        userDto.setEmail(updateUserDto.getEmail());
+        return userDto;
+    }
+
+    public void deleteUser(String id) {
+        users.removeIf(user -> user.getId().equals(id));
+    }
 }

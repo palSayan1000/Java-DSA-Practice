@@ -4,7 +4,7 @@ package dsa.algorithms.two_pointers.arrays.problems;
 public class Partition_Array_According_To_Given_Pivot {
     static void main() {
         System.out.println(java.util.Arrays.toString(new Partition_Array_According_To_Given_Pivot()
-                .pivotArray(new int[] {9,12,5,10,14,3,10}, 10)));
+                .pivotArray(new int[]{9, 12, 5, 10, 14, 3, 10}, 10)));
     }
 
     public int[] pivotArray(int[] nums, int pivot) {

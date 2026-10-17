@@ -8,6 +8,6 @@ public class Convert_The_Temperature {
     }
 
     public double[] convertTemperature(double Celsius) {
-        return new double[] {Celsius + 273.15, Celsius * 1.80 + 32.00};
+        return new double[]{Celsius + 273.15, Celsius * 1.80 + 32.00};
     }
 }

@@ -11,18 +11,18 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 @ConfigurationPropertiesScan
 public class SpringCoreConceptsApplication implements CommandLineRunner {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringCoreConceptsApplication.class, args);
-	}
+    private final UserService userService;
 
-	private final UserService userService;
+    public SpringCoreConceptsApplication(DataBase dataBase, Configurations configurations) {
+        this.userService = new UserService(dataBase, configurations);
+    }
 
-	public SpringCoreConceptsApplication(DataBase dataBase, Configurations configurations) {
-		this.userService = new UserService(dataBase, configurations);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringCoreConceptsApplication.class, args);
+    }
 
-	@Override
-	public void run(String @NonNull ... args) throws Exception {
-		userService.saveUser("Sayan Pal");
-	}
+    @Override
+    public void run(String @NonNull ... args) throws Exception {
+        userService.saveUser("Sayan Pal");
+    }
 }

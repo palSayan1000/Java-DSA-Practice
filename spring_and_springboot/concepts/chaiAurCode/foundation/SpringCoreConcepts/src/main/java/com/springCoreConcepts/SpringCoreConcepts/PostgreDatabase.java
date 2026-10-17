@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 //@Profile("prod")
 @ConditionalOnProperty(name = "db.type", havingValue = "postgres")
-public class PostgreDatabase implements DataBase{
+public class PostgreDatabase implements DataBase {
     @Override
     public void saveToDB(String user) {
         System.out.println("Saved to postgres database: " + user);

@@ -5,7 +5,7 @@ public class Rearrange_Array_Elements_By_Sign {
     static void main() {
         System.out.println(java.util.Arrays.toString(
                 new Rearrange_Array_Elements_By_Sign()
-                        .rearrangeArray(new int[] {3,1,-2,-5,2,-4})
+                        .rearrangeArray(new int[]{3, 1, -2, -5, 2, -4})
         ));
     }
 

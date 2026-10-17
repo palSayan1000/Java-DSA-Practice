@@ -4,7 +4,7 @@ package dsa.algorithms.prefix_sum.arrays.problems;
 public class Sum_Of_All_Odd_Length_Subarrays {
     static void main() {
         System.out.println(new Sum_Of_All_Odd_Length_Subarrays()
-                .sumOddLengthSubarrays(new int[] {1,4,2,5,3}));
+                .sumOddLengthSubarrays(new int[]{1, 4, 2, 5, 3}));
     }
 
     public int sumOddLengthSubarrays(int[] arr) {

@@ -12,7 +12,7 @@ public class UserService {
     private final Configurations configuration;
 
     @Autowired
-    public UserService(DataBase dataBase,  Configurations configuration) {
+    public UserService(DataBase dataBase, Configurations configuration) {
         this.dataBase = dataBase;
         this.configuration = configuration;
     }

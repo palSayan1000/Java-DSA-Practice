@@ -3,7 +3,7 @@ package dsa.algorithms.two_pointers.arrays.problems;
 // https://leetcode.com/problems/move-zeroes/description/
 public class Move_Zeroes {
     static void main() {
-        int[] nums = new int[] {0,1,0,3,12};
+        int[] nums = new int[]{0, 1, 0, 3, 12};
         new Move_Zeroes().moveZeroes(nums);
         System.out.println(java.util.Arrays.toString(nums));
     }

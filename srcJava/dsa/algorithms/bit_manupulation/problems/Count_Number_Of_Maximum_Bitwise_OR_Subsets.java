@@ -4,7 +4,7 @@ package dsa.algorithms.bit_manupulation.problems;
 public class Count_Number_Of_Maximum_Bitwise_OR_Subsets {
     static void main() {
         System.out.println(new Count_Number_Of_Maximum_Bitwise_OR_Subsets()
-                .countMaxOrSubsets(new int[] {3, 1}));
+                .countMaxOrSubsets(new int[]{3, 1}));
     }
 
     public int countMaxOrSubsets(int[] nums) {

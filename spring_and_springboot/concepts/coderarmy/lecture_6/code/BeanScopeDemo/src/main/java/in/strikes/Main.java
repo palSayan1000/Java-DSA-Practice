@@ -13,6 +13,6 @@ public class Main {
 
         orderService.placeOrder();
 
-        System.out.println(orderService ==  orderService2);
+        System.out.println(orderService == orderService2);
     }
 }

@@ -13,7 +13,7 @@ class ParkingSystem {
     private final int[] slots;
 
     public ParkingSystem(int big, int medium, int small) {
-        slots = new int[] {big, medium, small};
+        slots = new int[]{big, medium, small};
     }
 
     public boolean addCar(int carType) {
